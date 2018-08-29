@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,user-scalable=no" name="viewport">
+    <title>软件学院举办“北斗卫星的前身，研发和应用”讲座-圈圈校园资讯</title>
+    <!--    <link rel="stylesheet" href="../css/touch.css"> -->
+    <style type="text/css">
+        html, body {
+            height: 100%;
+        }
+
+        body, ul, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mainBody { /*background:#EFF0F4;*/
+            text-align: left; /*font-family:STHeiti,Arial;*/ /*font-family: "HiraginoSansGB W3";*/
+            font-family: "Helvetica";
+            /*padding:0  0.8em;*/
+            overflow-x: scroll;
+            overflow-y: hidden;
+            max-width: 1024px;
+            margin: 0 auto;
+            overflow-x: auto;
+            background: #fff;
+            min-height: 100%;
+            /*footer置底*/
+            position: relative; /*重要！保证footer是相对于wapper位置绝对*/
+            height: auto; /* 保证页面能撑开浏览器高度时显示正常*/
+            min-height: 100%; /* IE6不支持，IE6要单独配置*/
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+            a:visited {
+                color: #999;
+            }
+
+            a:hover {
+                color: #F5A70D;
+            }
+
+        .articleList {
+            overflow: hidden;
+            color: #000;
+            background: #fff;
+            display: none;
+            padding: 1.2em;
+            padding-bottom: 180px; /*重要！给footer预留的空间*/
+        }
+
+            .articleList h1 {
+                font-size: 1.2em;
+                margin: 0;
+            }
+
+            .articleList h2 {
+                color: #b9b9b9;
+                font-size: 0.8em;
+                font-weight: normal;
+            }
+
+            .articleList .text1 p {
+                margin: 0.1em 0;
+                text-indent: 2em;
+                line-height: 1.45em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 table p {
+                margin: 0.1em 0;
+                line-height: 1.45em;
+                text-indent: 0em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 img {
+                max-width: 60%;
+                clear: both;
+                display: block;
+                margin: auto;
+                border: 0px;
+            }
+
+        .ep-source {
+            color: #808080;
+            font-size: 0.8em;
+            padding-top: 0.2em;
+        }
+
+        .attach {
+            color: #808080;
+            font-size: 0.9em;
+            padding-top: 0.2em;
+        }
+
+            .attach .attachTitle {
+            }
+
+            .attach .attachItem {
+                background: url(/admin/images/icon_attach.png) no-repeat 3px 4px;
+                padding-left: 20px;
+                line-height: 20px;
+                vertical-align: middle;
+            }
+
+        .text1 {
+            /*overflow-x: auto;*/
+        }
+
+        /*img
+        {
+            width: 98%;
+            max-width: 600px;
+        }*/
+        .spanShare {
+            float: left;
+            padding: 5px 0 0;
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0; /* 关键 */
+            left: 0; /* IE下一定要记得 */
+            height: 130px; /* footer的高度一定要是固定值*/
+        }
+
+        a.view-link {
+            padding-left: 5px;
+            color: #018DFF;
+        }
+
+            a.view-link:hover {
+                color: #F5A70D;
+            }
+    </style>
+    <script type="text/javascript" src="/scripts/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+       
+
+        $(document).ready(function () {
+            var url = window.location.href;
+            alert(url);
+            var start_index = url.lastIndexOf("/") + 1;
+            var end_index = url.lastIndexOf(".");
+            var id = url.substring(start_index, end_index);
+            $.ajax({
+                type: "POST",
+                url: "GetNewsReadNum.aspx",
+                data: { "newsId": id },
+                success: function (data) {
+                    alert(data);
+                    $("#readCnt").html(data);
+                },
+                error: function (data) {
+                    alert("请求数据出错");
+                }
+            });
+            if ($(".text1").find("img").length == 0)
+            {
+                $("<div style=\"display:none;\"><img src=\"/images/news_share.jpg\" alt=\"中央音乐学院\" /></div>").insertAfter($(".text"));
+            }
+            $(".applink").remove();
+            $(".weblink").show();
+        });
+
+    </script>
+</head>
+<body style="background-color: #eee;">
+    <div class="mainBody">
+        <div style="border-bottom: 1px solid #666; padding: 17px;">
+            <a href="/AdminMetro/login_page.aspx">
+                <img src="/images/news_head.png" style="border: 0px;" alt="中央音乐学院资讯" />
+            </a>
+        </div>
+        <!-- banner top end -->
+        <article class="articleList" style="display: block;">
+            <div class="head clearfix">
+                <h1 class="title">软件学院举办“北斗卫星的前身，研发和应用”讲座</h1>
+                <h2>
+                    <span class="time"><span>发布者：zqb</span>&nbsp;&nbsp;2016/8/5 8:59:26</span>
+                    &nbsp;&nbsp;<span>阅读量：<b id="readCnt">1</b></span>
+                </h2>
+            </div>
+            <!-- JiaThis Button BEGIN -->
+            <div id="bdshare" class="jiathis_style_24x24 ">
+                <span class="spanShare">分享：</span>
+                <a class="jiathis_button_qzone"></a>
+                <a class="jiathis_button_tsina"></a>
+                <a class="jiathis_button_tqq"></a>
+                <a class="jiathis_button_weixin"></a>
+                <a class="jiathis_button_renren"></a>
+                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+            </div>
+            <div style="clear: both;"></div>
+            <!-- JiaThis Button END -->
+            <div class="text clearfix">
+                <div class="text1">
+                    <p><p style="margin-top: 0.1em;margin-bottom: 0.1em;padding: 0.3em 0px 0px;text-indent: 2em;line-height: 24px;font-size: medium;letter-spacing: 0.1em;max-width: 100%;font-family: Helvetica;white-space: normal;text-align: center;background: white"><span style="text-indent: 38px;font-size: 16px;color: red;letter-spacing: 2px">撰稿：</span><span style="text-indent: 38px;font-size: 16px;color: rgb(46, 116, 181);letter-spacing: 2px">董百顺</span><span style="text-indent: 38px;font-size: 16px;color: red;letter-spacing: 2px"> 摄像：</span><span style="text-indent: 38px"><span style="font-size: 16px;font-family: Helvetica, sans-serif;color: red;letter-spacing: 2px"> </span></span><span style="text-indent: 38px;font-size: 16px;color: rgb(46, 116, 181)">仇实</span><span style="text-indent: 38px"><span style="font-size: 16px;font-family: Helvetica, sans-serif;color: red;letter-spacing: 2px"> </span></span><span style="text-indent: 38px;font-size: 16px;color: red;letter-spacing: 2px">编辑：</span><span style="text-indent: 38px;font-size: 16px;color: rgb(46, 116, 181);letter-spacing: 2px">史继筠</span><br/></p><p style="margin-top: 0.1em;margin-bottom: 0.1em;padding: 0.3em 0px 0px;text-indent: 32px;line-height: 24px;font-size: medium;letter-spacing: 0.1em;max-width: 100%;font-family: Helvetica;white-space: normal;background-color: rgb(255, 255, 255)"><span style="font-size: 16px;font-family: 宋体">2016</span><span style="font-size: 16px;font-family: 宋体">年8月3日下午三点，北京理工大学大学生软件科技创新创业基地邀请中国科学院光电研究院徐颖研究员作题为“北斗卫星的前身，研发和应用”的专题讲座。陈杰浩老师主持了本次专题讲座，科技创新创业基地暑期集训近200名学生参加了本次专题讲座。</span></p><p style="margin-top: 0.1em;margin-bottom: 0.1em;padding: 0.3em 0px 0px;text-indent: 2em;line-height: 24px;font-size: medium;letter-spacing: 0.1em;max-width: 100%;font-family: Helvetica;white-space: normal;text-align: center;background-color: rgb(255, 255, 255)"><span style="font-size: 16px;font-family: 宋体"><img width=" 554px" height=" 369px" src="/ueditor1_4_2_utf8/net/upload/image/201608/6360594662244445305691936.jpg"/></span></p><p style="margin-top: 0.1em;margin-bottom: 0.1em;padding: 0.3em 0px 0px;text-indent: 32px;line-height: 24px;font-size: medium;letter-spacing: 0.1em;max-width: 100%;font-family: Helvetica;white-space: normal;background-color: rgb(255, 255, 255)"><span style="font-size: 16px;font-family: 宋体">讲座开始前，陈杰浩老师对徐颖研究员进行了详细的介绍。徐颖，北京理工大学校友，中国科学院二代导航专项总体部导航技术研究室副主任，中科院光电研究院建院以来最年轻的研究员、博士生导师。主要研究方向是卫星导航及增强技术。获得中科院北京分院“启明星”优秀人才奖，获首届遥感青年科技人才创新资助计划支持，中国科学院青年创新促进会会员，电子学会高级会员，电子学会青年科学家俱乐部会员。</span></p><p style="margin-top: 0.1em;margin-bottom: 0.1em;padding: 0.3em 0px 0px;text-indent: 32px;line-height: 24px;font-size: medium;letter-spacing: 0.1em;max-width: 100%;font-family: Helvetica;white-space: normal;background-color: rgb(255, 255, 255)"><span style="font-size: 16px;font-family: 宋体">此次讲座分为北斗前身、北斗建设、北斗应用三大部分。徐颖研究员首先以《史记?天官书》中“斗为帝车，运于中央，临制四乡，分阴阳，建四时，均五行，移节度，定诸记，皆系于斗”的古典授时定位理论为切入点，介绍了北斗卫星导航系统的命名由来，简述了人类导航技术从原始的地文导航、经由天文导航、地磁导航、无线电导航，直至今日发展到人造卫星导航的历史进程。</span><span style="font-family: 宋体;font-size: 16px;text-indent: 32px">结合自主制造星载原子钟的生动事例，徐颖研究员指出自主研发的卫星导航核心技术在信息化现代战争及社会经济发展等方面十分关键，并进一步详细介绍了我国北斗卫星导航系统从双星快速定位系统，历经北斗一号，北斗二号的建设过程。</span></p><p style="margin-top: 0.1em;margin-bottom: 0.1em;padding: 0.3em 0px 0px;text-indent: 32px;line-height: 24px;font-size: medium;letter-spacing: 0.1em;max-width: 100%;font-family: Helvetica;white-space: normal;text-align: center;background-color: rgb(255, 255, 255)"><span style="font-size: 16px;font-family: 宋体"><img width=" 554px" height=" 369px" src="/ueditor1_4_2_utf8/net/upload/image/201608/6360594662248272461677844.jpg"/></span></p><p style="margin-top: 0.1em;margin-bottom: 0.1em;padding: 0.3em 0px 0px;text-indent: 32px;line-height: 24px;font-size: medium;letter-spacing: 0.1em;max-width: 100%;font-family: Helvetica;white-space: normal;background-color: rgb(255, 255, 255)"><span style="font-size: 16px;font-family: 宋体">正如GPS之父</span><span style="font-size: 16px;font-family: 宋体">布拉德·帕金森</span><span style="font-size: 16px;font-family: 宋体">所说“卫星导航应用只受人们想象力的限制”，徐颖研究员还向大家展示了北斗卫星导航系统在维护国家安全、经济安全、人民生命财产安全等方面重要应用，并以中山市北斗产业基地建设为例，介绍了北斗卫星导航系统在抗震救灾、现代农业、气象预测、重点运输过程监控以及居民安保关爱等领域的巨大经济价值与广阔应用前景。讲座最后，徐颖研究员与基地师生分享了研发过程中与研发团队突破难关的心路历程。</span></p><p style="margin-top: 0.1em;margin-bottom: 0.1em;padding: 0.3em 0px 0px;text-indent: 2em;line-height: 24px;font-size: medium;letter-spacing: 0.1em;max-width: 100%;font-family: Helvetica;white-space: normal;background-color: rgb(255, 255, 255)"><span style="font-size: 16px;font-family: 宋体"> </span></p><p style="margin-top: 0.1em;margin-bottom: 0.1em;padding: 0.3em 0px 0px;text-indent: 2em;line-height: 24px;font-size: medium;letter-spacing: 0.1em;max-width: 100%;font-family: Helvetica;white-space: normal;text-align: center;background-color: rgb(255, 255, 255)"><span style="font-size: 16px;font-family: 宋体"><img width=" 459px" height=" 637px" src="/ueditor1_4_2_utf8/net/upload/image/201608/6360594662253745626663752.jpg"/></span></p><p style="margin-top: 0.1em;margin-bottom: 0.1em;padding: 0.3em 0px 0px;text-indent: 32px;line-height: 24px;font-size: medium;letter-spacing: 0.1em;max-width: 100%;font-family: Helvetica;white-space: normal;background-color: rgb(255, 255, 255)"><span style="font-size: 16px;font-family: 宋体">讲座结束后的交流环节，在场同学们积极向徐颖研究员提出自己对北斗开发工作、北斗军用加密等有关疑问，徐颖也一一耐心细致的解答。</span></p><p style="margin-top: 0.1em;margin-bottom: 0.1em;padding: 0.3em 0px 0px;text-indent: 32px;line-height: 24px;font-size: medium;letter-spacing: 0.1em;max-width: 100%;font-family: Helvetica;white-space: normal;text-align: center;background-color: rgb(255, 255, 255)"><img src="/ueditor1_4_2_utf8/net/upload/image/201608/6360594662259862981177077.png" title="blob.png" alt="blob.png" style="max-width: 60%;clear: both;display: block;border: 0px"/></p><p style="margin-top: 0.1em;margin-bottom: 0.1em;padding: 0.3em 0px 0px;text-indent: 28px;line-height: 24px;font-size: medium;letter-spacing: 0.1em;max-width: 100%;font-family: Helvetica;white-space: normal;background-color: rgb(255, 255, 255)"><br/></p><p style="margin-top: 0.1em;margin-bottom: 0.1em;padding: 0.3em 0px 0px;text-indent: 32px;line-height: 24px;font-size: medium;letter-spacing: 0.1em;max-width: 100%;font-family: Helvetica;white-space: normal;background-color: rgb(255, 255, 255)"><span style="font-size: 16px;font-family: 宋体">下午四点钟，历时一个多小时的讲座圆满结束。徐颖研究员生动的语言、鲜活的事例、渊博的知识，引发了同学们的强烈反响。此次讲座不仅扩宽了同学们的视野、为大家提供一个和行业精英交流的机会，更为大家带来了深刻的思考。陈杰浩老师最后祝愿基地学子以徐颖研究员为榜样，牢记“胸怀天下，软件报国”，为国家科研工作奉献自己的力量！</span></p><p><br/></p></p>
+                </div>
+                <div class="attach"><p class='attachTitle'>附件：</p><p class='attachItem'>(1)&nbsp;<a href='/home/news/Attach.aspx?id=03A9070D52DCF420&address=%2fupload%2fnews%2fattach%2f6360594667908682330.txt&name=C%23%e7%ac%94%e8%ae%b0.txt' target='_blank' >C#笔记.txt</a><a href='/AdminMetro/OnlineView/OnlineView.aspx?src=%2fupload%2fnews%2fattach%2f6360594667908682330.txt&name=C%23%e7%ac%94%e8%ae%b0.txt' target='_blank' class='view-link'>[预览]</a></p></div>
+            </div>
+
+        </article>
+        <!--<div id="footer">
+            <a href="/index.aspx">
+                <img style="max-width: 100%; width: 100%; border: 0px;" src="/images/news_ad_1024_v1.jpg" alt="中央音乐学院资讯">
+            </a>
+        </div>-->
+    </div>
+</body>
+</html>
+<script type="text/javascript" id="jiaThis" src="http://v3.jiathis.com/code/jia.js?uid=1365383547842139" charset="utf-8">
+</script>
+

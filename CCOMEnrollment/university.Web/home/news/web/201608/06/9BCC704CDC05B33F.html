@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,user-scalable=no" name="viewport">
+    <title>选择五院501，选择了梦想！-圈圈校园资讯</title>
+    <!--    <link rel="stylesheet" href="../css/touch.css"> -->
+    <style type="text/css">
+        html, body {
+            height: 100%;
+        }
+
+        body, ul, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mainBody { /*background:#EFF0F4;*/
+            text-align: left; /*font-family:STHeiti,Arial;*/ /*font-family: "HiraginoSansGB W3";*/
+            font-family: "Helvetica";
+            /*padding:0  0.8em;*/
+            overflow-x: scroll;
+            overflow-y: hidden;
+            max-width: 1024px;
+            margin: 0 auto;
+            overflow-x: auto;
+            background: #fff;
+            min-height: 100%;
+            /*footer置底*/
+            position: relative; /*重要！保证footer是相对于wapper位置绝对*/
+            height: auto; /* 保证页面能撑开浏览器高度时显示正常*/
+            min-height: 100%; /* IE6不支持，IE6要单独配置*/
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+            a:visited {
+                color: #999;
+            }
+
+            a:hover {
+                color: #F5A70D;
+            }
+
+        .articleList {
+            overflow: hidden;
+            color: #000;
+            background: #fff;
+            display: none;
+            padding: 1.2em;
+            padding-bottom: 180px; /*重要！给footer预留的空间*/
+        }
+
+            .articleList h1 {
+                font-size: 1.2em;
+                margin: 0;
+            }
+
+            .articleList h2 {
+                color: #b9b9b9;
+                font-size: 0.8em;
+                font-weight: normal;
+            }
+
+            .articleList .text1 p {
+                margin: 0.1em 0;
+                text-indent: 2em;
+                line-height: 1.45em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 table p {
+                margin: 0.1em 0;
+                line-height: 1.45em;
+                text-indent: 0em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 img {
+                max-width: 60%;
+                clear: both;
+                display: block;
+                margin: auto;
+                border: 0px;
+            }
+
+        .ep-source {
+            color: #808080;
+            font-size: 0.8em;
+            padding-top: 0.2em;
+        }
+
+        .attach {
+            color: #808080;
+            font-size: 0.9em;
+            padding-top: 0.2em;
+        }
+
+            .attach .attachTitle {
+            }
+
+            .attach .attachItem {
+                background: url(/admin/images/icon_attach.png) no-repeat 3px 4px;
+                padding-left: 20px;
+                line-height: 20px;
+                vertical-align: middle;
+            }
+
+        .text1 {
+            /*overflow-x: auto;*/
+        }
+
+        /*img
+        {
+            width: 98%;
+            max-width: 600px;
+        }*/
+        .spanShare {
+            float: left;
+            padding: 5px 0 0;
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0; /* 关键 */
+            left: 0; /* IE下一定要记得 */
+            height: 130px; /* footer的高度一定要是固定值*/
+        }
+
+        a.view-link {
+            padding-left: 5px;
+            color: #018DFF;
+        }
+
+            a.view-link:hover {
+                color: #F5A70D;
+            }
+    </style>
+    <script type="text/javascript" src="/scripts/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+       
+
+        $(document).ready(function () {
+            var url = window.location.href;
+            //alert(url);
+            var start_index = url.lastIndexOf("/") + 1;
+            var end_index = url.lastIndexOf(".");
+            var id = url.substring(start_index, end_index);
+            //alert(id);
+            $.ajax({
+                type: "POST",
+                url: "/AdminMetro/CCOM/notification/GetNewsReadNum.ashx",
+                data: { "newsId": id },
+                success: function (data) {
+                    //alert(data);
+                    $("#readCnt").html(data);
+                },
+                error: function (data) {
+                    alert("请求数据出错");
+                }
+            });
+            //if ($(".text1").find("img").length == 0)
+            //{
+            //    $("<div style=\"display:none;\"><img src=\"/images/news_share.jpg\" alt=\"中央音乐学院\" /></div>").insertAfter($(".text"));
+            //}
+            //$(".applink").remove();
+            //$(".weblink").show();
+        });
+
+    </script>
+</head>
+<body style="background-color: #eee;">
+    <div class="mainBody">
+        <div style="border-bottom: 1px solid #666; padding: 17px;">
+            <a href="/AdminMetro/login_page.aspx">
+                <img src="/images/news_head.png" style="border: 0px;" alt="中央音乐学院资讯" />
+            </a>
+        </div>
+        <!-- banner top end -->
+        <article class="articleList" style="display: block;">
+            <div class="head clearfix">
+                <h1 class="title">选择五院501，选择了梦想！</h1>
+                <h2>
+                    <span class="time"><span>发布者：zqb</span>&nbsp;&nbsp;2016/8/6 14:25:00</span>
+                    &nbsp;&nbsp;<span>阅读量：<b id="readCnt">1</b></span>
+                </h2>
+            </div>
+            <!-- JiaThis Button BEGIN -->
+            <div id="bdshare" class="jiathis_style_24x24 ">
+                <span class="spanShare">分享：</span>
+                <a class="jiathis_button_qzone"></a>
+                <a class="jiathis_button_tsina"></a>
+                <a class="jiathis_button_tqq"></a>
+                <a class="jiathis_button_weixin"></a>
+                <a class="jiathis_button_renren"></a>
+                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+            </div>
+            <div style="clear: both;"></div>
+            <!-- JiaThis Button END -->
+            <div class="text clearfix">
+                <div class="text1">
+                    <p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal; text-indent: 43px;"><span style="margin: 0px; padding: 0px; font-family: 宋体, SimSun; font-size: 18px;">中国航天科技集团第五研究院501研究所具有一流的航天器研制能力和设计水平。在航天器总体设计方面已经形成了传输遥感卫星、空间科学与深空探测卫星、通信广播卫星、导航卫星、返回式卫星与空间安全和载人航天等六大领域，以及热控、机械、电子、通信、系统工程、综合测试、在轨管理等七个专业设计体系。总体部科研设施完善，科研技术实力雄厚。共获得国家科技进步奖6项、国家自然科学奖1项、国防科学尖端科研成果奖59项、国防科学技术奖104项、部级奖励200多项。</span></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal; text-indent: 43px;"><span style="margin: 0px; padding: 0px; font-family: 宋体, SimSun; font-size: 18px;">我在研究生阶段攻读的专业是电子与通信工程，方向是信号处理，毕业选择去了501所。我学的是电子与通信工程专业，单位与本专业还基本对口，主要研究的也是信息与信号处理相关的内容，我这个方向能去的地方很多，而且也是一个当前也算是比较吃香的专业了，除了常说的科工科技相关的这些研究所，包括一院二院四院五院九院啥的，其他的研究所只要做信号处理，目标识别探测相关的都可以去，除了这些跟专业内容高度吻合的研究所外，还有很多通用的东西，比如说硬件相关的，FPGA 、DSP之类的，这是一项技能，你学会了不仅仅可以做信号处理，做别的也都可以，可扩展性很强。当然了，除了研究所，我的专业相关的内容企业用的也很多，常去的有通信行业的企业，比如华为大唐之类的。如果想在这个大的行业里面做一个小的转型，也可以往集成电路发展，就业面非常广。除了本专业的还可以去跨专业的，这个就更多了，现在很多其他专业的都希望能招到有理工背景的人才，如果你再能精通编程，即使换了专业一样可以发挥出你自己的价值。</span></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal; text-indent: 43px;"><span style="margin: 0px; padding: 0px; font-family: 宋体, SimSun; font-size: 18px;">在我面试的时候问到了很多专业相关的问题，也有一些个人生活方面的问题。现在很多人都在流传，通信这个专业找工作女生很受歧视，作为一个过来人，我也确实有听说，一些比较辛苦比较累的地方不是特别愿意要女生，但是我觉得大家也不要把这个问题太夸张，只要你有足够的能力，各个研究所还是会抢着要你的。关于学校背景，这个只能说是不成文的规定吧，如果你双985肯定是最好的，次之是211，因为我们在面试的过程中也发现基本上绝大多数都是211以上，甚至是双985。在找工作的时候我拿到了不少offer，当初没有特别的考虑说要去科工还是科技，我主要还是考虑了发展、待遇和地域问题。相比之下发展更重要吧，因为这个表明了你未来的无限可能性，而待遇仅仅是眼前一两年的事情，我觉得眼光还是要长远一点吧，如果你能有一个好的平台、好的发展，待遇前两年低一点也无所谓。</span></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal; text-indent: 43px;"><span style="margin: 0px; padding: 0px; font-family: 宋体, SimSun; font-size: 18px;">不知不觉已经入职一个多月了，回想当初，我怀着对未来美好的期望和一切从零开始努力奋斗的心态，从学校到社会，从学生到一名职业人，环境在变化，角色在转变，习惯校园生活的我面对这些变化，一时竟然有些茫然。值得庆幸的是，在我进入工作岗位后，有前辈一直在指引我，为我答疑解惑。</span></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal; text-indent: 43px;"><span style="margin: 0px; padding: 0px; font-family: 宋体, SimSun; font-size: 18px;">由于行业缘故，航天院所的企业文化和作风，我个人感觉是近于部队。服从、完成任务很重要。要记住“特别能吃苦、特别能战斗、特别能攻关、特别能奉献”的精神，是真正的航天精神，并不是宣传口号。要想干好工作，需要这种精神，而这种精神文化，也正是航天所实行的。因此，要理解，干航天有荣誉感，但真的很累，加班是经常的，安排工作是以完成任务为第一位的。某些工作岗位经常加班到深夜，可能某段时间经常需要牺牲双休日。而且职位越高、责任越大，老总们、大大小小的领导们，各自以不同的方式忙累着。直接关系科研生产的不大不小的领导们最累，什么事都要操心，加班更是经常的。有些老员工会感叹，干了航天，牺牲了家庭。</span></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal; text-indent: 43px;"><span style="margin: 0px; padding: 0px; font-family: 宋体, SimSun; font-size: 18px;">我个人认为，择业时，企业文化也是真正要考虑的，比待遇稍重要一些。否则，工作不开心，要钱有什么用？除非钱多到足以弥补心理平衡。因此，我觉得选择航天的人，要真正理解航天精神、航天文化，这是很有必要的。任何一个企业都有自己的文化、自己的特有工作方式特点，可能都有优缺点，都有让人不爽的地方。但是，这就好像挑对象，各有取舍，对别人合适的，对你未必合适。</span></p><p><br/></p></p>
+                </div>
+                <div class="attach"></div>
+            </div>
+
+        </article>
+        <div id="footer">
+            <!--<a href="/index.aspx">
+                <img style="max-width: 100%; width: 100%; border: 0px;" src="/images/news_ad_1024_v1.jpg" alt="中央音乐学院资讯">
+            </a>-->
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" id="jiaThis" src="http://v3.jiathis.com/code/jia.js?uid=1365383547842139" charset="utf-8">
+</script>
+

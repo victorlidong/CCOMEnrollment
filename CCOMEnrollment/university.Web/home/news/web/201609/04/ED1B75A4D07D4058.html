@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,user-scalable=no" name="viewport">
+    <title>“嗓音、医学、言语与歌唱青年论坛”在我校举行-圈圈校园资讯</title>
+    <!--    <link rel="stylesheet" href="../css/touch.css"> -->
+    <style type="text/css">
+        html, body {
+            height: 100%;
+        }
+
+        body, ul, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mainBody { /*background:#EFF0F4;*/
+            text-align: left; /*font-family:STHeiti,Arial;*/ /*font-family: "HiraginoSansGB W3";*/
+            font-family: "Helvetica";
+            /*padding:0  0.8em;*/
+            overflow-x: scroll;
+            overflow-y: hidden;
+            max-width: 1024px;
+            margin: 0 auto;
+            overflow-x: auto;
+            background: #fff;
+            min-height: 100%;
+            /*footer置底*/
+            position: relative; /*重要！保证footer是相对于wapper位置绝对*/
+            height: auto; /* 保证页面能撑开浏览器高度时显示正常*/
+            min-height: 100%; /* IE6不支持，IE6要单独配置*/
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+            a:visited {
+                color: #999;
+            }
+
+            a:hover {
+                color: #F5A70D;
+            }
+
+        .articleList {
+            overflow: hidden;
+            color: #000;
+            background: #fff;
+            display: none;
+            padding: 1.2em;
+            padding-bottom: 180px; /*重要！给footer预留的空间*/
+        }
+
+            .articleList h1 {
+                font-size: 1.2em;
+                margin: 0;
+            }
+
+            .articleList h2 {
+                color: #b9b9b9;
+                font-size: 0.8em;
+                font-weight: normal;
+            }
+
+            .articleList .text1 p {
+                margin: 0.1em 0;
+                text-indent: 2em;
+                line-height: 1.45em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 table p {
+                margin: 0.1em 0;
+                line-height: 1.45em;
+                text-indent: 0em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 img {
+                max-width: 60%;
+                clear: both;
+                display: block;
+                margin: auto;
+                border: 0px;
+            }
+
+        .ep-source {
+            color: #808080;
+            font-size: 0.8em;
+            padding-top: 0.2em;
+        }
+
+        .attach {
+            color: #808080;
+            font-size: 0.9em;
+            padding-top: 0.2em;
+        }
+
+            .attach .attachTitle {
+            }
+
+            .attach .attachItem {
+                background: url(/admin/images/icon_attach.png) no-repeat 3px 4px;
+                padding-left: 20px;
+                line-height: 20px;
+                vertical-align: middle;
+            }
+
+        .text1 {
+            /*overflow-x: auto;*/
+        }
+
+        /*img
+        {
+            width: 98%;
+            max-width: 600px;
+        }*/
+        .spanShare {
+            float: left;
+            padding: 5px 0 0;
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0; /* 关键 */
+            left: 0; /* IE下一定要记得 */
+            height: 130px; /* footer的高度一定要是固定值*/
+        }
+
+        a.view-link {
+            padding-left: 5px;
+            color: #018DFF;
+        }
+
+            a.view-link:hover {
+                color: #F5A70D;
+            }
+    </style>
+    <script type="text/javascript" src="/scripts/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+       
+
+        $(document).ready(function () {
+            var url = window.location.href;
+            //alert(url);
+            var start_index = url.lastIndexOf("/") + 1;
+            var end_index = url.lastIndexOf(".");
+            var id = url.substring(start_index, end_index);
+            //alert(id);
+            $.ajax({
+                type: "POST",
+                url: "/AdminMetro/CCOM/notification/GetNewsReadNum.ashx",
+                data: { "newsId": id },
+                success: function (data) {
+                    //alert(data);
+                    $("#readCnt").html(data);
+                },
+                error: function (data) {
+                    alert("请求数据出错");
+                }
+            });
+            //if ($(".text1").find("img").length == 0)
+            //{
+            //    $("<div style=\"display:none;\"><img src=\"/images/news_share.jpg\" alt=\"中央音乐学院\" /></div>").insertAfter($(".text"));
+            //}
+            //$(".applink").remove();
+            //$(".weblink").show();
+        });
+
+    </script>
+</head>
+<body style="background-color: #eee;">
+    <div class="mainBody">
+        <div style="border-bottom: 1px solid #666; padding: 17px;">
+            <a href="/AdminMetro/login_page.aspx">
+                <img src="/images/login/logo4.png" style="border: 0px;" alt="中央音乐学院资讯" />
+            </a>
+        </div>
+        <!-- banner top end -->
+        <article class="articleList" style="display: block;">
+            <div class="head clearfix">
+                <h1 class="title">“嗓音、医学、言语与歌唱青年论坛”在我校举行</h1>
+                <h2>
+                    <span class="time"><span>发布者：中央音乐学院管理员</span>&nbsp;&nbsp;2016/9/4 13:31:00</span>
+                    &nbsp;&nbsp;<span>阅读量：<b id="readCnt">1</b></span>
+                </h2>
+            </div>
+            <!-- JiaThis Button BEGIN -->
+            <div id="bdshare" class="jiathis_style_24x24 ">
+                <span class="spanShare">分享：</span>
+                <a class="jiathis_button_qzone"></a>
+                <a class="jiathis_button_tsina"></a>
+                <a class="jiathis_button_tqq"></a>
+                <a class="jiathis_button_weixin"></a>
+                <a class="jiathis_button_renren"></a>
+                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+            </div>
+            <div style="clear: both;"></div>
+            <!-- JiaThis Button END -->
+            <div class="text clearfix">
+                <div class="text1">
+                    <p><p><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">作者：黄薇 韩丽艳 文/ 周建都 王涛 图</span><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">来源：中央音乐学院</span><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">发布日期：2016-05-09 13:57:00</span><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">本栏目内容由党委宣传部负责维护</span></p><p style="text-align:left;color: rgb(67, 67, 67); font-size: 14px;">　　为了进一步促进我国嗓音、医学、言语与歌唱事业的合作和发展，借世界嗓音日到来之际，4月20日，中央音乐学院嗓音研究中心主办了“嗓音、医学、言语与歌唱青年论坛”。论坛由中国艺术医学协会副会长、嗓音专业委员会副主任委员、我校嗓音研究中心韩丽艳主任主持。著名的声乐教育家、女高音歌唱家郭淑珍教授、著名男中音歌唱家、北京声乐研究所钟振发所长、旅意著名女高音歌唱家姜峰女士、著名喉科专家、海军总医院李进让主任、中国传统音乐理论家、博士生导师钱茸教授、北京艺术研究所傅显舟研究员、女中音歌唱家、我校声歌系孙媛媛副教授、旅美博士、男中音歌唱家陈野先生、著名歌手黄绮珊女士等应邀出席了此次论坛。俞峰院长、周海宏副院长、声歌系张立萍主任、赵登营教授、著名指挥家杨鸿年教授发来了祝贺短信。</p><p style="color: rgb(67, 67, 67); font-size: 14px;">　　韩丽艳主任在开幕致辞中指出，嗓音是人类最原始、最基本、最便利的交流工具，它在我们的生活、工作、学习以及人际交往、情感表达和艺术表现等诸多方面发挥了重要的作用。嗓子一旦出现问题, 轻者影响交流的顺畅，重者影响职业生涯甚至会产生心理问题，特别对职业歌手来讲。我校嗓音临床检测、嗓音鉴定、嗓音矫治训练在声乐表演人才的选拔、声部鉴定、嗓音健康维护等方面都发挥了十分重要的作用。近几年来，在研究生培养方面也做了很多工作，先后培养了7名硕士研究生，今天组织这场“嗓音、医学、言语与歌唱青年论坛”，就是为这些年轻人搭建这样一个平台，展示他们的研究成果，接受大家的批评和建议，使他们能够更快、更好地成长起来。</p><p style="color: rgb(67, 67, 67); font-size: 14px;">　　7名研究生分别在论坛上发表了题为 ：“男高音唱高音难的生理及技术原因调查” 、“嗓音临床检测对歌唱训练的意义和价值” 、“美声女中音的声种特点与生理条件、嗓音使用状况的关系研究” 、“声带及其周围组织的不良表现对发声及嗓音健康的影响” 、“嗓音矫治训练在声乐教学和嗓音疾病康复中的重要作用”、 “儿童歌唱中存在的嗓音问题的思考和对策”、 “声带小结有那么可怕吗——论述小结产生的原因、分类和对策”等。他们的演讲得到了与会专家们的一致肯定，认为研究的题目和内容很有意义和研究价值，介绍的训练方法也很实用。</p><p style="color: rgb(67, 67, 67); font-size: 14px;">　　科研处处长王新华在总结中表达了对艺术嗓音研究工作的重视，他认为嗓音专业虽然是小学科，但在声乐人才培养、嗓音健康的维护、学生歌唱潜能的挖掘方面都发挥了十分重要的作用，希望“十三五”期间能给予该学科更多的支持。郭淑珍教授结合自己多年的演唱、教学经验，阐述了嗓音结构特点对歌者声部的决定作用、声带病患带给演员歌唱事业的不利影响，同时她强烈呼吁嗓音研究中心要继续开设嗓音必修课程，让学唱的学生们懂得自己乐器长在哪里、各有什么功能、怎样工作的和如何保护、使用它，她的发言赢得与会人员的阵阵掌声。过去经常光顾韩丽艳主任办公室的黄绮珊女士不但为来宾们演唱了她拿手的《等待》和《I will always love you》，同时还分享了歌唱方法、技巧与情感表达之间的关系，她的演唱为十分严肃的学术论坛增添了几分轻松、愉快的艺术氛围，使论坛活动达到了小小的高潮。</p><p style="color: rgb(67, 67, 67); font-size: 14px;">　　论坛进行了三个多小时，结束后来自成都师范学院的付昀教授、姚敏主任还有姜峰教授和陈野博士分别给予每位演讲者以鼓励和建议，相信他们的点评和建议会对研究生未来的学习和成长大有裨益的。</p><p style="color: rgb(67, 67, 67); font-size: 14px;"><br/></p><table class="FCK__ShowTableBorders" bordercolor="#000000" cellspacing="0" cellpadding="0" width="856" align="center" height="668"><tbody style="margin: 0px; padding: 0px; border: 0px;"><tr class="firstRow"><td> <a href="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201605/W020160509504441630581.jpg" target="_blank" oldsrc="W020160509504441630581.jpg" _fcksavedurl="/webpic/W0201605/W020160509/W020160509504441630581.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); text-decoration: none; outline: none;"><img border="0" src="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201605/W020160509504392553644.jpg" width="298" height="198" ignore="1" _fcksavedurl="/webpic/W0201605/W020160509/W020160509504392553644.jpg" photodocid="39963" fromphoto="1" style="margin: 0px; padding: 0px; border: 0px; height: 189px; width: 280px;"/></a></td><td> <a href="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201605/W020160509504434448305.jpg" target="_blank" oldsrc="W020160509504434448305.jpg" _fcksavedurl="/webpic/W0201605/W020160509/W020160509504434448305.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); text-decoration: none; outline: none;"><img border="0" src="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201605/W020160509504388054072.jpg" ignore="1" _fcksavedurl="/webpic/W0201605/W020160509/W020160509504388054072.jpg" photodocid="39958" fromphoto="1" style="margin: 0px; padding: 0px; border: 0px;"/></a></td><td> <a href="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201605/W020160509504442666905.jpg" target="_blank" oldsrc="W020160509504442666905.jpg" _fcksavedurl="/webpic/W0201605/W020160509/W020160509504442666905.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); text-decoration: none; outline: none;"><img border="0" src="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201605/W020160509504393693401.jpg" width="299" height="200" ignore="1" _fcksavedurl="/webpic/W0201605/W020160509/W020160509504393693401.jpg" photodocid="39964" fromphoto="1" style="margin: 0px; padding: 0px; border: 0px; height: 198px; width: 298px;"/></a></td></tr><tr><td><a href="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201605/W020160509504432089696.jpg" target="_blank" oldsrc="W020160509504432089696.jpg" _fcksavedurl="/webpic/W0201605/W020160509/W020160509504432089696.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); text-decoration: none; outline: none;"><img border="0" src="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201605/W020160509504385805502.jpg" ignore="1" _fcksavedurl="/webpic/W0201605/W020160509/W020160509504385805502.jpg" photodocid="39957" fromphoto="1" style="margin: 0px; padding: 0px; border: 0px;"/></a></td><td> <p style="text-align:center;color: rgb(67, 67, 67); font-size: 14px;"><a href="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201605/W020160509504433735139.jpg" target="_blank" oldsrc="W020160509504433735139.jpg" _fcksavedurl="/webpic/W0201605/W020160509/W020160509504433735139.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"><img border="0" src="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201605/W020160509504382936798.jpg" width="300" height="223" ignore="1" _fcksavedurl="/webpic/W0201605/W020160509/W020160509504382936798.jpg" photodocid="39959" fromphoto="1" style="margin: 0px; padding: 0px; border: 0px; height: 203px; width: 276px;"/></a></p></td><td> <a href="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201605/W020160509504449969818.jpg" target="_blank" oldsrc="W020160509504449969818.jpg" _fcksavedurl="/webpic/W0201605/W020160509/W020160509504449969818.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); text-decoration: none; outline: none;"><img border="0" src="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201605/W020160509504397774289.jpg" width="300" height="199" ignore="1" _fcksavedurl="/webpic/W0201605/W020160509/W020160509504397774289.jpg" photodocid="39965" fromphoto="1" style="margin: 0px; padding: 0px; border: 0px; height: 186px; width: 285px;"/></a></td></tr><tr><td> <a href="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201605/W020160509504434143348.jpg" target="_blank" oldsrc="W020160509504434143348.jpg" _fcksavedurl="/webpic/W0201605/W020160509/W020160509504434143348.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); text-decoration: none; outline: none;"><img border="0" src="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201605/W020160509504382003650.jpg" width="299" height="225" ignore="1" _fcksavedurl="/webpic/W0201605/W020160509/W020160509504382003650.jpg" photodocid="39960" fromphoto="1" style="margin: 0px; padding: 0px; border: 0px; height: 208px; width: 280px;"/></a></td><td><p style="text-align:center;color: rgb(67, 67, 67); font-size: 14px;"><a href="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201605/W020160509504438400825.jpg" target="_blank" oldsrc="W020160509504438400825.jpg" _fcksavedurl="/webpic/W0201605/W020160509/W020160509504438400825.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"><img border="0" src="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201605/W020160509504384633392.jpg" width="298" height="225" ignore="1" _fcksavedurl="/webpic/W0201605/W020160509/W020160509504384633392.jpg" photodocid="39962" fromphoto="1" style="margin: 0px; padding: 0px; border: 0px; height: 203px; width: 262px;"/></a></p></td><td> <p style="text-align:center;color: rgb(67, 67, 67); font-size: 14px;"><a href="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201605/W020160509504439090941.jpg" target="_blank" oldsrc="W020160509504439090941.jpg" _fcksavedurl="/webpic/W0201605/W020160509/W020160509504439090941.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(143, 0, 47); text-decoration: none; outline: none;"><img border="0" src="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201605/W020160509504389839012.jpg" width="300" height="198" ignore="1" _fcksavedurl="/webpic/W0201605/W020160509/W020160509504389839012.jpg" photodocid="39961" fromphoto="1" style="margin: 0px; padding: 0px; border: 0px; height: 195px; width: 296px;"/></a></p></td></tr></tbody></table><p><br/></p></p>
+                </div>
+                <div class="attach"></div>
+            </div>
+
+        </article>
+        <div id="footer">
+            <!--<a href="/index.aspx">
+                <img style="max-width: 100%; width: 100%; border: 0px;" src="/images/news_ad_1024_v1.jpg" alt="中央音乐学院资讯">
+            </a>-->
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" id="jiaThis" src="http://v3.jiathis.com/code/jia.js?uid=1365383547842139" charset="utf-8">
+</script>
+

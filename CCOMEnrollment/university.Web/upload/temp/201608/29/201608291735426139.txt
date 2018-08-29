@@ -1,0 +1,6 @@
+改了1,2,4,5
+
+
+"开始"->"程序"->Microsoft SQL Server 2008->配置工具->SQL Server配置管理器->SQL Server服务:
+
+只保留SQL Server(MSSQLSERVER)(正在运行)，其他的全部设为停止。

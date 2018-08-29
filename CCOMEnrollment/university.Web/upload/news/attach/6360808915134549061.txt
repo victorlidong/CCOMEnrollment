@@ -1,0 +1,8 @@
+链接：http://pan.baidu.com/s/1hs9B4Le 密码：nznn
+
+先下载代码运行起来
+
+数据库是（可以在sql server或Navicat Premium打开）universities和bitss为连接的数据库
+10.4.20.202
+sa
+quanquan@360

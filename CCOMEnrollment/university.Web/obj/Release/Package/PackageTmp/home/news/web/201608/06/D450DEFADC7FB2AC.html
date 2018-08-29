@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,user-scalable=no" name="viewport">
+    <title>北京理工大学华为俱乐部揭牌成立-圈圈校园资讯</title>
+    <!--    <link rel="stylesheet" href="../css/touch.css"> -->
+    <style type="text/css">
+        html, body {
+            height: 100%;
+        }
+
+        body, ul, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mainBody { /*background:#EFF0F4;*/
+            text-align: left; /*font-family:STHeiti,Arial;*/ /*font-family: "HiraginoSansGB W3";*/
+            font-family: "Helvetica";
+            /*padding:0  0.8em;*/
+            overflow-x: scroll;
+            overflow-y: hidden;
+            max-width: 1024px;
+            margin: 0 auto;
+            overflow-x: auto;
+            background: #fff;
+            min-height: 100%;
+            /*footer置底*/
+            position: relative; /*重要！保证footer是相对于wapper位置绝对*/
+            height: auto; /* 保证页面能撑开浏览器高度时显示正常*/
+            min-height: 100%; /* IE6不支持，IE6要单独配置*/
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+            a:visited {
+                color: #999;
+            }
+
+            a:hover {
+                color: #F5A70D;
+            }
+
+        .articleList {
+            overflow: hidden;
+            color: #000;
+            background: #fff;
+            display: none;
+            padding: 1.2em;
+            padding-bottom: 180px; /*重要！给footer预留的空间*/
+        }
+
+            .articleList h1 {
+                font-size: 1.2em;
+                margin: 0;
+            }
+
+            .articleList h2 {
+                color: #b9b9b9;
+                font-size: 0.8em;
+                font-weight: normal;
+            }
+
+            .articleList .text1 p {
+                margin: 0.1em 0;
+                text-indent: 2em;
+                line-height: 1.45em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 table p {
+                margin: 0.1em 0;
+                line-height: 1.45em;
+                text-indent: 0em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 img {
+                max-width: 60%;
+                clear: both;
+                display: block;
+                margin: auto;
+                border: 0px;
+            }
+
+        .ep-source {
+            color: #808080;
+            font-size: 0.8em;
+            padding-top: 0.2em;
+        }
+
+        .attach {
+            color: #808080;
+            font-size: 0.9em;
+            padding-top: 0.2em;
+        }
+
+            .attach .attachTitle {
+            }
+
+            .attach .attachItem {
+                background: url(/admin/images/icon_attach.png) no-repeat 3px 4px;
+                padding-left: 20px;
+                line-height: 20px;
+                vertical-align: middle;
+            }
+
+        .text1 {
+            /*overflow-x: auto;*/
+        }
+
+        /*img
+        {
+            width: 98%;
+            max-width: 600px;
+        }*/
+        .spanShare {
+            float: left;
+            padding: 5px 0 0;
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0; /* 关键 */
+            left: 0; /* IE下一定要记得 */
+            height: 130px; /* footer的高度一定要是固定值*/
+        }
+
+        a.view-link {
+            padding-left: 5px;
+            color: #018DFF;
+        }
+
+            a.view-link:hover {
+                color: #F5A70D;
+            }
+    </style>
+    <script type="text/javascript" src="/scripts/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+       
+
+        $(document).ready(function () {
+            var url = window.location.href;
+            //alert(url);
+            var start_index = url.lastIndexOf("/") + 1;
+            var end_index = url.lastIndexOf(".");
+            var id = url.substring(start_index, end_index);
+            //alert(id);
+            $.ajax({
+                type: "POST",
+                url: "/AdminMetro/CCOM/notification/GetNewsReadNum.ashx",
+                data: { "newsId": id },
+                success: function (data) {
+                    //alert(data);
+                    $("#readCnt").html(data);
+                },
+                error: function (data) {
+                    alert("请求数据出错");
+                }
+            });
+            //if ($(".text1").find("img").length == 0)
+            //{
+            //    $("<div style=\"display:none;\"><img src=\"/images/news_share.jpg\" alt=\"中央音乐学院\" /></div>").insertAfter($(".text"));
+            //}
+            //$(".applink").remove();
+            //$(".weblink").show();
+        });
+
+    </script>
+</head>
+<body style="background-color: #eee;">
+    <div class="mainBody">
+        <div style="border-bottom: 1px solid #666; padding: 17px;">
+            <a href="/AdminMetro/login_page.aspx">
+                <img src="/images/news_head.png" style="border: 0px;" alt="中央音乐学院资讯" />
+            </a>
+        </div>
+        <!-- banner top end -->
+        <article class="articleList" style="display: block;">
+            <div class="head clearfix">
+                <h1 class="title">北京理工大学华为俱乐部揭牌成立</h1>
+                <h2>
+                    <span class="time"><span>发布者：zqb</span>&nbsp;&nbsp;2016/8/6 14:21:00</span>
+                    &nbsp;&nbsp;<span>阅读量：<b id="readCnt">1</b></span>
+                </h2>
+            </div>
+            <!-- JiaThis Button BEGIN -->
+            <div id="bdshare" class="jiathis_style_24x24 ">
+                <span class="spanShare">分享：</span>
+                <a class="jiathis_button_qzone"></a>
+                <a class="jiathis_button_tsina"></a>
+                <a class="jiathis_button_tqq"></a>
+                <a class="jiathis_button_weixin"></a>
+                <a class="jiathis_button_renren"></a>
+                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+            </div>
+            <div style="clear: both;"></div>
+            <!-- JiaThis Button END -->
+            <div class="text clearfix">
+                <div class="text1">
+                    <p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal; text-align: center;"><img alt="" src="/ueditor1_4_2_utf8/net/upload/image/201608/6360609011824861562712259.jpg" style="margin: 0px; padding: 0px; border: none; height: 480px; width: 640px;"/><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px 0px 20px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;">　　2016年5月24日上午，北京理工大学华为俱乐部（以下简称华为俱乐部）成立揭牌仪式在体育馆南厅唯实报告厅举行。华为技术有限公司北京研究所所长田兴普、副所长张丽娟、人力资源部经理俞婷君，北京理工大学副校长王晓锋、招生就业工作处处长李振键、副处长林骥佳等出席了揭牌仪式。<br/>　　王晓锋首先发表了讲话，他指出华为与北京理工大学的合作由来已久，在科技创新、人才培养和学科建设方面都有着长期而稳定的校企合作关系。在校企双方共同的努力下，北京理工大学向华为输送了大批优秀毕业生，华为也成为了北京理工大学高端就业基地之一。华为俱乐部的成立标志着校企之间的合作迈出了更为关键的一步，希望双方在这样一个良好的平台上继续深化合作，共同将华为俱乐部办好，力争办出特色，达到实现学生自身价值和促进企业发展的双赢局面。<br/>　　田兴普随后发表了讲话，他指出北京理工大学与华为一直有着紧密的合作，为华为输送了大批优秀的毕业生，部分学生目前已经成长为华为技术和管理方面的中坚。希望华为俱乐部的成立能进一步促进校企双方的合作，通过这样一个平台有更多优秀的毕业生认识了解华为，加入华为的大家庭。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px 0px 20px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal; text-align: center;"><img alt="" src="/ueditor1_4_2_utf8/net/upload/image/201608/6360609011826063565941504.jpg" style="margin: 0px; padding: 0px; border: none; height: 480px; width: 640px;"/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px 0px 20px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><span style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px;">　　</span>李振键和张丽娟共同签署了华为俱乐部合作协议, 王晓锋和田兴普为华为俱乐部揭牌。</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px 0px 20px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal; text-align: center;"><img alt="" src="/ueditor1_4_2_utf8/net/upload/image/201608/6360609011827148195941504.jpg" style="margin: 0px; padding: 0px; border: none; height: 480px; width: 640px;"/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px 0px 20px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><span style="margin: 0px; padding: 0px;">　　</span>揭牌仪式后，张丽娟介绍了华为公司的基本情况及企业发展愿景。两位目前在华为工作的北理工校友方源和武志辉也来到现场，与同学们分享了在华为工作的心得体会。在分享结束后，针对同学们所关心的问题，两位校友以及华为公司的领导也做了耐心细致的回答。<br/>　　北京理工大学华为俱乐部的成立，架起了学生与学生、学生与企业之间沟通的桥梁，为我校学生提供了多元化的实践平台，将进一步推进校企“零距离”对接，实现校企的合作共赢。</p><p><br/></p></p>
+                </div>
+                <div class="attach"><p class='attachTitle'>附件：</p><p class='attachItem'>(1)&nbsp;<a href='/home/news/Attach.aspx?id=B47025B2DC6BA232&address=%2fupload%2fnews%2fattach%2f6360609016201986510.pdf&name=Java%e5%ae%9e%e9%aa%8c1.pdf' target='_blank' >Java实验1.pdf</a><a href='/AdminMetro/OnlineView/OnlineView.aspx?src=%2fupload%2fnews%2fattach%2f6360609016201986510.pdf&name=Java%e5%ae%9e%e9%aa%8c1.pdf' target='_blank' class='view-link'>[预览]</a></p></div>
+            </div>
+
+        </article>
+        <div id="footer">
+            <!--<a href="/index.aspx">
+                <img style="max-width: 100%; width: 100%; border: 0px;" src="/images/news_ad_1024_v1.jpg" alt="中央音乐学院资讯">
+            </a>-->
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" id="jiaThis" src="http://v3.jiathis.com/code/jia.js?uid=1365383547842139" charset="utf-8">
+</script>
+

@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html >
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,user-scalable=no" name="viewport">
+    <title>资讯提示</title>
+    <!--    <link rel="stylesheet" href="../css/touch.css"> -->
+    <style type="text/css">
+        body, ul, p
+        {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mainBody
+        { /*background:#EFF0F4;*/
+            text-align: left; /*font-family:STHeiti,Arial;*/ /*font-family: "HiraginoSansGB W3";*/
+            font-family: "Helvetica";
+            /*padding: 0.8em;*/
+            overflow-x: scroll;
+            max-width: 1024px; 
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+
+        a, a:visited
+        {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .articleList
+        {
+            overflow: hidden;
+            color: #000;
+            background: #fff;
+            display: none;
+             padding: 1.2em;
+        }
+
+        .articleList h1
+        {
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        .articleList h2
+        {
+            color: #b9b9b9;
+            font-size: 0.8em;
+            font-weight: normal;
+        }
+
+        .articleList .text1 p
+        {
+            margin: 0.1em 0;
+            line-height: 1.45em;
+            padding-top: 0.3em;
+            font-size: 1.0em;
+            font-weight: normal;
+            letter-spacing: 0.1em;
+            max-width: 100%;
+        }
+
+        .ep-source
+        {
+            color: #808080;
+            font-size: 0.8em;
+            padding-top: 0.2em;
+        }
+
+        .attach
+        {
+            color: #808080;
+            font-size: 0.9em;
+            padding-top: 0.2em;
+        }
+
+
+        .attach .attachItem
+        {
+            background: url(/admin/images/icon_attach.png) no-repeat 3px 4px;
+            padding-left: 20px;
+            line-height: 20px;
+            vertical-align: middle;
+        }
+
+        .text1
+        {
+            overflow-x: auto;
+            padding-left: 6em;
+        }
+    </style>
+   <script type="text/javascript" src="/scripts/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        var id;
+        function setting(s) {
+            $("#redirectSec").html(s);
+            s = parseInt(s) - 1;
+            if (s == 0) {
+                window.clearTimeout(id);
+                self.location = "/AdminMetro/login_page.aspx";
+            }
+            else {
+                id = setTimeout("setting('" + s + "')", 1000);
+            }
+        }
+        $(document).ready(function () {
+            //set title
+            var title = decodeURIComponent(getQueryString());
+            $("h1.title").html(title);
+            setting(15);
+        });
+        function getQueryString(name) {
+            var r = window.location.href.substring(window.location.href.indexOf("=")+1);
+            if (r != null)
+                return r;
+            return "";
+        }
+       
+    </script>
+</head>
+<body>
+    <div class="mainBody">
+        <div style="border-bottom:1px solid #666;padding:1em;"><img src="/images/news_head.png" style="width:153px;" alt="旺泉街道资讯" /></div>
+        <!-- banner top end -->
+        <article class="articleList" style="display: block;">
+            <div class="head clearfix">
+                <h1 class="title">titlexxx</h1>
+            </div>
+            <div class="text clearfix">
+                <div class="text1">
+                    <p style="border-bottom:1px solid gray;width:60%;padding-bottom:0.2em;margin-top:4em;color:red;">
+                        <img src="/images/hint.png" alt="提示" />&nbsp;<b>阅读提示：</b>
+                    </p>
+                    <p><b>新闻阅读权限不足！</b></p>
+                    <p>您可能没有登录Web系统</p>
+                    <p><b style="color:red;" id="redirectSec">15</b>秒后跳转至中央音乐学院首页...<a href="/AdminMetro/login_page.aspx" style="color:#3a9bd4">点击进入</a></p>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

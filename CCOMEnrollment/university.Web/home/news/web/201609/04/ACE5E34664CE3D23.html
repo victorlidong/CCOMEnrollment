@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,user-scalable=no" name="viewport">
+    <title>我校中提琴专业学生在俄罗斯第9届国际青年音乐家比赛中获奖-圈圈校园资讯</title>
+    <!--    <link rel="stylesheet" href="../css/touch.css"> -->
+    <style type="text/css">
+        html, body {
+            height: 100%;
+        }
+
+        body, ul, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mainBody { /*background:#EFF0F4;*/
+            text-align: left; /*font-family:STHeiti,Arial;*/ /*font-family: "HiraginoSansGB W3";*/
+            font-family: "Helvetica";
+            /*padding:0  0.8em;*/
+            overflow-x: scroll;
+            overflow-y: hidden;
+            max-width: 1024px;
+            margin: 0 auto;
+            overflow-x: auto;
+            background: #fff;
+            min-height: 100%;
+            /*footer置底*/
+            position: relative; /*重要！保证footer是相对于wapper位置绝对*/
+            height: auto; /* 保证页面能撑开浏览器高度时显示正常*/
+            min-height: 100%; /* IE6不支持，IE6要单独配置*/
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+            a:visited {
+                color: #999;
+            }
+
+            a:hover {
+                color: #F5A70D;
+            }
+
+        .articleList {
+            overflow: hidden;
+            color: #000;
+            background: #fff;
+            display: none;
+            padding: 1.2em;
+            padding-bottom: 180px; /*重要！给footer预留的空间*/
+        }
+
+            .articleList h1 {
+                font-size: 1.2em;
+                margin: 0;
+            }
+
+            .articleList h2 {
+                color: #b9b9b9;
+                font-size: 0.8em;
+                font-weight: normal;
+            }
+
+            .articleList .text1 p {
+                margin: 0.1em 0;
+                text-indent: 2em;
+                line-height: 1.45em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 table p {
+                margin: 0.1em 0;
+                line-height: 1.45em;
+                text-indent: 0em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 img {
+                max-width: 60%;
+                clear: both;
+                display: block;
+                margin: auto;
+                border: 0px;
+            }
+
+        .ep-source {
+            color: #808080;
+            font-size: 0.8em;
+            padding-top: 0.2em;
+        }
+
+        .attach {
+            color: #808080;
+            font-size: 0.9em;
+            padding-top: 0.2em;
+        }
+
+            .attach .attachTitle {
+            }
+
+            .attach .attachItem {
+                background: url(/admin/images/icon_attach.png) no-repeat 3px 4px;
+                padding-left: 20px;
+                line-height: 20px;
+                vertical-align: middle;
+            }
+
+        .text1 {
+            /*overflow-x: auto;*/
+        }
+
+        /*img
+        {
+            width: 98%;
+            max-width: 600px;
+        }*/
+        .spanShare {
+            float: left;
+            padding: 5px 0 0;
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0; /* 关键 */
+            left: 0; /* IE下一定要记得 */
+            height: 130px; /* footer的高度一定要是固定值*/
+        }
+
+        a.view-link {
+            padding-left: 5px;
+            color: #018DFF;
+        }
+
+            a.view-link:hover {
+                color: #F5A70D;
+            }
+    </style>
+    <script type="text/javascript" src="/scripts/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+       
+
+        $(document).ready(function () {
+            var url = window.location.href;
+            //alert(url);
+            var start_index = url.lastIndexOf("/") + 1;
+            var end_index = url.lastIndexOf(".");
+            var id = url.substring(start_index, end_index);
+            //alert(id);
+            $.ajax({
+                type: "POST",
+                url: "/AdminMetro/CCOM/notification/GetNewsReadNum.ashx",
+                data: { "newsId": id },
+                success: function (data) {
+                    //alert(data);
+                    $("#readCnt").html(data);
+                },
+                error: function (data) {
+                    alert("请求数据出错");
+                }
+            });
+            //if ($(".text1").find("img").length == 0)
+            //{
+            //    $("<div style=\"display:none;\"><img src=\"/images/news_share.jpg\" alt=\"中央音乐学院\" /></div>").insertAfter($(".text"));
+            //}
+            //$(".applink").remove();
+            //$(".weblink").show();
+        });
+
+    </script>
+</head>
+<body style="background-color: #eee;">
+    <div class="mainBody">
+        <div style="border-bottom: 1px solid #666; padding: 17px;">
+            <a href="/AdminMetro/login_page.aspx">
+                <img src="/images/login/logo4.png" style="border: 0px;" alt="中央音乐学院资讯" />
+            </a>
+        </div>
+        <!-- banner top end -->
+        <article class="articleList" style="display: block;">
+            <div class="head clearfix">
+                <h1 class="title">我校中提琴专业学生在俄罗斯第9届国际青年音乐家比赛中获奖</h1>
+                <h2>
+                    <span class="time"><span>发布者：中央音乐学院管理员</span>&nbsp;&nbsp;2016/9/4 13:34:00</span>
+                    &nbsp;&nbsp;<span>阅读量：<b id="readCnt">1</b></span>
+                </h2>
+            </div>
+            <!-- JiaThis Button BEGIN -->
+            <div id="bdshare" class="jiathis_style_24x24 ">
+                <span class="spanShare">分享：</span>
+                <a class="jiathis_button_qzone"></a>
+                <a class="jiathis_button_tsina"></a>
+                <a class="jiathis_button_tqq"></a>
+                <a class="jiathis_button_weixin"></a>
+                <a class="jiathis_button_renren"></a>
+                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+            </div>
+            <div style="clear: both;"></div>
+            <!-- JiaThis Button END -->
+            <div class="text clearfix">
+                <div class="text1">
+                    <p><p><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">作者：管弦系</span><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">来源：</span><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">发布日期：2016-04-19 17:13:00</span><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">本栏目内容由党委宣传部负责维护</span></p><p>　　</p><p style="text-align:left;">　　<span style="margin: 0px; padding: 0px; border: 0px;">2016</span>年4月1日-8日，由俄罗斯文化部主办，在符拉迪沃斯托克（Vladivostok）举办的2016第9届国际青年音乐家比赛中（The 9th International Coompetition of Young Musicians），我校管弦系中提琴学生宣懿珍获中提琴第二名；赵雯馨、赵帅获得中提琴并列第三名。指导教师王昌海教授获优秀教师奖。</p><p style="text-align:left;"> </p><p style="text-align:center;"><a href="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201604/W020160419620260633098.jpg" target="_blank" oldsrc="W020160419620260633098.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(143, 0, 47); text-decoration: none; outline: none;"><img border="0" src="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201604/W020160419620241163211.jpg" ignore="1" _fcksavedurl="/webpic/W0201604/W020160419/W020160419620241163211.jpg" fromphoto="1" photodocid="39622" style="margin: 0px; padding: 0px; border: 0px;"/></a> <a href="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201604/W020160419620260366272.jpg" target="_blank" oldsrc="W020160419620260366272.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"><img border="0" src="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201604/W020160419620240214397.jpg" ignore="1" _fcksavedurl="/webpic/W0201604/W020160419/W020160419620240214397.jpg" fromphoto="1" photodocid="39621" style="margin: 0px; padding: 0px; border: 0px;"/></a> <a href="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201604/W020160419620259190884.jpg" target="_blank" oldsrc="W020160419620259190884.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"><img border="0" src="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201604/W020160419620239377601.jpg" ignore="1" _fcksavedurl="/webpic/W0201604/W020160419/W020160419620239377601.jpg" fromphoto="1" photodocid="39620" style="margin: 0px; padding: 0px; border: 0px;"/></a> <a href="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201604/W020160419620258082625.jpg" target="_blank" oldsrc="W020160419620258082625.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"><img border="0" src="http://www.ccom.edu.cn/xwyhd/zxdt/2016s/201604/W020160419620238658655.jpg" ignore="1" _fcksavedurl="/webpic/W0201604/W020160419/W020160419620238658655.jpg" fromphoto="1" photodocid="39619" style="margin: 0px; padding: 0px; border: 0px;"/></a></p><p><br/></p></p>
+                </div>
+                <div class="attach"></div>
+            </div>
+
+        </article>
+        <div id="footer">
+            <!--<a href="/index.aspx">
+                <img style="max-width: 100%; width: 100%; border: 0px;" src="/images/news_ad_1024_v1.jpg" alt="中央音乐学院资讯">
+            </a>-->
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" id="jiaThis" src="http://v3.jiathis.com/code/jia.js?uid=1365383547842139" charset="utf-8">
+</script>
+

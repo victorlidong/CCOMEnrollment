@@ -1,0 +1,6 @@
+select * from ( select ROW_NUMBER() OVER (order by Sys_Universities_Info.UI_ID asc) Row,Sys_Universities_Region.UD_Name,Sys_Universities_Region.UR_MasterStation,Sys_Universities_Type.*,Sys_Universities_Province.UP_Name,Sys_Universities_Province.UP_FirstLetter,Sys_Universities_City.*,Sys_Universities_Info.* 
+FROM Sys_Universities_Region,Sys_Universities_Type,Sys_Universities_Province,Sys_Universities_City,Sys_Universities_Info
+            where  Sys_Universities_Info.UR_ID = Sys_Universities_Region.UR_ID
+             and  Sys_Universities_Info.UI_TypeID = Sys_Universities_Type.UT_ID
+             and  Sys_Universities_Info.UI_ProvinceID = Sys_Universities_Province.UP_ID
+             and  Sys_Universities_Info.UI_CityID = Sys_Universities_City.UC_ID) TT where Row between 1 and 4

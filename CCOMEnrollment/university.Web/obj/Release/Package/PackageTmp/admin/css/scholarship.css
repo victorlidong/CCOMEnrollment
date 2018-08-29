@@ -1,0 +1,93 @@
+﻿.table {
+    margin: 0 auto;
+    background: white;
+    text-align: center;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+    .table td {
+        border: 1px solid #e1e1e1;
+        /*border-top: 0px solid #e1e1e1;*/
+        vertical-align: middle;
+        white-space: nowrap;
+        word-break: keep-all;
+        height: 30px;
+        border-collapse: collapse;
+    }
+
+    .table th {
+        border: 1px solid #e1e1e1;
+        /*border-top: 0px solid #e1e1e1;*/
+        vertical-align: middle;
+        background-color: white;
+        white-space: nowrap;
+        word-break: keep-all;
+        height: 30px;
+        font-weight: bold;
+    }
+
+.header_table {
+    margin: 0 auto;
+    background: white;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+    .header_table td {
+        border: 0;
+        /*border-top: 0px solid #e1e1e1;*/
+        height: 25px;
+        border-collapse: collapse;
+        text-align: left;
+    }
+
+    .header_table th {
+        border: 0;
+        /*border-top: 0px solid #e1e1e1;*/
+        background-color: white;
+        height: 25px;
+        font-weight: bold;
+        text-align: right;
+    }
+
+.model_table {
+    background: white;
+    text-align: center;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+    .model_table td {
+        border: 1px solid #e1e1e1;
+        /*border-top: 0px solid #e1e1e1;*/
+        vertical-align: middle;
+        white-space: nowrap;
+        word-break: keep-all;
+        height: 30px;
+        border-collapse: collapse;
+    }
+
+    .model_table th {
+        border: 1px solid #e1e1e1;
+        /*border-top: 0px solid #e1e1e1;*/
+        vertical-align: middle;
+        background-color: white;
+        white-space: nowrap;
+        word-break: keep-all;
+        height: 30px;
+        font-weight: bold;
+    }
+
+
+    .apply_table{ width:100%; border:1px solid #EDECFF; font-family:Verdana, Geneva, sans-serif; }
+    .apply_table th{padding:5px 8px 5px 0;color:#333;font-weight:700;text-align:right;background:#ffffff;}
+	.apply_table td{padding:6px 0 5px 10px;text-align:left;color:#717171;line-height:200%}
+	.apply_table label{ margin-left:2px; padding:7px 0 0; font-family:"宋体"; }
+	.apply_table label.attr{color:#1d1d1d}
+	.apply_table label input{ margin-right:5px; vertical-align:middle;}
+	.apply_table span label{ margin:0; padding:0; }
+	.apply_table textarea{font-size:12px;padding:3px;color:#000;border:1px #d2d2d2 solid;vertical-align:middle; font-family:"微软雅黑";}
+	.apply_table textarea.small{ width:350px; height:75px;}
+	.apply_table textarea.big{ width:500px; height:350px;}
+	.apply_table img.operator{ width:12px; height:12px; margin:0 6px; cursor:pointer; vertical-align:bottom; }

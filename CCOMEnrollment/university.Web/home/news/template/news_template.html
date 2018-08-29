@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html >
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,user-scalable=no" name="viewport">
+    <title>旺泉街道资讯-titlexxx</title>
+    <!--    <link rel="stylesheet" href="../css/touch.css"> -->
+    <style type="text/css">
+        body, ul, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mainBody { /*background:#EFF0F4;*/
+            text-align: left; /*font-family:STHeiti,Arial;*/ /*font-family: "HiraginoSansGB W3";*/
+            font-family: "Helvetica";
+            /*padding: 0.8em;*/
+            overflow-x: scroll;
+            max-width: 1024px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        a:visited {
+            color: #999;
+        }
+        a:hover {
+             color: #F5A70D;
+        }
+        .articleList {
+            overflow: hidden;
+            color: #000;
+            background: #fff;
+            display: none;
+            padding: 1.2em;
+        }
+
+            .articleList h1 {
+                font-size: 1.2em;
+                margin: 0;
+            }
+
+            .articleList h2 {
+                color: #b9b9b9;
+                font-size: 0.8em;
+                font-weight: normal;
+            }
+
+            .articleList .text1 p {
+                margin: 0.1em 0 0.2em 0;
+                /*text-indent: 2em;*/
+                line-height: 1.45em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 table p {
+                margin: 0.1em 0;
+                line-height: 1.45em;
+                text-indent: 0em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 p img {
+                max-width: 100%;
+                clear: both;
+                display: block;
+                margin: auto;
+                border: 0px;
+            }
+
+        .ep-source {
+            color: #808080;
+            font-size: 0.8em;
+            padding-top: 0.2em;
+        }
+
+        .attach {
+            color: #808080;
+            font-size: 0.9em;
+            padding-top: 0.2em;
+        }
+
+            .attach .attachTitle {
+            }
+
+            .attach .attachItem {
+                background: url(/admin/images/icon_attach.png) no-repeat 3px 4px;
+                padding-left: 20px;
+                line-height: 20px;
+                vertical-align: middle;
+            }
+
+        .text1 {
+            overflow-x: auto;
+        }
+
+        img {
+            width: 98%;
+            max-width: 600px;
+        }
+
+        a.view-link {
+            padding-left: 5px;
+            color: #018DFF;
+        }
+
+            a.view-link:hover {
+                color: #F5A70D;
+            }
+    </style>
+    <script type="text/javascript" src="/scripts/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/metro/js/app-interact.js"></script>
+    <script type="text/javascript">
+        var ua = navigator.userAgent;
+        var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+            isIphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+            isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+            isMobile = isIphone || isAndroid;
+        if (!isMobile) {
+            location.href = location.href.replace("app", "web");
+        }
+        $(document).ready(function () {
+            var url = window.location.href;
+            var start_index = url.lastIndexOf("/") + 1;
+            var end_index = url.lastIndexOf(".");
+            var id = url.substring(start_index, end_index);
+            var t = url.substring(url.indexOf("=") + 1);
+            var submitUrl = "/admin/NewsApi/news_ajax.ashx?action=getNewsReadCnt&id=" + id + "&t=" + t;
+            //开始提交
+            $.ajax({
+                url: submitUrl,
+                success: function (data) {
+                    try {
+                        var resultJson = eval("(" + data + ")");
+                        if (resultJson.ErrCode == 200) {
+                            $("#readCnt").html(resultJson.ReadCnt);
+                        } else {
+                            self.location = "/home/news/template/news_redirect.html?t=" + encodeURIComponent($("h1.title").html());
+                        }
+                    } catch (e) {
+                        self.location = "/home/news/template/news_redirect.html?t=" + encodeURIComponent($("h1.title").html());
+                    }
+                },
+                error: function (data, status, e) {
+                    //alert("信息加载失败：" + e);
+                    self.location = "/home/news/template/news_redirect.html?t=" + encodeURIComponent($("h1.title").html());
+                },
+                cache: false
+            });
+            $(".text1").find("img").click(function () {
+                var selectd_obj = this;
+                var selectd_index = 0;
+                var imgUrls = [];
+                $(".text1").find("img").each(function (index, obj) {
+                    var imgUrl = $(obj).attr("src");
+                    if (imgUrl.substring(0, 1) == "/") {
+                        imgUrl = "http://www.quanquan6.com" + imgUrl;
+                    }
+                    imgUrls.push(imgUrl);
+                    if (obj == selectd_obj) {
+                        selectd_index = index;
+                    }
+                });
+                $("#hiddenimages").text('["' + imgUrls.join('","') + '"]');
+                window.location.href = "qqinapp://images.show?index=" + selectd_index;
+            });
+            if ($(".text1").find("img").length == 0) {
+                $("<div style=\"display:none;\"><img src=\"/images/news_share.jpg\" alt=\"圈圈校园资讯\" /></div>").insertAfter($(".text"));
+            }
+            $(".weblink").remove();
+            $(".applink").show();
+            if(QQ.token!=null)
+                $("#appDownload").remove();
+        });
+    </script>
+</head>
+<body>
+    <div class="mainBody">
+        <div style="border-bottom: 1px solid #666; padding: 0.8em; display: none;">
+            <img src="/images/news_head.png" style="width: 153px; border: 0px;" alt="圈圈校园资讯" />
+        </div>
+        <!-- banner top end -->
+        <article class="articleList" style="display: block;">
+            <div class="head clearfix">
+                <h1 class="title">titlexxx</h1>
+                <h2><span class="time">desxxx</span>
+                    &nbsp;&nbsp;<span>阅读量：<b id="readCnt">1</b></span> </h2>
+            </div>
+            <div class="text clearfix">
+                <div class="text1">
+                    <p>contentxxx</p>
+                </div>
+                <div class="attach">attachxxx</div>
+            </div>
+          <!--  <div style="display:none;">
+                  <img src="/images/logo.png" alt="圈圈校园资讯">
+            </div>-->
+        </article>
+    </div>
+    <div id="appDownload">
+        <a href="/index.aspx">
+            <img id="buttom_adimg" style="max-width: 100%; max-height: 240px; width: 100%; border: 0px;" src="/images/news_ad.jpg" alt="旺泉街道资讯">
+        </a>
+    </div>
+    <div id="hiddenimages" style="display: none">
+    </div>
+</body>
+</html>

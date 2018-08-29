@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{73A204AA-7805-4E9F-9C79-6D02989A03A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>university.BLL</RootNamespace>
+    <AssemblyName>university.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Nonshipping>true</Nonshipping>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CCOM\Achievement_degree.cs" />
+    <Compile Include="CCOM\Admin_agency.cs" />
+    <Compile Include="CCOM\Agency.cs" />
+    <Compile Include="CCOM\Certificate_type.cs" />
+    <Compile Include="CCOM\Comment.cs" />
+    <Compile Include="CCOM\Comput_score.cs" />
+    <Compile Include="CCOM\Datum.cs" />
+    <Compile Include="CCOM\Datum_type.cs" />
+    <Compile Include="CCOM\Degree.cs" />
+    <Compile Include="CCOM\Examination_AEE_score.cs" />
+    <Compile Include="CCOM\Examination_arrangement.cs" />
+    <Compile Include="CCOM\Examination_arrangement_detail.cs" />
+    <Compile Include="CCOM\Examination_CEE_score.cs" />
+    <Compile Include="CCOM\Examination_room.cs" />
+    <Compile Include="CCOM\Examination_subject.cs" />
+    <Compile Include="CCOM\Examination_subject_average_score.cs" />
+    <Compile Include="CCOM\Examination_subject_item.cs" />
+    <Compile Include="CCOM\Examination_subject_nature.cs" />
+    <Compile Include="CCOM\Examination_subject_score.cs" />
+    <Compile Include="CCOM\Examination_subject_value.cs" />
+    <Compile Include="CCOM\Exam_firstin_subject.cs" />
+    <Compile Include="CCOM\Exam_firstin_subject_score.cs" />
+    <Compile Include="CCOM\Exam_preliminary_subject.cs" />
+    <Compile Include="CCOM\Exam_preliminary_subject_score.cs" />
+    <Compile Include="CCOM\Family_member.cs" />
+    <Compile Include="CCOM\Father_function.cs" />
+    <Compile Include="CCOM\Form.cs" />
+    <Compile Include="CCOM\Form_review.cs" />
+    <Compile Include="CCOM\Form_value.cs" />
+    <Compile Include="CCOM\Fractional_line.cs" />
+    <Compile Include="CCOM\Homework.cs" />
+    <Compile Include="CCOM\Judge.cs" />
+    <Compile Include="CCOM\Major.cs" />
+    <Compile Include="CCOM\Mark_table.cs" />
+    <Compile Include="CCOM\Musical_instrument.cs" />
+    <Compile Include="CCOM\Nation.cs" />
+    <Compile Include="CCOM\Nationality.cs" />
+    <Compile Include="CCOM\News.cs" />
+    <Compile Include="CCOM\News_attach.cs" />
+    <Compile Include="CCOM\News_type.cs" />
+    <Compile Include="CCOM\Notice.cs" />
+    <Compile Include="CCOM\Notice_attach.cs" />
+    <Compile Include="CCOM\Notice_type.cs" />
+    <Compile Include="CCOM\Period.cs" />
+    <Compile Include="CCOM\Politics.cs" />
+    <Compile Include="CCOM\Proposal.cs" />
+    <Compile Include="CCOM\Province.cs" />
+    <Compile Include="CCOM\Reply_commission.cs" />
+    <Compile Include="CCOM\Reply_group.cs" />
+    <Compile Include="CCOM\Reply_student.cs" />
+    <Compile Include="CCOM\Role.cs" />
+    <Compile Include="CCOM\Role_permission.cs" />
+    <Compile Include="CCOM\SMS.cs" />
+    <Compile Include="CCOM\SMS_apply_record.cs" />
+    <Compile Include="CCOM\Software_accept.cs" />
+    <Compile Include="CCOM\Son_function.cs" />
+    <Compile Include="CCOM\Student.cs" />
+    <Compile Include="CCOM\Subject.cs" />
+    <Compile Include="CCOM\Teach_week.cs" />
+    <Compile Include="CCOM\Temp_record.cs" />
+    <Compile Include="CCOM\Title.cs" />
+    <Compile Include="CCOM\Topic.cs" />
+    <Compile Include="CCOM\Topic_relation.cs" />
+    <Compile Include="CCOM\Tracking_evaluation.cs" />
+    <Compile Include="CCOM\Transcript.cs" />
+    <Compile Include="CCOM\Tutor.cs" />
+    <Compile Include="CCOM\User_extra.cs" />
+    <Compile Include="CCOM\User_extra_value.cs" />
+    <Compile Include="CCOM\User_function_desktop.cs" />
+    <Compile Include="CCOM\User_information.cs" />
+    <Compile Include="CCOM\User_notice.cs" />
+    <Compile Include="CCOM\User_permission.cs" />
+    <Compile Include="CCOM\User_property.cs" />
+    <Compile Include="CCOM\User_sms.cs" />
+    <Compile Include="CCOM\User_subject_record.cs" />
+    <Compile Include="CCOM\User_subject_value.cs" />
+    <Compile Include="CCOM\View_Admin.cs" />
+    <Compile Include="CCOM\View_AEE_ManegeSubject.cs" />
+    <Compile Include="CCOM\View_AEE_Score.cs" />
+    <Compile Include="CCOM\View_AEE_Subject_Score.cs" />
+    <Compile Include="CCOM\View_Datum.cs" />
+    <Compile Include="CCOM\View_Desktop.cs" />
+    <Compile Include="CCOM\View_FirstIn_Score.cs" />
+    <Compile Include="CCOM\View_GetExaminee.cs" />
+    <Compile Include="CCOM\View_Major_Preliminary.cs" />
+    <Compile Include="CCOM\View_Mark_table.cs" />
+    <Compile Include="CCOM\View_Preliminary_Score.cs" />
+    <Compile Include="CCOM\View_Selete_Topic.cs" />
+    <Compile Include="CCOM\View_TotalScore.cs" />
+    <Compile Include="CCOM\View_User.cs" />
+    <Compile Include="CCOM\View_UserAgency.cs" />
+    <Compile Include="CCOM\View_User_CEE.cs" />
+    <Compile Include="CCOM\View_Weeklog.cs" />
+    <Compile Include="CCOM\Week_log.cs" />
+    <Compile Include="ServerControl1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="siteconfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\university.Common\university.Common.csproj">
+      <Project>{0362990a-0c6b-440b-a3f2-c58ce1a92a66}</Project>
+      <Name>university.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\university.DAL\university.DAL.csproj">
+      <Project>{75fe3148-a162-4f79-90ce-4c0595a22303}</Project>
+      <Name>university.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\university.Database\university.Database.csproj">
+      <Project>{828da3d9-8f60-4859-8b30-bc9b72781876}</Project>
+      <Name>university.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\university.Model\university.Model.csproj">
+      <Project>{00e27a2d-baca-4d2d-b303-ecffa09ffe7d}</Project>
+      <Name>university.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

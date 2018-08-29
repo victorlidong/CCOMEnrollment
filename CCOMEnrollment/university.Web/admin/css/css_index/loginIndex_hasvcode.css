@@ -1,0 +1,51 @@
+﻿/*.loginformIpt {
+        height: 35px;
+}
+
+.formIpt {
+    top: 7px;
+    height: 25px;
+    line-height: 25px;
+}*/
+
+
+/*.loginformIpt .ico{
+    top: 4px;
+}
+
+.ico-uname {
+    width: 35px;
+    height: 35px;
+}
+.ico-pwd {
+    width: 25px;
+    height: 25px;
+}*/
+.login_banner .inner_wrap .school_wrap {
+    top: 8px;
+}
+
+.login_banner .inner_wrap .stuno_wrap {
+    top: 12px;
+}
+
+.login_banner .inner_wrap .pwd_wrap {
+    top: 16px;
+}
+
+.login_banner .inner_wrap .vcodebtn_box {
+    top: 20px;
+}
+
+.login_banner .inner_wrap .fgreg_wrap {
+    margin-top: 2px;
+}
+
+.login_banner .inner_wrap .loginbutton_wrap {
+    margin-top: 4px;
+}
+
+.login_banner .inner_wrap .username_wrap {
+    top: 10px;
+    margin-top: 20px;
+}

@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{508E83D1-B1DB-4113-9966-DBEA6164C083}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>universty.UI</RootNamespace>
+    <AssemblyName>university.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Nonshipping>true</Nonshipping>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LitJSON">
+      <HintPath>..\university.Web\bin\LitJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\university.Web\bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HttpModule.cs" />
+    <Compile Include="ManagePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServerControl1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpLoad.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\university.BLL\university.BLL.csproj">
+      <Project>{73a204aa-7805-4e9f-9c79-6d02989a03a7}</Project>
+      <Name>university.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\university.Common\university.Common.csproj">
+      <Project>{0362990a-0c6b-440b-a3f2-c58ce1a92a66}</Project>
+      <Name>university.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\university.DAL\university.DAL.csproj">
+      <Project>{75fe3148-a162-4f79-90ce-4c0595a22303}</Project>
+      <Name>university.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\university.Model\university.Model.csproj">
+      <Project>{00e27a2d-baca-4d2d-b303-ecffa09ffe7d}</Project>
+      <Name>university.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\DiffieHellman.dll" />
+    <Content Include="bin\Debug\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\Debug\LitJSON.dll" />
+    <Content Include="bin\Debug\log4net.dll" />
+    <Content Include="bin\Debug\Microsoft.Office.Interop.Word.dll" />
+    <Content Include="bin\Debug\Microsoft.Vbe.Interop.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\Debug\office.dll" />
+    <Content Include="bin\Debug\Org.Mentalis.Security.dll" />
+    <Content Include="bin\Debug\Qiniu.4.0.dll" />
+    <Content Include="bin\Debug\Tamir.SharpSSH.dll" />
+    <Content Include="bin\Debug\ThoughtWorks.QRCode.dll" />
+    <Content Include="bin\Debug\university.BLL.dll" />
+    <Content Include="bin\Debug\university.BLL.pdb" />
+    <Content Include="bin\Debug\university.Common.dll" />
+    <Content Include="bin\Debug\university.Common.pdb" />
+    <Content Include="bin\Debug\university.DAL.dll" />
+    <Content Include="bin\Debug\university.DAL.pdb" />
+    <Content Include="bin\Debug\university.Database.dll" />
+    <Content Include="bin\Debug\university.Database.pdb" />
+    <Content Include="bin\Debug\university.Model.dll" />
+    <Content Include="bin\Debug\university.Model.pdb" />
+    <Content Include="bin\Debug\university.UI.dll" />
+    <Content Include="bin\Debug\university.UI.pdb" />
+    <Content Include="bin\Debug\universty.UI.dll" />
+    <Content Include="bin\Debug\universty.UI.pdb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

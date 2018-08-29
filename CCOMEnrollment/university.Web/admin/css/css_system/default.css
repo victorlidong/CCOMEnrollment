@@ -1,0 +1,24 @@
+﻿/*机构、权限弹出层*/
+#ddlOrgan,#ddlAddParentID,#ddlEditSelect,#ddlEditSelect,#ManageOrg_show,#rblRightList {
+    float:left;
+}
+.ddlForm {
+    background-color:#8cd1eb;
+    margin-left:15px;
+    padding:0.5px 15px;
+    cursor:pointer;
+    line-height:20px;
+    height:20px;
+    text-align:center;
+    display:inline-block;
+    float:left;
+}
+
+/*table样式*/
+.form_table tr{
+    height:45px;
+}
+/*placeholder搜索框*/
+.txtInput {
+    width:228px;
+}

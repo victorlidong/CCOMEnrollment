@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,user-scalable=no" name="viewport">
+    <title>中粮期货-圈圈校园资讯</title>
+    <!--    <link rel="stylesheet" href="../css/touch.css"> -->
+    <style type="text/css">
+        html, body {
+            height: 100%;
+        }
+
+        body, ul, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mainBody { /*background:#EFF0F4;*/
+            text-align: left; /*font-family:STHeiti,Arial;*/ /*font-family: "HiraginoSansGB W3";*/
+            font-family: "Helvetica";
+            /*padding:0  0.8em;*/
+            overflow-x: scroll;
+            overflow-y: hidden;
+            max-width: 1024px;
+            margin: 0 auto;
+            overflow-x: auto;
+            background: #fff;
+            min-height: 100%;
+            /*footer置底*/
+            position: relative; /*重要！保证footer是相对于wapper位置绝对*/
+            height: auto; /* 保证页面能撑开浏览器高度时显示正常*/
+            min-height: 100%; /* IE6不支持，IE6要单独配置*/
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+            a:visited {
+                color: #999;
+            }
+
+            a:hover {
+                color: #F5A70D;
+            }
+
+        .articleList {
+            overflow: hidden;
+            color: #000;
+            background: #fff;
+            display: none;
+            padding: 1.2em;
+            padding-bottom: 180px; /*重要！给footer预留的空间*/
+        }
+
+            .articleList h1 {
+                font-size: 1.2em;
+                margin: 0;
+            }
+
+            .articleList h2 {
+                color: #b9b9b9;
+                font-size: 0.8em;
+                font-weight: normal;
+            }
+
+            .articleList .text1 p {
+                margin: 0.1em 0;
+                text-indent: 2em;
+                line-height: 1.45em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 table p {
+                margin: 0.1em 0;
+                line-height: 1.45em;
+                text-indent: 0em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 img {
+                max-width: 60%;
+                clear: both;
+                display: block;
+                margin: auto;
+                border: 0px;
+            }
+
+        .ep-source {
+            color: #808080;
+            font-size: 0.8em;
+            padding-top: 0.2em;
+        }
+
+        .attach {
+            color: #808080;
+            font-size: 0.9em;
+            padding-top: 0.2em;
+        }
+
+            .attach .attachTitle {
+            }
+
+            .attach .attachItem {
+                background: url(/admin/images/icon_attach.png) no-repeat 3px 4px;
+                padding-left: 20px;
+                line-height: 20px;
+                vertical-align: middle;
+            }
+
+        .text1 {
+            /*overflow-x: auto;*/
+        }
+
+        /*img
+        {
+            width: 98%;
+            max-width: 600px;
+        }*/
+        .spanShare {
+            float: left;
+            padding: 5px 0 0;
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0; /* 关键 */
+            left: 0; /* IE下一定要记得 */
+            height: 130px; /* footer的高度一定要是固定值*/
+        }
+
+        a.view-link {
+            padding-left: 5px;
+            color: #018DFF;
+        }
+
+            a.view-link:hover {
+                color: #F5A70D;
+            }
+    </style>
+    <script type="text/javascript" src="/scripts/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+       
+
+        $(document).ready(function () {
+            var url = window.location.href;
+            //alert(url);
+            var start_index = url.lastIndexOf("/") + 1;
+            var end_index = url.lastIndexOf(".");
+            var id = url.substring(start_index, end_index);
+            //alert(id);
+            $.ajax({
+                type: "POST",
+                url: "/AdminMetro/CCOM/notification/GetNewsReadNum.ashx",
+                data: { "newsId": id },
+                success: function (data) {
+                    //alert(data);
+                    $("#readCnt").html(data);
+                },
+                error: function (data) {
+                    alert("请求数据出错");
+                }
+            });
+            //if ($(".text1").find("img").length == 0)
+            //{
+            //    $("<div style=\"display:none;\"><img src=\"/images/news_share.jpg\" alt=\"中央音乐学院\" /></div>").insertAfter($(".text"));
+            //}
+            //$(".applink").remove();
+            //$(".weblink").show();
+        });
+
+    </script>
+</head>
+<body style="background-color: #eee;">
+    <div class="mainBody">
+        <div style="border-bottom: 1px solid #666; padding: 17px;">
+            <a href="/AdminMetro/login_page.aspx">
+                <img src="/images/login/logo4.png" style="border: 0px;" alt="中央音乐学院资讯" />
+            </a>
+        </div>
+        <!-- banner top end -->
+        <article class="articleList" style="display: block;">
+            <div class="head clearfix">
+                <h1 class="title">中粮期货</h1>
+                <h2>
+                    <span class="time"><span>发布者：zqb</span>&nbsp;&nbsp;2016/8/8 20:56:00</span>
+                    &nbsp;&nbsp;<span>阅读量：<b id="readCnt">1</b></span>
+                </h2>
+            </div>
+            <!-- JiaThis Button BEGIN -->
+            <div id="bdshare" class="jiathis_style_24x24 ">
+                <span class="spanShare">分享：</span>
+                <a class="jiathis_button_qzone"></a>
+                <a class="jiathis_button_tsina"></a>
+                <a class="jiathis_button_tqq"></a>
+                <a class="jiathis_button_weixin"></a>
+                <a class="jiathis_button_renren"></a>
+                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+            </div>
+            <div style="clear: both;"></div>
+            <!-- JiaThis Button END -->
+            <div class="text clearfix">
+                <div class="text1">
+                    <p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal;text-align: center"><span style=";padding: 0px;font-size: 29px;font-family: 华文仿宋">招聘启事</span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;white-space: normal;text-indent: 38px;line-height: 21px"><span style=";padding: 0px;font-size: 19px;line-height: 28.5px;font-family: 华文仿宋">中粮期货成立于96年，注册资金8.5个亿, 拥有经纪；投资咨询；资产管理资质，三家期货交易所的全权会员资格，公司评级AA级，是目前期货行业顶级公司之一。大股东中粮集团（COFCO）是中国领先的农产品、食品领域多元化产品和服务供应商，主营业务包括：农产品贸易与加工、地产与酒店经营、金融服务等。中粮集团拥有中国食品（HK 0506）、中粮控股（HK 0606）、蒙牛乳业（HK2319）、中粮包装（HK 0906）4家香港上市公司，中粮屯河（600737）、中粮地产（000031）和丰原生化（000930）3家内地上市公司。2014年，中粮并购国际农产品及大宗商品贸易集团Nidera和来宝农业，成为一家全球布局的国际化粮油企业。凭借其良好的经营业绩，中粮持续名列美国《财富》杂志全球企业500强，居中国食品工业百强之首</span><span style=";padding: 0px;font-family: 宋体">。</span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal;text-indent: 37px"><span style=";padding: 0px;font-size: 19px;font-family: 华文仿宋">现因公司业务发展需要，面向社会诚聘互联网营销专员。愿您的加入给我们带来新的活力，我们也将为您提供广阔的发展空间！</span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal;text-indent: 37px"><span style=";padding: 0px;font-size: 19px;font-family: 华文仿宋">本次招聘为总部交易部互联网营销专员岗，优秀者在通过试用期后将被录用为正式员工。</span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">岗位职责：</span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">1</span><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">、微信公众平台功能开发和运营；</span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">2</span><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">、在和讯、新浪财经等线上推广平台发布宣传推广文案；</span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">3</span><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">、利用微博、微信、网站及各种营销策略提升公司产品知名度；</span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">4</span><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">、定期分析运营数据并反馈，对宣传文案进行优化调整。</span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋"> </span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">名额：1-2名</span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋"> </span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">岗位要求：</span></p><p class="MsoListParagraph" style="margin-left: 48px;padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">1、<span style=";padding: 0px;font-stretch: normal;font-size: 9px;font-family: 'Times New Roman'">    </span></span><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">金融、计算机、市场营销及相关专业；</span></p><p class="MsoListParagraph" style="margin-left: 48px;padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">2、<span style=";padding: 0px;font-stretch: normal;font-size: 9px;font-family: 'Times New Roman'">    </span></span><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">对新媒体感兴趣，能够准确把握互联网热点事件；</span></p><p class="MsoListParagraph" style="margin-left: 48px;padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">3、<span style=";padding: 0px;font-stretch: normal;font-size: 9px;font-family: 'Times New Roman'">    </span></span><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">热爱期货行业，有期货从业资格者优先；</span></p><p class="MsoListParagraph" style="margin-left: 48px;padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">4、<span style=";padding: 0px;font-stretch: normal;font-size: 9px;font-family: 'Times New Roman'">    </span></span><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">参与过学校微博协会，微信协会等社团者优先；</span></p><p class="MsoListParagraph" style="margin-left: 48px;padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">5、<span style=";padding: 0px;font-stretch: normal;font-size: 9px;font-family: 'Times New Roman'">    </span></span><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">有一定的文字功底；</span></p><p class="MsoListParagraph" style="margin-left: 48px;padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">6、<span style=";padding: 0px;font-stretch: normal;font-size: 9px;font-family: 'Times New Roman'">    </span></span><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">具有良好的沟通协调能力和团队合作精神。</span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋"> </span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">联系人：徐炳轩</span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">电话：010-59136922</span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">邮箱地址：874342870@qq.com</span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 仿宋">注：投递邮箱时请注明“实习生”</span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 华文仿宋"> </span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal;text-indent: 373px"><span style=";padding: 0px;font-size: 19px;font-family: 华文仿宋"> </span></p><p style="padding: 0px;font-size: 14px;font-family: 宋体, arial, tahoma;line-height: 24px;white-space: normal"><span style=";padding: 0px;font-size: 19px;font-family: 华文仿宋">中粮期货有限公司</span></p><p><br/></p></p>
+                </div>
+                <div class="attach"></div>
+            </div>
+
+        </article>
+        <div id="footer">
+            <!--<a href="/index.aspx">
+                <img style="max-width: 100%; width: 100%; border: 0px;" src="/images/news_ad_1024_v1.jpg" alt="中央音乐学院资讯">
+            </a>-->
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" id="jiaThis" src="http://v3.jiathis.com/code/jia.js?uid=1365383547842139" charset="utf-8">
+</script>
+

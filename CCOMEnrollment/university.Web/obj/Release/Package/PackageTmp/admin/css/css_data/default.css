@@ -1,0 +1,233 @@
+#contentTab {
+    font-family:'Microsoft YaHei';
+    padding-top:10px;
+}
+h1, h2, h3, h4, h5 {
+    font-family:'Microsoft YaHei';
+}
+/*切换目录的选项卡*/
+#contentTab ul {
+    width:1024px;
+    height:50px;
+    padding:0;
+    margin:0 auto;
+    overflow:hidden;
+    border-left:1px solid #dcdcdc;
+    border-right:1px solid #dcdcdc;
+}
+    #contentTab ul li {
+        width:204px;
+        height:50px;
+        font-size:16px;
+        line-height:50px;
+        text-align:center;
+        list-style:none;
+        float:left;
+        padding:0;
+        margin:0;
+        background-color:#EEE;
+        border-right:1px solid #FFF;
+        cursor:pointer;
+    }
+        #contentTab ul li:last-child {
+            border-right:0;
+        }
+    #contentTab ul .liselected {
+        height:48px;
+        background-color:#FFF;
+        border-top:2px solid #8d8d8d;
+    }
+/*个人基本信息*/
+.basic_info {
+    width:994px;
+    height:auto;
+    min-height:100px;
+    margin:0 auto 10px auto;
+    padding:10px 15px;
+    border:1px solid #DCDCDC;
+}
+    .basic_info .basic_info_face {
+        width: 108px;
+        height: 144px;
+        margin-right:20px;
+        float:left;
+    }
+        .basic_info .basic_info_face img {
+            width: 108px;
+            height: 144px;
+            outline: 0;
+            border: 0;
+        }
+    .basic_info .basic_info_intro {
+        width:866px;
+        height:auto;
+        min-height:144px;
+        float:left;
+    }
+
+.basic_info_intro_loginname {
+    margin-top: 10px;
+    font-size: 24px;
+}
+.basic_info_intro_info {
+    margin-top: 10px;
+    font-size: 16px;
+}
+    .basic_info_intro_info #lblIntroInfo span {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+.basic_info_intro_personal {
+    margin-top:10px;
+    border-top:1px solid #f0f0f0;
+    padding-top:8px;
+    font-size:14px;
+    color:#999;
+}
+.basic_info_intro_integral {
+    margin-top:15px;
+}
+    .basic_info_intro_integral span {
+        float:left;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .basic_info_intro_integral .piespan {
+        margin: 0 10px;
+        font-weight:normal;
+    }
+    .basic_info_intro_integral span:first-child {
+        margin-right:3px;
+    }
+    .basic_info_intro_integral img {
+        width:auto;
+        height:17px;
+        border:0;
+        outline:0;
+        float:left;
+        margin-top:1px;
+    }
+/*详细信息*/
+.info_detail {
+    width:994px;
+    min-height:100px;
+    padding:10px 15px;
+    margin:0 auto;
+    border-left:1px solid #DCDCDC;
+    border-right:1px solid #DCDCDC;
+    border-bottom:1px solid #DCDCDC;
+}
+    .info_detail h3 {
+        font-size:16px;
+        color:#333;
+        font-weight:normal;
+    }
+    .info_detail table {
+        width:85%;
+        font-size:14px;
+        margin:0 0 0 3%;
+        border:0;
+    }
+        .info_detail table td {
+            padding-bottom:20px;
+            width:36%;
+        }
+        .info_detail table tr td:first-child {
+            width:28%;
+        }
+    .info_detail .detail_quare {
+        height:auto;
+        width:100%;
+        border-bottom:1px solid #F0F0F0;
+    }
+.info_detail_nature, .info_detail_organ, .info_detail_declare, .info_detail_score, .info_detail_log {
+    width:100%;
+    min-height:100px;
+}
+.info_detail_organ, .info_detail_declare, .info_detail_score, .info_detail_log {
+    display:none;
+}
+/*-----自然属性------*/
+.info_detail_nature .infobasic {
+    padding-bottom:20px;
+}
+/*-----在校关系------*/
+.detail_quare div{
+    font-size:14px;
+    margin: 0 0 0 3%;
+    padding-bottom: 20px;
+}
+    .detail_quare div span {
+        display: inline-block;
+        margin: 0px 50px 0px 0px;
+        font-weight:bolder;
+        color:#999;
+    }
+    .detail_quare div .ciname {
+        width:200px;
+        margin:0;
+        font-weight:normal;
+        color:#414141;
+    }
+    .detail_quare div .cimobile {
+        width:400px;
+        margin:0;
+        text-align:left;
+        font-weight:normal;
+        color:#414141;
+    }
+/*-----学籍变化情况------*/
+.info_detail .changetable {
+    margin-bottom:20px;
+}
+.info_detail .changetable th{
+    text-align:center;
+    border:1px solid #D0D0D0;
+    padding:5px 0;
+}
+.info_detail .changetable td,.info_detail .changetable td:first-child{
+    clear:both;
+    width:15%;
+    text-align:center;
+    border:1px solid #D0D0D0;
+    padding:10px 0;
+}
+    .info_detail .changetable td:last-child {
+        width:40%;
+    }
+/*-----家庭信息------*/
+.info_detail .hometable {
+    margin-bottom:20px;
+}
+.info_detail .hometable th{
+    text-align:center;
+    border:1px solid #D0D0D0;
+    padding:5px 0;
+}
+.info_detail .hometable td,.info_detail .hometable td:first-child{
+    clear:both;
+    width:20%;
+    text-align:center;
+    border:1px solid #D0D0D0;
+    padding:10px 0;
+}
+    .info_detail .hometable td:last-child {
+        width:40%;
+    }
+
+/*.info_detail_nature {
+    background-color:#F00;
+}
+.info_detail_organ {
+    background-color:#FF0;
+}
+.info_detail_declare {
+    background-color:#F0F;
+}
+.info_detail_score {
+    background-color:#000;
+}
+.info_detail_log {
+    background-color:#00F;
+}*/

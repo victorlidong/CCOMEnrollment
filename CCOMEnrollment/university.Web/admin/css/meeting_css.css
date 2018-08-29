@@ -1,0 +1,116 @@
+@charset "gb2312";
+ body
+         {
+            background: white;
+            font: normal 12px/160% Tahoma,sans-serif;
+        }
+
+td,div,input,textarea,select,h1,h2,h3,h4,h5{font:normal 12px/160% tahoma,verdana,sans-serif;}
+p,form,h1,h2,h3,h4,h5,ul,ol{margin:0;padding:0;}
+p{line-height:normal;margin-bottom:2px;}
+li{ list-style:none;}
+blockquote{margin-right:0px;margin-top:0px;margin-bottom:0px;}
+br{font:normal 1px/10px 'ËÎÌו',sans-serif;}
+input,textarea,select{border:1px solid #84B9DC;background:#FFF; font:normal 12px/20px Tahoma,sans-serif;height:20px;padding:0px 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+a{ color:#07588E;}
+.bt_content {
+	FONT-SIZE: 14px; font-family: "ËÎÌו"; line-height: 24pt; letter-spacing: 1px 
+}
+a:hover{ color:#008000;}
+a,a:hover{ text-decoration:none;}
+.input1,.input2{margin:5px;height:19px;font:normal 12px/18px Tahoma,sans-serif;}
+.input1{margin:5px;background-color:#FFFBE6;border:1px solid #F5D298; color:#AC4E0F;}
+.input2{margin:5px;background-color:#EEE;border-bottom:#FFF 1px solid;border-left:#CCC 1px solid;border-right:1px solid #FFF;border-top:#CCC 1px solid;}
+.button{font:normal 12px/16px Tahoma,sans-serif;border-left:1px solid #EFEFEF;border-top:1px solid #EFEFEF;border-bottom:1px solid #BBB;border-right:1px solid #BBB;background:#E7E7E7;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.smallbox{margin:5px;border:none;background:none;}
+.smallbox input{margin:5px;border:none;background:none;}
+.an input{margin:5px;vertical-align:middle;}
+.img{border:0px;}
+
+.left{ float:left;}
+.right{ float:right;}
+
+#outside{ clear:both; width:976px; margin:auto}
+
+#header{ clear:both; width:976px; height:90px;}
+#header .logo_left{ float:left; width:300px; height:90px; background:url(../images/webImage/left_logo.gif) no-repeat left 15px;}
+#header .logo_right{ float:right; width:200px; height:90px; background:url(../images/webImage/right_logo.gif) no-repeat right;}
+
+#topmenu{ clear:both; width:976px; height:37px;}
+#topmenu .topmenu_left{ float:left; width:176px; height:37px; background:url(../images/webImage/left_top.gif) no-repeat;}
+#topmenu .topmenu_right{ float:left; width:800px; height:37px;}
+
+.mainbg{ float:left; width:100%; height:380px; background:url(../images/webImage/main.jpg) no-repeat center}
+
+#txt{ float:left; width:976px; background:url(../images/webImage/txtbg.gif) repeat-y;}
+#left{ float:left; width:176px;}
+#right{ float:left; width:800px;}
+#all{ margin:4px; padding:4px; font-size:12px; }
+
+.grid{clear:both; border-left:0px solid #A4D5F0; border-top:0px solid #A4D5F0; border-right:0px solid #FFF; border-bottom:0px solid #FFF;border-collapse:separate;font:normal 12px/160% Tahoma,sans-serif; }
+
+.inner{clear:both;width:98%;border-collapse:separate; padding:1px;border:1px #A4D5F0 solid;border-collapse:collapse;overflow:hidden;text-align:left; background:#F0F8FF;}
+.category{ color:#AC4E0F; background:url(../../Style/Images/WebImage/welcome_03.jpg); font-weight:bold; }
+.forumtdt{border:0px solid ; padding-left:5px;}
+.forumtd,.forumtd td{
+padding-left:5px; height:25px;
+border-bottom:1px;
+ border-left:1px  #A4D5F0 solid;
+ border-right:0px;
+ border-top:1px #A4D5F0 solid; 
+}
+	.forumtd1,.forumtd1 td{border:1px solid ; padding-left:5px; color:#102683;font-weight:bold;
+}
+.forumtdn,.forumtdn td{padding-left:5px; height:25px;border-bottom:1px; border-left:1px  #A4D5F0 solid;border-right:0px;border-top:1px #A4D5F0 solid;}
+
+
+.forumno,.forumno td{border:0px; height:25px;padding-left:5px;font-weight:bold;}
+.fno,.fno td{border-top:none; padding:1px;}
+
+.t1{ color:#666; font:normal 12px/160% Tahoma,sans-serif;}
+
+
+#right_menu{ float:left; width:704px; height:36px; border-bottom:1px solid #FFF;}
+#right_menu li,#right_menu li a{ float:left; height:36px; line-height:36px; font-size:14px; color:#FFF;}
+#right_menu li a{ padding:0 10px; border-right:1px solid #445C70; background:url(../images/webImage/menubg_2.gif) repeat-x;}
+#right_menu li a:hover{ color:#FFF; border-right:1px solid #DCECF8; background:url(../images/webImage/menubg_3.gif) repeat-x;}
+.main a{ float:left; width:96px; height:37px; line-height:37px; text-align:center; font-size:14px; color:#327099; background:url(../images/webImage/menubg_1.gif) no-repeat;}
+.main a:hover{ color:#000;}
+
+.left_ul{ float:left; width:166px; padding:5px;}
+.left_ul li,.left_ul li a{ float:left; width:155px; font-size:14px; color:#333; padding-left:5px; height:28px; line-height:28px; margin-bottom:1px;}
+.left_ul li a:hover{}
+
+#user{ width:162px; margin:auto; padding-top:10px; margin-bottom:5px;}
+#user li{ float:left; width:162px; height:24px;}
+
+#menu,#user{ width:162px; margin:auto; margin-bottom:5px;}
+#menu img{ vertical-align:middle;}
+#menu a.title:link,#menu a.title:visited,#menu a.title2:link,#menu a.title2:visited{display:block;padding:5px 0 0 10px;}
+#menu a.title:link,#menu a.title:visited{color:#327099; font-weight:bold; height:22px; background:url(../images/webImage/menubg_4.gif) no-repeat;}
+#menu a.title:hover{ color:#62A2CC; background-position:left -27px;}
+#menu .item ul {display:none; padding-top:3px;}
+#menu .item { margin:0 auto 2px auto;}
+#menu .item ul,#menu .item{ width:162px; float:left;}
+#menu .item ul li {height:27px;line-height:24px;float:left;}
+#menu .item ul li a{ border:1px solid #D1EEFC; background:#F7FCFF;}
+#menu .item ul li a:hover{color:#555; border:1px solid #CCC; background:#F7F7F7;}
+.itemselected{ color:#AC4E0F!important; border:1px solid #F5D298!important; background:#FFFBE6!important;}
+#menu .item ul li a,#menu .item ul li a:hover,.itemselected{float:left;width:150px;padding-left:10px; margin-bottom:1px;}
+
+.pager{float:right;border:1px solid #A4D5F0;padding:1px;margin-top:2px;background:#FFF;}
+.pager a,.pager span{background:#DFF1FF;}
+.pager a,.pager b,.num,.pager span{padding:0 5px;line-height:19px;font-size:11px;margin-right:1px;float:left;}
+.pager input{width:30px;float:left;height:17px;line-height:16px;}
+.pager a:hover{background:#8CBDEF;color:#FFF;}
+.num{float:left;color:#FFF;font-weight:bold;background:#8CBDEF!important;}
+
+.footer{ font-size:10px;color:#8CBDEF;}

@@ -1,0 +1,27 @@
+﻿/**********add_stu3*************/
+.adduser {
+    width:200px;
+    font-size:16px;
+    margin:20px auto;
+    padding:10px;
+    background-color:#8CD1EB;
+}
+#send {
+    height: 80px;
+    margin-top: 20px;
+}
+#send span:first-child {
+    float:left;
+    height: 70px;
+}
+#CheckSend {
+    height: 16px;
+    width: 16px;
+}
+#txtSendMessage {
+    outline:none;
+}
+.checkall label {
+    margin-right:20px;
+    font-size:15px;
+}

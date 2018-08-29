@@ -1,0 +1,55 @@
+﻿
+body, html {
+    font-family: "hiragino sans gb w3";
+    margin: 0 auto;
+    padding: 0;
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+img {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+#content {
+    width: 100%;
+}
+
+.container {
+    margin: 16px;
+}
+
+/********v3 intro page css************/
+.title {
+    margin-top: 0.8em;
+    margin-bottom: 0.1em;
+    font-size: 1.2em;
+}
+
+.content {
+
+}
+
+.div-text {
+    color: #999;
+    margin: 0.1em 0 0.2em 0;
+    /*text-indent: 2em;*/
+    line-height: 1.45em;
+    padding-top: 0.3em;
+    font-size: 1.0em;
+    font-weight: normal;
+    /*letter-spacing: 0.1em;*/
+    max-width: 100%;
+}
+
+.div-img {
+    margin: 1.0em auto;
+}

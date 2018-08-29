@@ -1,0 +1,23 @@
+$.ajax({
+                type: "GET",
+                url: "../StudentApply/UpdateUserInfor.ashx",
+                data: {
+                    fun: 'SubmitWeekly',
+                    Action: '<%this.action.ToString();%>',
+                    StartTime: $("#txtStarttime").val(),
+                    EndTime: $("#txtEndtime").val(),
+                    State: $("#rblState").val(),
+                    Types: $("#txtAddName").val(),
+                    WeekID: '<%=DESEncrypt.Encrypt(this.datumId.ToString()) %>',
+                },
+                success: function (data) {
+                    console.log(action);
+                    if (data['code'] == 0) {
+                        parent.jsprint(data["msg"], "", "Error", "");
+                        location.reload();
+                    } else {
+                        parent.jsprint(data["msg"], "", "Success", "");
+                        location.reload();
+                    }
+                }
+            });

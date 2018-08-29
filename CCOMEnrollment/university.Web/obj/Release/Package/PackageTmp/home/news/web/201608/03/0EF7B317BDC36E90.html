@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,user-scalable=no" name="viewport">
+    <title>往届毕业生领取改派报到证、户口更改函通知-圈圈校园资讯</title>
+    <!--    <link rel="stylesheet" href="../css/touch.css"> -->
+    <style type="text/css">
+        html, body {
+            height: 100%;
+        }
+
+        body, ul, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mainBody { /*background:#EFF0F4;*/
+            text-align: left; /*font-family:STHeiti,Arial;*/ /*font-family: "HiraginoSansGB W3";*/
+            font-family: "Helvetica";
+            /*padding:0  0.8em;*/
+            overflow-x: scroll;
+            overflow-y: hidden;
+            max-width: 1024px;
+            margin: 0 auto;
+            overflow-x: auto;
+            background: #fff;
+            min-height: 100%;
+            /*footer置底*/
+            position: relative; /*重要！保证footer是相对于wapper位置绝对*/
+            height: auto; /* 保证页面能撑开浏览器高度时显示正常*/
+            min-height: 100%; /* IE6不支持，IE6要单独配置*/
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+            a:visited {
+                color: #999;
+            }
+
+            a:hover {
+                color: #F5A70D;
+            }
+
+        .articleList {
+            overflow: hidden;
+            color: #000;
+            background: #fff;
+            display: none;
+            padding: 1.2em;
+            padding-bottom: 180px; /*重要！给footer预留的空间*/
+        }
+
+            .articleList h1 {
+                font-size: 1.2em;
+                margin: 0;
+            }
+
+            .articleList h2 {
+                color: #b9b9b9;
+                font-size: 0.8em;
+                font-weight: normal;
+            }
+
+            .articleList .text1 p {
+                margin: 0.1em 0;
+                text-indent: 2em;
+                line-height: 1.45em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 table p {
+                margin: 0.1em 0;
+                line-height: 1.45em;
+                text-indent: 0em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 img {
+                max-width: 60%;
+                clear: both;
+                display: block;
+                margin: auto;
+                border: 0px;
+            }
+
+        .ep-source {
+            color: #808080;
+            font-size: 0.8em;
+            padding-top: 0.2em;
+        }
+
+        .attach {
+            color: #808080;
+            font-size: 0.9em;
+            padding-top: 0.2em;
+        }
+
+            .attach .attachTitle {
+            }
+
+            .attach .attachItem {
+                background: url(/admin/images/icon_attach.png) no-repeat 3px 4px;
+                padding-left: 20px;
+                line-height: 20px;
+                vertical-align: middle;
+            }
+
+        .text1 {
+            /*overflow-x: auto;*/
+        }
+
+        /*img
+        {
+            width: 98%;
+            max-width: 600px;
+        }*/
+        .spanShare {
+            float: left;
+            padding: 5px 0 0;
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0; /* 关键 */
+            left: 0; /* IE下一定要记得 */
+            height: 130px; /* footer的高度一定要是固定值*/
+        }
+
+        a.view-link {
+            padding-left: 5px;
+            color: #018DFF;
+        }
+
+            a.view-link:hover {
+                color: #F5A70D;
+            }
+    </style>
+    <script type="text/javascript" src="/scripts/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        //var ua = navigator.userAgent;
+
+        //$(document).ready(function () {
+        //    var url = window.location.href;
+        //    var start_index = url.lastIndexOf("/") + 1;
+        //    var end_index = url.lastIndexOf(".");
+        //    var id = url.substring(start_index, end_index);
+        //    alert(id);
+        //    //开始提交
+        //    $.ajax({
+        //        type: "POST",
+        //        url: "GetNewsReadNum.ashx",
+        //        data: {"newsId":id},
+        //        success: function (data)
+        //        {
+        //            if(data!=null)
+        //            {
+        //                alert(data);
+        //                $("#readCnt").html(data);
+        //            }
+
+        //        },
+        //        error: function (data, status, e) {
+        //            //alert("信息加载失败：" + e);
+        //            alert("请求数据出错");
+        //            //self.location = "/home/news/template/news_redirect.html?t=" + encodeURIComponent($("h1.title").html());
+        //        },
+        //        cache: false
+
+        //    });
+        //    if ($(".text1").find("img").length == 0) {
+        //        $("<div style=\"display:none;\"><img src=\"/images/news_share.jpg\" alt=\"中央音乐学院\" /></div>").insertAfter($(".text"));
+        //    }
+        //    $(".applink").remove();
+        //    $(".weblink").show();
+        //});
+
+        $(document).ready(function () {
+            var url = window.location.href;
+            var start_index = url.lastIndexOf("/") + 1;
+            var end_index = url.lastIndexOf(".");
+            var id = url.substring(start_index, end_index);
+            $.ajax({
+                type: "POST",
+                url: "GetNewsReadNum.aspx",
+                data: { "newsId": id },
+                success: function (data) {
+                    alert(data);
+                    $("#readCnt").html(data);
+                },
+                error: function (data) {
+                    alert("请求数据出错");
+                }
+            });
+            if ($(".text1").find("img").length == 0)
+            {
+                $("<div style=\"display:none;\"><img src=\"/images/news_share.jpg\" alt=\"中央音乐学院\" /></div>").insertAfter($(".text"));
+            }
+            $(".applink").remove();
+            $(".weblink").show();
+        });
+
+    </script>
+</head>
+<body style="background-color: #eee;">
+    <div class="mainBody">
+        <div style="border-bottom: 1px solid #666; padding: 17px;">
+            <a href="/AdminMetro/login_page.aspx">
+                <img src="/images/news_head.png" style="border: 0px;" alt="中央音乐学院资讯" />
+            </a>
+        </div>
+        <!-- banner top end -->
+        <article class="articleList" style="display: block;">
+            <div class="head clearfix">
+                <h1 class="title">往届毕业生领取改派报到证、户口更改函通知</h1>
+                <h2>
+                    <span class="time"><span>发布者：zqb</span>&nbsp;&nbsp;2016/8/3 16:15:06</span>
+                    &nbsp;&nbsp;<span>阅读量：<b id="readCnt">1</b></span>
+                </h2>
+            </div>
+            <!-- JiaThis Button BEGIN -->
+            <div id="bdshare" class="jiathis_style_24x24 ">
+                <span class="spanShare">分享：</span>
+                <a class="jiathis_button_qzone"></a>
+                <a class="jiathis_button_tsina"></a>
+                <a class="jiathis_button_tqq"></a>
+                <a class="jiathis_button_weixin"></a>
+                <a class="jiathis_button_renren"></a>
+                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+            </div>
+            <div style="clear: both;"></div>
+            <!-- JiaThis Button END -->
+            <div class="text clearfix">
+                <div class="text1">
+                    <p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 22pt; font-family: 宋体;">下列同学改派手续已经办理完毕，请尽快到学校就业办公室</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 22pt; font-family: 宋体;">领取新的报到证。</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"> </p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;"></span></strong></p><p style="margin-bottom: 0px; padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><span style="margin: 0px; padding: 0px;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">2014</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">年办理（未领取）：</span></strong></span></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">:</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">杨春平、鹿文鹏、王佳、孙洋、贺卫东、别海罡、薛恒、华淼、王军、王佳宁、余海滨、刘栋、陆坤</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;">户口函：</span></strong></span></strong><span style="margin: 0px; padding: 0px;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px;">孙华、于天鹏</span></strong></span></strong></span></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;"><br/></span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">2015</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">年办理（未领取）：</span></strong><span style="margin: 0px; padding: 0px; font-size: 12px;"> </span></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">严艳瑞、罗健、刘营、满都拉、李宏宇、吴达、许铁沥、王立权、刘建军、邱金刚、陈晓磊、范哲晰、曾昊晗、米华莉、李玏一、巢进波、吴昊、刘劲武、霍其润、张欣、丁伟、王晓山、赵鑫、甘志华、安立奎、谭海、林松、马俪芳、范金娟、杨冬虎、李焱、李锦绣、宋三波、李选才、孙青虎、李昕、邵明星、尚吉永、申华平、付久强、郝亚维、潘若鹏、赵振博、胡宸睿</span></strong></p><p style="margin-bottom: 0px; padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">户口函：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">陈益民</span></strong></p><p style="margin-bottom: 0px; padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;"><br/></span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">2016</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">年1月-3月办理（未领取）：</span></strong></p><p style="margin-bottom: 0px; padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">魏少飞、卢禹、邹博庚、孙旭非、邹振兴、吕书鹏、游琳玉、</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><span style="margin: 0px; padding: 0px;"> </span></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">4</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">月1日办理：</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">奚当阳、刘金梦、牛丽娜、张朴、常智胜、丁飞、项瑞乐、周玮、程双园、张钰莹、董芳、赵福俊</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><span style="margin: 0px; padding: 0px;"> </span></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">4</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">月5日办理：</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">常嘉文、赵巍巍、曲倩倩、彭楚琰、李天瓅、苏轩、雷季东、张小方</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">户口函：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">丁飞</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;"></span></strong> </p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">4</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">月12日办理：</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">朱新楷、马科、赵奔、耿剑、李贝贝、徐太文、胡鹏燕、韩荣、张心玥、高明光、何力骜、胡贵、张维、杨莉媛、杨凯豪、李嘉文、刘俊杰、郑航群、张沛松、高清华、邵明星</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">户口函：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">韩荣</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;"></span></strong> </p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">4</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">月19日办理：</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证：何蕴豪、曹宇晨、范修阳、陈达、范宗祥、刘奕轩、杨茜、刘恒达、钱丽、贺剑云</span></span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">户口函：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">陈达</span></span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><br/></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">4</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">月26日办理：</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">程隆璇、李昕、贾文祯、左昊、郑淏元、张玥、经纬、尹鹏、李锦锋、陈俊鹏</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"> </p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">5</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">月10日办理：</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">杨敏、张苗苗、钟娟、高珍珍、韩美旭、马硕山、高晓丽</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">户口函：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">高晓丽、袁维</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"> </p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">5</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">月17日办理：</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">霍金亮、程士俊、王瑞洁、何润田、张媛、朱瑞青、陈晨、郭明玲、宋挺</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">户口函：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">李文彬</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"> </p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">5</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">月27日办理：</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">邹舸、张笑慈、许敬轩、赵梦杰、秦婕、高宏宇、刘爽、闫梓祯、李志爽、于立佳、张静、朱立</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"> </p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">5</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">月31日办理：</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">李昕、梁光楠、张楠、彭智韦、彭谦、邵逸尘、陈佳琪、孔雪萍、余博文、高明</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"> </p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">6</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">月7日办理：</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">张琳晞、王兵、郑宇彤、王凯豪、周正、刘爽、张蕾、薛文娟、徐志雨、彭云柯、杜佳、王宇辰、郭翔、刘宗楠、王欣蓓</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">户口函：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">王宁、牛席席</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;"></span></strong> </p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">6</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">月28日办理：</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">林沈颖、刘晓博、唐晶、黄萍花、李芸、李春林、狄妍君、袁朝晖、赵子豪、瞿辰皓、马悦玲、赵望、韩今晶、苏南、李倩、周宇清、王默、李哲宁、王超、李江、吉尚伟、辛婧婧、乔岩、徐俊、王曼、张贤超、芮瑞、范燕燕、张旻阳、刘正、胡尧文、刘华卿、刘正琨、高珊、尹哲、刘宇鑫、冯路、刘净、刘奎、张宇中、施永孝、李冬梅、张连存</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">户口函：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">赵思媛</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;"></span></strong> </p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"> </p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">6</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">月29日办理：</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">邓昱、裘克飞、</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">于洋、高晓英、刘栋、苗壮、陈璐、杨袆、田丽、韦洁瑶、朱曼亚、李坤、</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">户口函：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">于洋、高晓英</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"> </p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">7</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">月1日办理：</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">朱挺、宋洪丽、上官丽丽、吴东琳、金凯强、田甜、曹娟、尚晴、黄静艳、牛江夏、马熹群、王晓波、郑岩、高原、戴彬婷、刘鹏、周阳光、马晨、白晗东、卢万讙、王佳佳、周凌峰、王培、庞兆峰、迟蕊、李竟艳、赵瑞、王雅婧、杨熠、艾欣、周义堃、冉婷、冯本恒、杨阳</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"> </p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">7</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">月5日办理：</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">鞠瑾、白佩文、吴荔慧、林易蒙、李栋、赵振南、林武华、布买丽燕、宗煜、艾斯木提拉、高媛、赵琳琳、李伯雄、高月桐、张颖、陈偲艺、范晓非、王晓波、卢万譞、张宪彪、杨静、石玉江、尚利宁、常慧杰、孙红蕾</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">户口函：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">武昕昊、刘德馨、孙英、李玺、</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">王晓波、高媛、高月桐</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"> </p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;"><strong style="margin: 0px; padding: 0px;">7</strong></span><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">月12日办理：</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; text-decoration: underline;">报到证：</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">李开良、曲泓诺、张博涵、杨欣然、温鑫宇、李喆、范舟、张沁瑶、常宏辉、王鑫莹、刘伟、潘潇、种道称、邬小平、周玉琴、马源、杨雪、高瑞奇、胡运韬、刘金涛、曾扬、杨亚峰、付继云、王红</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;"><strong style="margin: 0px; padding: 0px;">户口函：</strong></span></span><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">王鑫莹、付继云</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;"></span></strong> </p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;"><span style="margin: 0px; padding: 0px; color: red;"><strong style="margin: 0px; padding: 0px;">7</strong></span><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; color: red;">月15日办理：</span></strong></span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; color: red;"><span style="margin: 0px; padding: 0px; color: black; text-decoration: underline;"><strong style="margin: 0px; padding: 0px;">报到证：</strong></span></span></strong></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">文泽航、李明华、耿杰、欧阳慧明、谭祎、赵瀚辰、张雨沛、梁雨亭、李玉洁、钟宇豪、王志明、杨紫琰、魏博、杨玲、马红鹏、雷磊、刘雷鸣、齐海阔、岳广臣、孟磊、郭孝龙、吴克麟、吴朴恩、王祎、陈芊芊</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; color: red;"><span style="margin: 0px; padding: 0px; color: black; text-decoration: underline;"><strong style="margin: 0px; padding: 0px;">户口函：</strong></span></span></strong></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">陈芊芊</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; color: red;"><span style="margin: 0px; padding: 0px; color: black; text-decoration: underline;"></span></span></strong></span></strong> </p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><span style="margin: 0px; padding: 0px; font-size: 16px; font-family: Arial, sans-serif;"> </span><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">7</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">月20日办理：</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">解延安、任洁、王东、刘昶秀、李艾丹、薛晓卿、郑维维、杨丽娜、李瑶、任逸翔、刘彧诚、曲童、张喜鸿、赵昆、于深邈、马元儒、</span></strong></p><p style="margin-bottom: 0px; padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">户口函：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">杨丽娜、周玉琴、董新庄、周海亮、傅新民</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;"> </span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"> </p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">7</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">月26日办理：</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">杨涛、李林明、党晓捷、尹旭、魏博、安琪、刘琳、王豪、上官丽丽、苗薇、陈蕾西、傅鋳杰、苏雅、李尧、单季鑫、姜艺、张千雪、高涵、饶宇轩、吴志恒、</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><span style="margin: 0px; padding: 0px; font-family: 宋体;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px;">户口函：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px;">上官丽丽、樊君斌</span></strong></span></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><br/></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><br/></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><br/></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">8</span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体; color: red;">月2日办理：</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">报到证：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px; font-family: 宋体;">佟振宇、王晨余、郭耀蔚</span></strong></p><p style="padding: 0px; font-size: 14px; font-family: 宋体, arial, tahoma; line-height: 24px; white-space: normal;"><span style="margin: 0px; padding: 0px; font-family: 宋体;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; text-decoration: underline;"><span style="margin: 0px; padding: 0px; font-size: 24px;">户口函：</span></span></strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; font-size: 24px;">孙英、涂小兰、汪海鹏、杨玲</span></strong></span></p><p><br/></p></p>
+                </div>
+                <div class="attach">attachxxx</div>
+            </div>
+
+        </article>
+        <div id="footer">
+            <a href="/index.aspx">
+                <img style="max-width: 100%; width: 100%; border: 0px;" src="/images/news_ad_1024_v1.jpg" alt="中央音乐学院资讯">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" id="jiaThis" src="http://v3.jiathis.com/code/jia.js?uid=1365383547842139" charset="utf-8">
+</script>
+

@@ -1,0 +1,103 @@
+﻿<script type="text/javascript">
+    $(function () {
+        //检测IE
+        var isIe6 = false;
+        try {
+
+            var browser = navigator.appName
+            var trim_Version = navigator.appVersion.split(";")[1].replace(/[ ]/g, "");
+            if (browser == "Microsoft Internet Explorer" && trim_Version == "MSIE6.0") {
+                isIe6 = true;
+            }
+            else if (browser == "Microsoft Internet Explorer" && trim_Version == "MSIE7.0") {
+                isIe6 = true;
+            }
+            else if (browser == "Microsoft Internet Explorer" && trim_Version == "MSIE8.0") {
+                isIe6 = true;
+            }
+            else if (browser == "Microsoft Internet Explorer" && trim_Version == "MSIE9.0") {
+                isIe6 = true;
+            }
+
+            var Sys = {};
+            var ua = navigator.userAgent.toLowerCase();
+            var s;
+            (s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] :
+            (s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :
+            (s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :
+            (s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
+            (s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
+            if (Sys.ie) {//Js判断为IE浏览器  
+            }
+            if (Sys.firefox) {//Js判断为火狐(firefox)浏览器
+                isIe6 = false;
+            }
+            if (Sys.chrome) {//Js判断为谷歌chrome浏览器
+                isIe6 = false;
+            }
+            if (Sys.opera) {//Js判断为opera浏览器
+                isIe6 = false;
+            }
+            if (Sys.safari) {//Js判断为苹果safari浏览器
+                isIe6 = false;
+            }
+        }
+        catch (e) {
+        }
+        finally {
+            if (isIe6) {
+                window.location.href = '/admin/ie9update.html';
+            }
+        }
+        //alert('3');
+    });
+
+    $(function () {
+        //隐藏面包屑
+        if (window.screen.availHeight < 800)
+        {
+            $(".breadcrumb").hide();
+        }
+        else
+            $(".breadcrumb").show();
+        //console.log(window.screen.availHeight);
+    });
+
+    $(function() {
+        //触发功能树变化
+        var reg = new RegExp("(^|&)" + "fun_id" + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) {
+            var funid = unescape(r[2]);
+            if ($.isFunction(parent.SetTopContent))
+                parent.SetTopContent(funid);
+            //alert(funid);
+            //console.log(funid);
+        }
+    });
+
+    $(function () {
+        if ($.isFunction(parent.hideStuatus)) {
+            $("body").click(function () {
+                parent.hideStuatus();
+                //console.log("点击隐藏");
+            });
+        }
+    });
+  
+</script>
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F9a103a0d184ea7d73dccd3718e1b990d' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="/scripts/jquery/jquery.form.min.js"></script>
+<script type="text/javascript" src="/metro/js/objURL.js"></script>
+<script type="text/javascript" src="/metro/js/common-scripts.js"></script>
+<script type="text/javascript" src="/metro/js/ex-common-scripts.js"></script>
+<style>
+    .placeholder {
+        color: #9e9e9e;
+    }
+</style>
+<script type="text/javascript" src="/metro/js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="/metro/js/intro-js-v1.0.0/intro.js"></script>

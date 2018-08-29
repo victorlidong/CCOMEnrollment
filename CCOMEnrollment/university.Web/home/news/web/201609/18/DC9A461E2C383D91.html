@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,user-scalable=no" name="viewport">
+    <title>“龙声华韵——常平作品音乐会”即将登陆国家大剧院——“新世纪优秀人才支持计划”系列-圈圈校园资讯</title>
+    <!--    <link rel="stylesheet" href="../css/touch.css"> -->
+    <style type="text/css">
+        html, body {
+            height: 100%;
+        }
+
+        body, ul, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mainBody { /*background:#EFF0F4;*/
+            text-align: left; /*font-family:STHeiti,Arial;*/ /*font-family: "HiraginoSansGB W3";*/
+            font-family: "Helvetica";
+            /*padding:0  0.8em;*/
+            overflow-x: scroll;
+            overflow-y: hidden;
+            max-width: 1024px;
+            margin: 0 auto;
+            overflow-x: auto;
+            background: #fff;
+            min-height: 100%;
+            /*footer置底*/
+            position: relative; /*重要！保证footer是相对于wapper位置绝对*/
+            height: auto; /* 保证页面能撑开浏览器高度时显示正常*/
+            min-height: 100%; /* IE6不支持，IE6要单独配置*/
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+            a:visited {
+                color: #999;
+            }
+
+            a:hover {
+                color: #F5A70D;
+            }
+
+        .articleList {
+            overflow: hidden;
+            color: #000;
+            background: #fff;
+            display: none;
+            padding: 1.2em;
+            padding-bottom: 180px; /*重要！给footer预留的空间*/
+        }
+
+            .articleList h1 {
+                font-size: 1.2em;
+                margin: 0;
+            }
+
+            .articleList h2 {
+                color: #b9b9b9;
+                font-size: 0.8em;
+                font-weight: normal;
+            }
+
+            .articleList .text1 p {
+                margin: 0.1em 0;
+                text-indent: 2em;
+                line-height: 1.45em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 table p {
+                margin: 0.1em 0;
+                line-height: 1.45em;
+                text-indent: 0em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 img {
+                max-width: 60%;
+                clear: both;
+                display: block;
+                margin: auto;
+                border: 0px;
+            }
+
+        .ep-source {
+            color: #808080;
+            font-size: 0.8em;
+            padding-top: 0.2em;
+        }
+
+        .attach {
+            color: #808080;
+            font-size: 0.9em;
+            padding-top: 0.2em;
+        }
+
+            .attach .attachTitle {
+            }
+
+            .attach .attachItem {
+                background: url(/admin/images/icon_attach.png) no-repeat 3px 4px;
+                padding-left: 20px;
+                line-height: 20px;
+                vertical-align: middle;
+            }
+
+        .text1 {
+            /*overflow-x: auto;*/
+        }
+
+        /*img
+        {
+            width: 98%;
+            max-width: 600px;
+        }*/
+        .spanShare {
+            float: left;
+            padding: 5px 0 0;
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0; /* 关键 */
+            left: 0; /* IE下一定要记得 */
+            height: 130px; /* footer的高度一定要是固定值*/
+        }
+
+        a.view-link {
+            padding-left: 5px;
+            color: #018DFF;
+        }
+
+            a.view-link:hover {
+                color: #F5A70D;
+            }
+    </style>
+    <script type="text/javascript" src="/scripts/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+       
+
+        $(document).ready(function () {
+            var url = window.location.href;
+            //alert(url);
+            var start_index = url.lastIndexOf("/") + 1;
+            var end_index = url.lastIndexOf(".");
+            var id = url.substring(start_index, end_index);
+            //alert(id);
+            $.ajax({
+                type: "POST",
+                url: "/AdminMetro/CCOM/notification/GetNewsReadNum.ashx",
+                data: { "newsId": id },
+                success: function (data) {
+                    //alert(data);
+                    $("#readCnt").html(data);
+                },
+                error: function (data) {
+                    alert("请求数据出错");
+                }
+            });
+            //if ($(".text1").find("img").length == 0)
+            //{
+            //    $("<div style=\"display:none;\"><img src=\"/images/news_share.jpg\" alt=\"中央音乐学院\" /></div>").insertAfter($(".text"));
+            //}
+            //$(".applink").remove();
+            //$(".weblink").show();
+        });
+
+    </script>
+</head>
+<body style="background-color: #eee;">
+    <div class="mainBody">
+        <div style="border-bottom: 1px solid #666; padding: 17px;">
+            <a href="/AdminMetro/login_page.aspx">
+                <img src="/images/login/logo4.png" style="border: 0px;" alt="中央音乐学院资讯" />
+            </a>
+        </div>
+        <!-- banner top end -->
+        <article class="articleList" style="display: block;">
+            <div class="head clearfix">
+                <h1 class="title">“龙声华韵——常平作品音乐会”即将登陆国家大剧院——“新世纪优秀人才支持计划”系列</h1>
+                <h2>
+                    <span class="time"><span>发布者：中央音乐学院管理员</span>&nbsp;&nbsp;2016/9/18 11:29:00</span>
+                    &nbsp;&nbsp;<span>阅读量：<b id="readCnt">1</b></span>
+                </h2>
+            </div>
+            <!-- JiaThis Button BEGIN -->
+            <div id="bdshare" class="jiathis_style_24x24 ">
+                <span class="spanShare">分享：</span>
+                <a class="jiathis_button_qzone"></a>
+                <a class="jiathis_button_tsina"></a>
+                <a class="jiathis_button_tqq"></a>
+                <a class="jiathis_button_weixin"></a>
+                <a class="jiathis_button_renren"></a>
+                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+            </div>
+            <div style="clear: both;"></div>
+            <!-- JiaThis Button END -->
+            <div class="text clearfix">
+                <div class="text1">
+                    <p><p><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">作者：作曲系供稿</span><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">来源：中央音乐学院</span><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">发布日期：2015-06-12 09:56:00</span><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">本栏目内容由党委宣传部负责维护</span></p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　</p><p class="cas_content" style="text-align:left;color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　2015年6月19日，我院作曲系副教授、著名作曲家常平作品专场音乐会将由中国国家交响乐团在国家大剧院音乐厅奏响。音乐会指挥及独奏均由我院教师担纲。指挥系林涛教授携手著名民族器乐演奏家于红梅教授、张强教授、吉炜副教授、袁非凡副教授，共同呈现常平近年来为民乐与交响乐队创作的大型交响协奏套曲《东方水墨》，以及获得全国交响乐文华大奖的交响力作《创世纪》。</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　6月9日在国家大剧院新闻发布厅举办了媒体见面会，国家大剧院演出部主任助理王路藜、国家交响乐团副团长魏军，作曲家常平、指挥家林涛、演奏家吉炜与袁非凡等嘉宾及各大媒体记者出席了新闻发布会。</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　</p><table class="FCK__ShowTableBorders" align="center" bordercolor="#000000" cellpadding="1" cellspacing="1" width="690" height="208"><tbody style="margin: 0px; padding: 0px; border: 0px;"><tr class="firstRow"><td> <a href="http://www.ccom.edu.cn/xwyhd/zxdt/2015s/201510/W020150612359669608621.jpg" _fcksavedurl="/webpic/W0201506/W020150612/W020150612359669608621.jpg" target="_blank" oldsrc="W020150612359669608621.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"><img src="/ueditor1_4_2_utf8/net/upload/image/201609/6360979503201382824445076.jpg" _fcksavedurl="/webpic/W0201506/W020150612/W020150612359583115727.jpg" ignore="1" fromphoto="1" photodocid="29615" border="0" height="168" width="343" style="margin: 0px; padding: 0px; border: 0px; width: 383px; height: 194px;"/></a></td><td> <a href="http://www.ccom.edu.cn/xwyhd/zxdt/2015s/201510/W020150612359697973703.jpg" _fcksavedurl="/webpic/W0201506/W020150612/W020150612359697973703.jpg" target="_blank" oldsrc="W020150612359697973703.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"><img src="/ueditor1_4_2_utf8/net/upload/image/201609/6360979503206394459430984.jpg" _fcksavedurl="/webpic/W0201506/W020150612/W020150612359581650197.jpg" ignore="1" fromphoto="1" photodocid="29616" border="0" style="margin: 0px; padding: 0px; border: 0px;"/></a></td></tr></tbody></table><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　<strong>四方联袂 打造民族音乐盛宴</strong></p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　即将登陆国家大剧院的常平个人作品专场音乐会是以“新世纪优秀人才支持计划”为基础，由教育部与中央音乐学院联合出资，中国国家交响乐团与国家大剧院联袂打造的。“新世纪优秀人才支持计划”属于教育部“高层次创造性人才计划”，亦是对高校优秀学术带头人的一个支持计划。主要着眼于培养支持一批学术基础扎实、具有突出创新能力和发展潜力的优秀学术带头人，支持他们开展创新性研究工作，承担国家重大科研任务，为培养他们成为优秀学科带头人搭建台阶、创造条件。</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　同时这场音乐会是“龙声华韵”系列的重要组成部分。“龙声华韵”系列音乐会,由中国国家交响乐团与国家大剧院联合推出，旨在推广和弘扬杰出华人作曲家及中国民族音乐文化。“龙声华韵”这一品牌自2006年创建，即得到了业界专业人士的称赞，也赢得了本土观众的尊重和欢迎。因而，常平作品专场音乐会的亮相将成为国家大剧院原创舞台上熠熠生辉的又一笔。  </p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　这场音乐会的“幕后主角”常平是中国当代最为活跃的作曲家之一，现执教于中央音乐学院作曲系。音乐会的一大亮点是由四部民族器乐协奏曲所组成的大型交响协奏套曲《东方水墨》，作曲家常平在一次采访中这样说过：“近代中国与世界的文化流向，一直是外国文化向中国输入更占主流，在这场演出中，民乐独奏与交响乐协奏成为独具一格的形式。以西方交响为载体，加入东方独特的音乐语汇，这种形式更易让世界接受中国音乐，也有助于向世界输出中国文化。”</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　</p><p class="cas_content" style="text-align:left;color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　<strong>交响协奏套曲《东方水墨》华美呈现   交响乐文华大奖《创世纪》重磅亮相</strong></p><p class="cas_content" style="text-align:left;color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　“这台音乐会的曲目构成我是做了仔细思考的。它以四部协奏曲和一部交响曲作为主体。四部协奏曲集结了民乐中最具代表性的四件乐器——二胡、古筝、琵琶、笛子，我为每一件乐器写了一部协奏曲，我把这四部作品看成一幅巨型的东方水墨，并首次呈现给观众。”常平说。作曲家提到的四部协奏曲分别为二胡协奏曲《天香》、古筝协奏曲《风定云墨》、笛子协奏曲《蓝莲花》、琵琶协奏曲《墨章》。从2005年创作《风定云墨》开始，到2015年完成《墨章》，常平共历时十年，他介绍说：“协奏曲对于每件独奏乐器而言，无论是在规模上，还是音乐的控制、情感的把握、技巧的展示方面，都是最高规格的展现，也是对乐器的挖掘、发展、突破的最佳的创作方式。中国传统民族乐器每件都具有鲜明独特的性格，与西方交响乐队融合，定会碰撞出绚丽火花。”</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　除了作品本身的魅力，这场音乐会也集结了诸多艺术大家。其中，中央音乐学院指挥系教授、著名指挥家林涛将倾情执棒，由顶尖民族器乐演奏家于红梅、张强、吉炜、袁非凡共同演绎这四部协奏曲。其中，《天香》包含了大量超高难度段落，对演奏家的演奏技术及音乐控制能力有极高的要求，被称为二胡演奏的“试金石”；《墨章》取意于元代书画家王蒙创造的“水晕墨章”技法,对演奏家技术的精准、内心的控制及音乐气质的表达亦是不小的挑战；《风定云墨》则在继承和发挥中国绘画泼墨和书法狂草气质的同时，赋予了现代审美意识，令人耳目一新；《蓝莲花》亦突破了以往竹笛惯有的表达方式，用这件有着数千年历史的乐器去表达蓝莲花所蕴含的内在精神。</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　音乐会下半场，将会呈现常平的交响乐作品《创世纪》。此作品于2012年获得文化部主办的第十六届全国交响乐创作文华大奖，并受到俄裔作曲家古柏杜丽娜高度赞扬，称之为“一部应受到极大尊重的作品”。据悉，该作品于俄罗斯首演时，俄罗斯资深评论家在报纸评论称“这是一部非常国际化的作品，它与世界音乐的发展步伐没有距离，中国交响乐创作的发展速度让我感到意外。”届时，作曲家通过音乐所表达的炙热情感、出色配器都会为观众带来震撼感受。常平表示：“致力于本国音乐的发展，一定会被国际社会所尊重。而对本国音乐发展的推动，第一动力就是创作。”</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　<a href="http://www.ccom.edu.cn/xwyhd/zxdt/2015s/201510/W020150612359524245363.jpg" _fcksavedurl="/webpic/W0201506/W020150612/W020150612359524245363.jpg" target="_blank" oldsrc="W020150612359524245363.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"></a></p><p><a href="http://www.ccom.edu.cn/xwyhd/zxdt/2015s/201510/W020150612359524245363.jpg" _fcksavedurl="/webpic/W0201506/W020150612/W020150612359524245363.jpg" target="_blank" oldsrc="W020150612359524245363.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); text-decoration: none; outline: none;"></a></p><p class="cas_content" style="text-align:center;color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;"><a href="http://www.ccom.edu.cn/xwyhd/zxdt/2015s/201510/W020150612359524245363.jpg" _fcksavedurl="/webpic/W0201506/W020150612/W020150612359524245363.jpg" target="_blank" oldsrc="W020150612359524245363.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); text-decoration: none; outline: none;">　　</a></p><p></p><p style="text-align:center;color: rgb(67, 67, 67); font-size: 14px;"><a href="http://www.ccom.edu.cn/xwyhd/zxdt/2015s/201510/W020150612359524245363.jpg" _fcksavedurl="/webpic/W0201506/W020150612/W020150612359524245363.jpg" target="_blank" oldsrc="W020150612359524245363.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"><img src="/ueditor1_4_2_utf8/net/upload/image/201609/6360979503211670343944309.jpg" _fcksavedurl="/webpic/W0201506/W020150612/W020150612359497548266.jpg" ignore="1" fromphoto="1" photodocid="29614" border="0" style="margin: 0px; padding: 0px; border: 0px;"/></a></p><p style="color: rgb(67, 67, 67); font-size: 14px;">　　</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　</p><blockquote dir="ltr" style="margin-right: 0px;"><blockquote dir="ltr" style="margin-right: 0px;"><blockquote dir="ltr" style="margin-right: 0px;"><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　<strong>时间</strong>：2015年6月19日 19:30</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　<strong>地点</strong>：国家大剧院音乐厅</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　<strong>曲目</strong>：</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　交响协奏套曲《东方水墨》</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　古筝协奏曲《风定云墨》</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　二胡协奏曲《天香》</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　琵琶协奏曲《墨章》</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　笛子协奏曲《蓝莲花》</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　交响乐《GENESIS》（创世纪）</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　<strong>指挥</strong>：林涛</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　<strong>演奏家</strong>：吉炜、于红梅、张强、袁非凡</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　<strong>乐团</strong>：中国国家交响乐团</p></blockquote></blockquote></blockquote><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　<strong>　曲目介绍</strong>：</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　《风定云墨》介绍</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　古筝协奏曲《风定云墨》创作完成于2005年4月，同年5月在北京音乐厅首演，古筝演奏家吉炜独奏，由指挥家谭利华执棒，北京交响乐团协奏。2006年再次由吉炜担任独奏，指挥家杨洋执棒，深圳交响乐团于深圳音乐厅演出。2007年，《风定云墨》获得第十三届文化部全国交响乐比赛大奖。</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　作曲家读唐代杜甫名诗《茅屋为秋风所破歌》中“俄顷风定云墨色，秋天漠漠向昏黑”两句时，偶得“巨风即逝，浓云如墨、山雨将至”的朦胧和稍纵即逝的瞬间意象、灵感。作品在继承和发挥中国绘画泼墨和书法狂草气质的同时，固守着中国文人心中那一片诗意的灵境，并赋予它现代审美意识。</p><p class="cas_content" style="text-align:left;color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　</p><p class="cas_content" style="text-align:left;color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　《天香》介绍</p><p class="cas_content" style="text-align:left;color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　二胡协奏曲《天香》受首届北京胡琴艺术节委约创作，完成于2012年10月，于同年11月，由著名二胡演奏家于红梅首演于北京中山音乐堂，由指挥家林涛率中国青年交响乐团担任协奏，演出获得成功。此后，由指挥家张国勇率中央民族乐团在国家大剧院、指挥家王甫建率上海民族乐团在东方艺术中心再次演出，产生了广泛的影响。《天香》全曲长度达到32分钟，中间包含了大量的超高难度段落，作品对演奏家的演奏技术以及音乐控制能力提出了极高的要求，被称为二胡演奏家的“试金石”。作品寓意于梅花，“天香是对这种高贵品质的神往，对崇高精神境界以及人类最伟大的天性——爱的追求与呼唤。”</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　《墨章》介绍</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　琵琶协奏曲《墨章》完成于2015年三月，本场音乐会为该作品首演。《墨章》对演奏家技术的精准，内心的控制以及音乐气质的表达提出了极高的要求。首演由著名琵琶演奏家张强担任独奏。</p><p class="cas_content" style="text-align:left;color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　《墨章》一方面取意于元代书画家王蒙创造的“水晕墨章”技法,就是应用宣纸和笔墨等工具，独特地表现出造型艺术中的“质感、量感、空间感”。即将墨汁溶化在大量水分之中，藉以晕成各种不同的层次，并由之产生美丽而浓淡各异的“文章”，由水墨晕成的斑斓纹样，赋予画面以气氛的变化和精神的深趣。“水晕墨章”的至臻境界，层层晕染开，逐步渗透，恰似投入湖心的石子，泛起淡淡涟漪，同时又纵横离奇，莫辨端倪。</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　另一方面，《墨章》也有水墨之篇章的含义。音乐如同运笔用墨，跌宕磅礴，郁然深秀，信笔挥洒之间彰显君子之风，傲骨之气。运转变通，如飞如动；高低晕淡，文采自然。</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　《蓝莲花》介绍</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　笛子协奏曲《蓝莲花》完成于2014年9月。作曲家倾注一年的时间来构思创作这部作品，曾经两次改变自己的想法而重新创作，最终将作品命名为《蓝莲花》。作曲家常平说：“蓝莲花，让我的思绪回溯到久远的过去。千百年来，蓝莲花一直被视为生命的象征，在古老的传说中，人们相信它具有再生的能量，因着它的纯洁，人们也将浪漫的情怀投掷于它神秘的身份之中，人们给了它最美的花语——“永恒的盼望”。它是富有灵性的存在，轻栖于水上，傲视污泥，它承载着人们关于生生不息、关于圣洁的梦想与执着。”</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　本场音乐会是《蓝莲花》的首演，由著名笛子演奏家袁非凡担任独奏。作品中独特的音乐语言及艺术造型不同于以往竹笛惯有的表达方式，音乐要求对声音的高度控制与精准，对演奏家提出了新的挑战。</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　《GENESIS》介绍</p><p class="cas_content" style="text-align:left;color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　《GENESIS》是为大型交响乐队创作的交响曲，完成于2004年1月，同年3月由俄罗斯萨拉多夫州立交响乐团世界首演。俄裔作曲大师索菲亚·古柏杜丽娜（Sofia Gubaidulina）听过作品后称赞说：“这是一部应该受到极大赞誉的作品，它应该得到极大的尊重”。2005年5月20日深圳交响乐团举办2005当代中国交响音乐会，在此次音乐会中，《GENESIS》在中国首演。2011年，《GENESIS》在文化部主办的第十六届全国交响乐作品评奖（文华奖）中获得大奖。 </p><p><br/></p></p>
+                </div>
+                <div class="attach"></div>
+            </div>
+
+        </article>
+        <div id="footer">
+            <!--<a href="/index.aspx">
+                <img style="max-width: 100%; width: 100%; border: 0px;" src="/images/news_ad_1024_v1.jpg" alt="中央音乐学院资讯">
+            </a>-->
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" id="jiaThis" src="http://v3.jiathis.com/code/jia.js?uid=1365383547842139" charset="utf-8">
+</script>
+

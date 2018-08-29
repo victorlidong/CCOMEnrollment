@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,user-scalable=no" name="viewport">
+    <title>跨文化“新作”为中国音乐发声 ——2016北京现代音乐节之“敛步随音——中西室内乐作品音乐会”举办-圈圈校园资讯</title>
+    <!--    <link rel="stylesheet" href="../css/touch.css"> -->
+    <style type="text/css">
+        html, body {
+            height: 100%;
+        }
+
+        body, ul, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mainBody { /*background:#EFF0F4;*/
+            text-align: left; /*font-family:STHeiti,Arial;*/ /*font-family: "HiraginoSansGB W3";*/
+            font-family: "Helvetica";
+            /*padding:0  0.8em;*/
+            overflow-x: scroll;
+            overflow-y: hidden;
+            max-width: 1024px;
+            margin: 0 auto;
+            overflow-x: auto;
+            background: #fff;
+            min-height: 100%;
+            /*footer置底*/
+            position: relative; /*重要！保证footer是相对于wapper位置绝对*/
+            height: auto; /* 保证页面能撑开浏览器高度时显示正常*/
+            min-height: 100%; /* IE6不支持，IE6要单独配置*/
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+            a:visited {
+                color: #999;
+            }
+
+            a:hover {
+                color: #F5A70D;
+            }
+
+        .articleList {
+            overflow: hidden;
+            color: #000;
+            background: #fff;
+            display: none;
+            padding: 1.2em;
+            padding-bottom: 180px; /*重要！给footer预留的空间*/
+        }
+
+            .articleList h1 {
+                font-size: 1.2em;
+                margin: 0;
+            }
+
+            .articleList h2 {
+                color: #b9b9b9;
+                font-size: 0.8em;
+                font-weight: normal;
+            }
+
+            .articleList .text1 p {
+                margin: 0.1em 0;
+                text-indent: 2em;
+                line-height: 1.45em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 table p {
+                margin: 0.1em 0;
+                line-height: 1.45em;
+                text-indent: 0em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 img {
+                max-width: 60%;
+                clear: both;
+                display: block;
+                margin: auto;
+                border: 0px;
+            }
+
+        .ep-source {
+            color: #808080;
+            font-size: 0.8em;
+            padding-top: 0.2em;
+        }
+
+        .attach {
+            color: #808080;
+            font-size: 0.9em;
+            padding-top: 0.2em;
+        }
+
+            .attach .attachTitle {
+            }
+
+            .attach .attachItem {
+                background: url(/admin/images/icon_attach.png) no-repeat 3px 4px;
+                padding-left: 20px;
+                line-height: 20px;
+                vertical-align: middle;
+            }
+
+        .text1 {
+            /*overflow-x: auto;*/
+        }
+
+        /*img
+        {
+            width: 98%;
+            max-width: 600px;
+        }*/
+        .spanShare {
+            float: left;
+            padding: 5px 0 0;
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0; /* 关键 */
+            left: 0; /* IE下一定要记得 */
+            height: 130px; /* footer的高度一定要是固定值*/
+        }
+
+        a.view-link {
+            padding-left: 5px;
+            color: #018DFF;
+        }
+
+            a.view-link:hover {
+                color: #F5A70D;
+            }
+    </style>
+    <script type="text/javascript" src="/scripts/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+       
+
+        $(document).ready(function () {
+            var url = window.location.href;
+            //alert(url);
+            var start_index = url.lastIndexOf("/") + 1;
+            var end_index = url.lastIndexOf(".");
+            var id = url.substring(start_index, end_index);
+            //alert(id);
+            $.ajax({
+                type: "POST",
+                url: "/AdminMetro/CCOM/notification/GetNewsReadNum.ashx",
+                data: { "newsId": id },
+                success: function (data) {
+                    //alert(data);
+                    $("#readCnt").html(data);
+                },
+                error: function (data) {
+                    alert("请求数据出错");
+                }
+            });
+            //if ($(".text1").find("img").length == 0)
+            //{
+            //    $("<div style=\"display:none;\"><img src=\"/images/news_share.jpg\" alt=\"中央音乐学院\" /></div>").insertAfter($(".text"));
+            //}
+            //$(".applink").remove();
+            //$(".weblink").show();
+        });
+
+    </script>
+</head>
+<body style="background-color: #eee;">
+    <div class="mainBody">
+        <div style="border-bottom: 1px solid #666; padding: 17px;">
+            <a href="/AdminMetro/login_page.aspx">
+                <img src="/images/login/logo4.png" style="border: 0px;" alt="中央音乐学院资讯" />
+            </a>
+        </div>
+        <!-- banner top end -->
+        <article class="articleList" style="display: block;">
+            <div class="head clearfix">
+                <h1 class="title">跨文化“新作”为中国音乐发声 ——2016北京现代音乐节之“敛步随音——中西室内乐作品音乐会”举办</h1>
+                <h2>
+                    <span class="time"><span>发布者：中央音乐学院管理员</span>&nbsp;&nbsp;2016/9/4 13:29:00</span>
+                    &nbsp;&nbsp;<span>阅读量：<b id="readCnt">1</b></span>
+                </h2>
+            </div>
+            <!-- JiaThis Button BEGIN -->
+            <div id="bdshare" class="jiathis_style_24x24 ">
+                <span class="spanShare">分享：</span>
+                <a class="jiathis_button_qzone"></a>
+                <a class="jiathis_button_tsina"></a>
+                <a class="jiathis_button_tqq"></a>
+                <a class="jiathis_button_weixin"></a>
+                <a class="jiathis_button_renren"></a>
+                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+            </div>
+            <div style="clear: both;"></div>
+            <!-- JiaThis Button END -->
+            <div class="text clearfix">
+                <div class="text1">
+                    <p><p><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">作者：音乐孔子办公室 文/谭宇辰 图</span><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">来源：中央音乐学院</span><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">发布日期：2016-05-24 18:30:00</span><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">本栏目内容由党委宣传部负责维护</span></p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　<span style="margin: 0px; padding: 0px; border: 0px;">5</span>月23日19:30，中央音乐学院音乐厅座无虚席，700余名观众共同观赏了2016北京现代音乐节之“<span style="margin: 0px; padding: 0px; border: 0px;">敛步随音——中西室内乐作品音乐会”</span>。作为2016北京现代音乐节“开演”后的首场音乐会，由中央音乐学院“中外音乐文化交流与体验”基地/音乐孔子学院办公室组织及承办。自2012年成立至今, 该部门一直秉承“与世界分享中国音乐”<span style="margin: 0px; padding: 0px; border: 0px;">的</span>艺术宗旨，先后三年组织了中央音乐学院巡演团赴欧洲、北美“三巡”展演活动、邀请国外学子来华学习体验中国音乐文化的两届“国际音乐夏令营”，以及两届“与世界分享中国音乐——中国音乐国际教育与文化传播主题论坛”等国内外影响广泛的中外音乐文化交流活动，推动<span style="margin: 0px; padding: 0px; border: 0px;">世界音乐文化“双向交流，深度融合”。</span></p><p class="cas_content" style="text-align:left;color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　用跨文化“新作”为中国音乐发声是此次音乐会的特色。当晚共上演9首风格多样、体裁各异的室内乐曲目，其中7首为前沿新作品。首先，古筝重奏《月儿高》（<span style="margin: 0px; padding: 0px; border: 0px;">2015</span>年编排）拉开帷幕，传统古曲的风韵在纵横交错的声部中完美呈现。其次，芮雪教授于<span style="margin: 0px; padding: 0px; border: 0px;">2015</span>年为二胡、中胡与吉他而作《风之旅》（2015年获“金胡琴奖”胡琴小型作品金奖）运用中西合璧的方式，将蕴含中国元素的音调重新演绎。外派丹麦音乐孔子学院作曲志愿者教师田景伦，在任期间创作的《千年》（2014为古筝、古琴、扬琴、二胡和钢琴而作）力求将西方现代创作技术与中国传统音乐相结合，以中国民族乐器呈现出国际化的审美意趣。陈丹布教授于<span style="margin: 0px; padding: 0px; border: 0px;">2014</span>年为琵琶、古筝而作的 《醉影婆娑》<span style="margin: 0px; padding: 0px; border: 0px;">以汉唐之风，通过琵琶与古筝自然天成之和声完美地再现古典韵致，表现了古代女子饮酒之后于花间轻盈起舞，广袖长舒，寓于“花中有侬，侬中有花”的婆娑意境。青年作曲家刘力</span><span style="margin: 0px; padding: 0px; border: 0px;">2014</span>年为“茉莉花”扬琴重奏团创作的《彼岸花》将带有东方印度音乐色彩的和声语汇，将<span style="margin: 0px; padding: 0px; border: 0px;">6</span>个音的主题在音乐展开过程中复杂化展现的淋漓尽致，表现对生命意义深度思考的主题。定居德国的陈晓勇教授始终强调：在深刻理解本国与欧洲音乐及其文化的基础上，寻找更高层次音乐表现形式的可能性，追求人对音乐在精神层次的认可，因此当晚演出的《水样》（2015为笙与室内乐团而作），又是一部有着力挖掘中国传统器乐之现代精神的作品。</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　<span style="margin: 0px; padding: 0px; border: 0px;">音乐会上演的作品不仅展现了中国作曲家对跨文化音乐的理解，也吸纳了</span>西方作曲家从不同的角度，探求中国音乐魅力的作品，如：彼得·帕扎特（波兰）2014年为打击乐、古筝、钢琴、手风琴和大提琴而作《莫言》（获首届“丹麦音乐孔子学院”作曲比赛一等奖）。精彩的无伴奏合唱《愉快的舞蹈》 、《边跳边唱》，以及被誉为“当代肖斯塔科维奇”的俄罗斯作曲家<span style="margin: 0px; padding: 0px; border: 0px;">施尼特凯</span>的作品《第三弦乐四重奏》，其标志性的“复风格”也象征着此场音乐会鲜明的包容性与多样性特征。</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　音乐会演奏阵容涵盖了中央音乐学院的多位优秀青年师生，以及“袁莎筝乐团”、“中央音乐学院音乐教育学院附中合唱团”、“琥珀四重奏”、“茉莉花”扬琴重奏团等多个活跃于当代舞台的组合和团体。</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　<span style="margin: 0px; padding: 0px; border: 0px;">社会各界人士从四面八方齐聚中央音乐学院，只为一睹高水平的中西室内乐音乐会，虽说此次前沿的新作品居多，但观众们仍在高潮不断的气氛下，</span>静心凝神、敛步随音，沉浸于丰富美妙的音乐之流，感受跨文化的融合之美。　　</p><table class="FCK__ShowTableBorders" bordercolor="#000000" cellspacing="0" cellpadding="0" width="665" align="center" height="624"><tbody style="margin: 0px; padding: 0px; border: 0px;"><tr class="firstRow"><td> <a href="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655671457035.jpg" target="_blank" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655671457035.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"><img border="0" src="/ueditor1_4_2_utf8/net/upload/image/201609/6360859257913469856455582.jpg" ignore="1" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655625390157.jpg" fromphoto="1" photodocid="40133" style="margin: 0px; padding: 0px; border: 0px;"/></a></td><td> <a href="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655676547058.jpg" target="_blank" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655676547058.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"><img border="0" src="/ueditor1_4_2_utf8/net/upload/image/201609/6360859257993124729812360.jpg" ignore="1" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655627639731.jpg" fromphoto="1" photodocid="40134" style="margin: 0px; padding: 0px; border: 0px;"/></a></td><td> <a href="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655684187168.jpg" target="_blank" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655684187168.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"><img border="0" src="/ueditor1_4_2_utf8/net/upload/image/201609/6360859258050809399468845.jpg" ignore="1" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655634328526.jpg" fromphoto="1" photodocid="40135" style="margin: 0px; padding: 0px; border: 0px;"/></a></td></tr><tr><td> <a href="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655687545021.jpg" target="_blank" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655687545021.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"><img border="0" src="/ueditor1_4_2_utf8/net/upload/image/201609/6360859258087121385425035.jpg" ignore="1" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655638523110.jpg" fromphoto="1" photodocid="40136" style="margin: 0px; padding: 0px; border: 0px;"/></a></td><td> <a href="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655659282261.jpg" target="_blank" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655659282261.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"><img border="0" src="/ueditor1_4_2_utf8/net/upload/image/201609/6360859258134334905582286.jpg" ignore="1" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655616939346.jpg" fromphoto="1" photodocid="40129" style="margin: 0px; padding: 0px; border: 0px;"/></a></td><td> <a href="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655667330322.jpg" target="_blank" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655667330322.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"><img border="0" src="/ueditor1_4_2_utf8/net/upload/image/201609/6360859258158694762039243.jpg" ignore="1" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655621331465.jpg" fromphoto="1" photodocid="40132" style="margin: 0px; padding: 0px; border: 0px;"/></a></td></tr><tr><td> <a href="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655666938610.jpg" target="_blank" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655666938610.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"><img border="0" src="/ueditor1_4_2_utf8/net/upload/image/201609/6360859258220619488154218.jpg" ignore="1" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655618312086.jpg" fromphoto="1" photodocid="40131" style="margin: 0px; padding: 0px; border: 0px;"/></a></td><td> <a href="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655698329971.jpg" target="_blank" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655698329971.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"><img border="0" src="/ueditor1_4_2_utf8/net/upload/image/201609/6360859258272810382824794.jpg" ignore="1" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655656147284.jpg" fromphoto="1" photodocid="40138" style="margin: 0px; padding: 0px; border: 0px;"/></a></td><td> <a href="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655663205312.jpg" target="_blank" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655663205312.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"><img border="0" src="/ueditor1_4_2_utf8/net/upload/image/201609/6360859258319941912982046.jpg" ignore="1" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655616584543.jpg" fromphoto="1" photodocid="40130" style="margin: 0px; padding: 0px; border: 0px;"/></a></td></tr></tbody></table><p class="cas_content" style="text-align:center;color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;"><a href="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655690402242.jpg" target="_blank" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655690402242.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(143, 0, 47); text-decoration: none; outline: none;"><img border="0" src="/ueditor1_4_2_utf8/net/upload/image/201609/6360859258444200499037585.jpg" ignore="1" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/hdtpk/2016s/201605/W020160524655649007267.jpg" fromphoto="1" photodocid="40137" style="margin: 0px; padding: 0px; border: 0px;"/></a></p><p><br/></p></p>
+                </div>
+                <div class="attach"></div>
+            </div>
+
+        </article>
+        <div id="footer">
+            <!--<a href="/index.aspx">
+                <img style="max-width: 100%; width: 100%; border: 0px;" src="/images/news_ad_1024_v1.jpg" alt="中央音乐学院资讯">
+            </a>-->
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" id="jiaThis" src="http://v3.jiathis.com/code/jia.js?uid=1365383547842139" charset="utf-8">
+</script>
+

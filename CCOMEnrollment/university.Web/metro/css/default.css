@@ -1,0 +1,14 @@
+#listTable,#listTable th,#listTable td {
+    text-align:center;
+    vertical-align: middle;
+}
+#listTable .HBleft {
+     text-align: right;
+     padding-right:5px;
+}
+#listTable .HBright {
+     text-align: left;
+     border-left: 0;
+     padding-left: 0px;
+}
+

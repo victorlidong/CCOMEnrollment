@@ -1,0 +1,6 @@
+E:\吴美静\研一\毕设管理系统_0913\CCOMEnrollment\university.Model\bin\Release\university.Model.dll
+E:\吴美静\研一\毕设管理系统_0913\CCOMEnrollment\university.Model\bin\Release\university.Model.pdb
+E:\吴美静\研一\毕设管理系统_0913\CCOMEnrollment\university.Model\bin\Release\Newtonsoft.Json.dll
+E:\吴美静\研一\毕设管理系统_0913\CCOMEnrollment\university.Model\bin\Release\Newtonsoft.Json.xml
+E:\吴美静\研一\毕设管理系统_0913\CCOMEnrollment\university.Model\obj\Release\university.Model.dll
+E:\吴美静\研一\毕设管理系统_0913\CCOMEnrollment\university.Model\obj\Release\university.Model.pdb

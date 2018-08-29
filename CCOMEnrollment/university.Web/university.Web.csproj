@@ -1,0 +1,2924 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1532D58-F3E4-486D-A798-BDEC101188A9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>university.Web</RootNamespace>
+    <AssemblyName>university.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.20229.20821, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoCompleteExtra, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AutoCompleteExtra.dll</HintPath>
+    </Reference>
+    <Reference Include="FusionCharts, Version=1.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\FusionCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.5.6\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.6\lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJSON, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\universities - 副本\bitss.Web\bin\LitJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+      <HintPath>..\packages\Excel-DNA.Interop.14.0.1\lib\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Excel-DNA.Interop.14.0.1\lib\Microsoft.Vbe.Interop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Excel-DNA.Interop.14.0.1\lib\Office.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="org.in2bits.MyXls, Version=0.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\org.in2bits.MyXls.dll</HintPath>
+    </Reference>
+    <Reference Include="RSS.NET, Version=0.86.4047.28552, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RSS.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminMetro\CCOM\AddUserInfo\AddUserInfo.aspx" />
+    <Content Include="AdminMetro\CCOM\center.aspx" />
+    <Content Include="AdminMetro\CCOM\DatumManage\TeacherCheck.aspx" />
+    <Content Include="AdminMetro\CCOM\DatumManage\TeacherCheckList.aspx" />
+    <Content Include="AdminMetro\CCOM\DatumManage\WeeklyAdd.aspx" />
+    <Content Include="AdminMetro\CCOM\DatumManage\WeeklyList.aspx" />
+    <Content Include="AdminMetro\CCOM\DatumManage\StudentSubmitList.aspx" />
+    <Content Include="AdminMetro\CCOM\DatumManage\StudentSubmit.aspx" />
+    <Content Include="AdminMetro\CCOM\ExamArrange\Achievement_degree.aspx" />
+    <Content Include="AdminMetro\CCOM\ExamArrange\AddInfo.ashx" />
+    <Content Include="AdminMetro\CCOM\ExamArrange\AddStudent.aspx" />
+    <Content Include="AdminMetro\CCOM\ExamArrange\AddTeacher.aspx" />
+    <Content Include="AdminMetro\CCOM\ExamArrange\ExamEdit.aspx" />
+    <Content Include="AdminMetro\CCOM\ExamArrange\ExamList.aspx" />
+    <Content Include="AdminMetro\CCOM\ExamArrange\ExamMarkingTable.aspx" />
+    <Content Include="AdminMetro\CCOM\ExamArrange\MyExamList.aspx" />
+    <Content Include="AdminMetro\CCOM\ExamArrange\FormReview.aspx" />
+    <Content Include="AdminMetro\CCOM\ExamArrange\FormReview2.aspx" />
+    <Content Include="AdminMetro\CCOM\ExamArrange\MyStudentList.aspx" />
+    <Content Include="AdminMetro\CCOM\ExamArrange\Tracking_evaluation.aspx" />
+    <Content Include="AdminMetro\CCOM\ExamArrange\ApplyBest.aspx" />
+    <Content Include="AdminMetro\CCOM\ExamArrange\ApplyBestList.aspx" />
+    <Content Include="AdminMetro\CCOM\ScoreManage\GroupStudentList.aspx" />
+    <Content Include="AdminMetro\CCOM\ScoreManage\GroupList.aspx" />
+    <Content Include="AdminMetro\CCOM\ScoreManage\CommentScore.aspx" />
+    <Content Include="AdminMetro\CCOM\ScoreManage\SoftwareScore.aspx" />
+    <Content Include="AdminMetro\CCOM\ScoreManage\ScoreList.aspx" />
+    <Content Include="AdminMetro\CCOM\ScoreManage\CommentPage.aspx" />
+    <Content Include="AdminMetro\CCOM\ScoreManage\SoftwarePage.aspx" />
+    <Content Include="AdminMetro\CCOM\ScoreManage\MyScore.aspx" />
+    <Content Include="AdminMetro\CCOM\ScoreManage\MySoftwarePage.aspx" />
+    <Content Include="AdminMetro\CCOM\ScoreManage\TeacherComment.aspx" />
+    <Content Include="AdminMetro\CCOM\ScoreManage\ComputScore.aspx" />
+    <Content Include="AdminMetro\CCOM\ScoreManage\ProposalReview.aspx" />
+    <Content Include="AdminMetro\CCOM\ScoreManage\ProposalList.aspx" />
+    <Content Include="AdminMetro\CCOM\StudentApply\FileDownload.aspx" />
+    <Content Include="AdminMetro\CCOM\StudentManage\DataBatchAdd.aspx" />
+    <Content Include="AdminMetro\CCOM\StudentManage\InitSystem.aspx" />
+    <Content Include="AdminMetro\CCOM\StudentManage\ExamSignInForm.aspx" />
+    <Content Include="AdminMetro\CCOM\ExamArrange\PrintExamInfor.aspx" />
+    <Content Include="AdminMetro\CCOM\FunctionManege\AddFatherFunction.aspx" />
+    <Content Include="AdminMetro\CCOM\FunctionManege\AddFatherFunction1.aspx" />
+    <Content Include="AdminMetro\CCOM\FunctionManege\AddSonFunction.aspx" />
+    <Content Include="AdminMetro\CCOM\FunctionManege\EditSonFunction.aspx" />
+    <Content Include="AdminMetro\CCOM\ManagerManage\AddManager.aspx" />
+    <Content Include="AdminMetro\CCOM\ManagerManage\ManagerList.aspx" />
+    <Content Include="AdminMetro\CCOM\notice\ApplySms.aspx" />
+    <Content Include="AdminMetro\CCOM\notice\Edit_default_notice.aspx" />
+    <Content Include="AdminMetro\CCOM\notice\error-20160903.txt" />
+    <Content Include="AdminMetro\CCOM\notice\Manage_SMS_apply.aspx" />
+    <Content Include="AdminMetro\CCOM\notice\Notice_image_temp.html" />
+    <Content Include="AdminMetro\CCOM\notice\Notice_list.aspx" />
+    <Content Include="AdminMetro\CCOM\notice\Notice_list_manager.aspx" />
+    <Content Include="AdminMetro\CCOM\notice\Notice_temp.html" />
+    <Content Include="AdminMetro\CCOM\notice\ReleaseOrEditNotice.aspx" />
+    <Content Include="AdminMetro\CCOM\notice\SelectUserDept.aspx" />
+    <Content Include="AdminMetro\CCOM\notice\ViewNotice.aspx" />
+    <Content Include="AdminMetro\CCOM\notification\News.aspx" />
+    <Content Include="AdminMetro\CCOM\notification\NewsListAjax.js" />
+    <Content Include="AdminMetro\CCOM\notification\News_list_manager.aspx" />
+    <Content Include="AdminMetro\CCOM\notification\news_temp.html" />
+    <Content Include="AdminMetro\CCOM\notification\News_type_manage.aspx" />
+    <Content Include="AdminMetro\CCOM\notification\Notice.aspx" />
+    <Content Include="AdminMetro\CCOM\notification\PreviewNews.aspx" />
+    <Content Include="AdminMetro\CCOM\notification\ReleaseOrEdit.js" />
+    <Content Include="AdminMetro\CCOM\notification\ReleaseOrEditNews.aspx" />
+    <Content Include="AdminMetro\CCOM\notification\ViewNews.aspx" />
+    <Content Include="AdminMetro\CCOM\OrgManage\OrgAdd.aspx" />
+    <Content Include="AdminMetro\CCOM\OrgManage\OrgEdit.aspx" />
+    <Content Include="AdminMetro\CCOM\OrgManage\OrgList.aspx" />
+    <Content Include="AdminMetro\CCOM\OrgManage\OrgSelect.aspx" />
+    <Content Include="AdminMetro\CCOM\ResManage\JudgeAdd.aspx" />
+    <Content Include="AdminMetro\CCOM\ResManage\JudgeBatchAdd.aspx" />
+    <Content Include="AdminMetro\CCOM\ResManage\JudgeList.aspx" />
+    <Content Include="AdminMetro\CCOM\ResManage\ResourceAdd.aspx" />
+    <Content Include="AdminMetro\CCOM\ResManage\ResourceBatchAdd.aspx" />
+    <Content Include="AdminMetro\CCOM\ResManage\ResourceList.aspx" />
+    <Content Include="AdminMetro\CCOM\ResManage\RoomAdd.aspx" />
+    <Content Include="AdminMetro\CCOM\ResManage\RoomBatchAdd.aspx" />
+    <Content Include="AdminMetro\CCOM\ResManage\RoomList.aspx" />
+    <Content Include="AdminMetro\CCOM\ResManage\MajorList.aspx" />
+    <Content Include="AdminMetro\CCOM\RoleManage\AddRole.aspx" />
+    <Content Include="AdminMetro\CCOM\RoleManage\PermissionManage.aspx" />
+    <Content Include="AdminMetro\CCOM\RoleManage\RoleList.aspx" />
+    <Content Include="AdminMetro\CCOM\StudentManage\AddStudent2.aspx" />
+    <Content Include="AdminMetro\CCOM\StudentManage\CertificateReference.html" />
+    <Content Include="AdminMetro\CCOM\StudentManage\StudentBatchAdd.aspx" />
+    <Content Include="AdminMetro\CCOM\StudentManage\StudentList.aspx" />
+    <Content Include="AdminMetro\CCOM\TopicManage\BatchCheck.aspx" />
+    <Content Include="AdminMetro\CCOM\TopicManage\StudentPage.aspx" />
+    <Content Include="AdminMetro\CCOM\TopicManage\TeacherPage.aspx" />
+    <Content Include="AdminMetro\CCOM\TopicManage\TopicBatchAdd.aspx" />
+    <Content Include="AdminMetro\CCOM\TopicManage\TopicCheckList.aspx" />
+    <Content Include="AdminMetro\CCOM\TopicManage\TopicList.aspx" />
+    <Content Include="AdminMetro\CCOM\TopicManage\StudentChoose.aspx" />
+    <Content Include="AdminMetro\CCOM\TopicManage\TeacherChoose.aspx" />
+    <Content Include="AdminMetro\CCOM\TopicManage\AcceptStudent.aspx" />
+    <Content Include="AdminMetro\CCOM\TopicManage\TopicPage.aspx" />
+    <Content Include="AdminMetro\CCOM\update_info\UpdateInfo.aspx" />
+    <Content Include="AdminMetro\CCOM\update_info\update_info.aspx" />
+    <Content Include="AdminMetro\CCOM\update_info\ChangePWD.aspx" />
+    <Content Include="AdminMetro\CCOM\userInfo\EditUserInfo.aspx" />
+    <Content Include="AdminMetro\index.aspx" />
+    <Content Include="AdminMetro\login_page.aspx" />
+    <Content Include="AdminMetro\getpwd.aspx" />
+    <Content Include="AdminMetro\OnlineView\OnlineImgView.aspx" />
+    <Content Include="AdminMetro\OnlineView\OnlinePdfView.aspx" />
+    <Content Include="AdminMetro\OnlineView\OnlineTxtView.aspx" />
+    <Content Include="AdminMetro\OnlineView\OnlineView.aspx" />
+    <Content Include="admin\css\apply.css" />
+    <Content Include="admin\css\bootstrap-theme.css" />
+    <Content Include="admin\css\bootstrap-theme.min.css" />
+    <Content Include="admin\css\bootstrap.css" />
+    <Content Include="admin\css\bootstrap.min.css" />
+    <Content Include="admin\css\css_1st\1.css" />
+    <Content Include="admin\css\css_1st\2.css" />
+    <Content Include="admin\css\css_2nd\1.css" />
+    <Content Include="admin\css\css_2nd\2.css" />
+    <Content Include="admin\css\css_activity\activity_detail.css" />
+    <Content Include="admin\css\css_data\default.css" />
+    <Content Include="admin\css\css_data\infodetail.css" />
+    <Content Include="admin\css\css_data\search.css" />
+    <Content Include="admin\css\css_index\centerIndex.css" />
+    <Content Include="admin\css\css_index\login-page-v3.css" />
+    <Content Include="admin\css\css_index\loginIndex-v3.css" />
+    <Content Include="admin\css\css_index\loginIndex.css" />
+    <Content Include="admin\css\css_index\loginIndex_hasvcode.css" />
+    <Content Include="admin\css\css_intro\app_screen.png" />
+    <Content Include="admin\css\css_intro\app_screen2.png" />
+    <Content Include="admin\css\css_intro\count.png" />
+    <Content Include="admin\css\css_intro\free.png" />
+    <Content Include="admin\css\css_intro\good.png" />
+    <Content Include="admin\css\css_intro\mail.png" />
+    <Content Include="admin\css\css_intro\manager.png" />
+    <Content Include="admin\css\css_intro\middle1-yuan.png" />
+    <Content Include="admin\css\css_intro\middle1.png" />
+    <Content Include="admin\css\css_intro\middle2-1.png" />
+    <Content Include="admin\css\css_intro\middle2-2.png" />
+    <Content Include="admin\css\css_intro\middle2-3.png" />
+    <Content Include="admin\css\css_intro\middle2.png" />
+    <Content Include="admin\css\css_intro\middle3.png" />
+    <Content Include="admin\css\css_intro\middle4.png" />
+    <Content Include="admin\css\css_intro\middle5.png" />
+    <Content Include="admin\css\css_intro\notice.png" />
+    <Content Include="admin\css\css_intro\qq.png" />
+    <Content Include="admin\css\css_intro\reg.png" />
+    <Content Include="admin\css\css_intro\reg_stu.png" />
+    <Content Include="admin\css\css_intro\schoolwork.png" />
+    <Content Include="admin\css\css_intro\security.png" />
+    <Content Include="admin\css\css_intro\social.png" />
+    <Content Include="admin\css\css_intro\stumanager.png" />
+    <Content Include="admin\css\css_intro\top-yuan.png" />
+    <Content Include="admin\css\css_intro\top.png" />
+    <Content Include="admin\css\css_intro\web_screen.png" />
+    <Content Include="admin\css\css_intro\web_screen2.png" />
+    <Content Include="admin\css\css_intro\work.png" />
+    <Content Include="admin\css\css_intro\yun.png" />
+    <Content Include="admin\css\css_intro_mobile\app_screen.png" />
+    <Content Include="admin\css\css_intro_mobile\app_screen2.png" />
+    <Content Include="admin\css\css_intro_mobile\basic.css" />
+    <Content Include="admin\css\css_intro_mobile\basic_v3.css" />
+    <Content Include="admin\css\css_intro_mobile\bottom.png" />
+    <Content Include="admin\css\css_intro_mobile\free.png" />
+    <Content Include="admin\css\css_intro_mobile\intro-apply.png" />
+    <Content Include="admin\css\css_intro_mobile\intro-news.png" />
+    <Content Include="admin\css\css_intro_mobile\intro-notice.png" />
+    <Content Include="admin\css\css_intro_mobile\manager.png" />
+    <Content Include="admin\css\css_intro_mobile\middle1.png" />
+    <Content Include="admin\css\css_intro_mobile\middle2-1.png" />
+    <Content Include="admin\css\css_intro_mobile\middle2-2.png" />
+    <Content Include="admin\css\css_intro_mobile\middle2-3.png" />
+    <Content Include="admin\css\css_intro_mobile\middle3.png" />
+    <Content Include="admin\css\css_intro_mobile\middle4.png" />
+    <Content Include="admin\css\css_intro_mobile\middle5.png" />
+    <Content Include="admin\css\css_intro_mobile\middlesmall.css" />
+    <Content Include="admin\css\css_intro_mobile\reg.png" />
+    <Content Include="admin\css\css_intro_mobile\reg_stu.png" />
+    <Content Include="admin\css\css_intro_mobile\schoolwork.png" />
+    <Content Include="admin\css\css_intro_mobile\security.png" />
+    <Content Include="admin\css\css_intro_mobile\social.png" />
+    <Content Include="admin\css\css_intro_mobile\stumanager.png" />
+    <Content Include="admin\css\css_intro_mobile\top.png" />
+    <Content Include="admin\css\css_intro_mobile\web_screen.png" />
+    <Content Include="admin\css\css_intro_mobile\web_screen2.png" />
+    <Content Include="admin\css\css_intro_mobile\yun.png" />
+    <Content Include="admin\css\css_intro_mobile\zepto.min.js" />
+    <Content Include="admin\css\css_Jeditable\jquery-ui.css" />
+    <Content Include="admin\css\css_model\1.css" />
+    <Content Include="admin\css\css_model\2.css" />
+    <Content Include="admin\css\css_PublicPageList\bootstrap-theme.css" />
+    <Content Include="admin\css\css_PublicPageList\bootstrap-theme.min.css" />
+    <Content Include="admin\css\css_PublicPageList\bootstrap.css" />
+    <Content Include="admin\css\css_PublicPageList\bootstrap.min.css" />
+    <Content Include="admin\css\css_PublicPageList\style.css" />
+    <Content Include="admin\css\css_SingleActivity\bootstrap-theme.css" />
+    <Content Include="admin\css\css_SingleActivity\bootstrap-theme.min.css" />
+    <Content Include="admin\css\css_SingleActivity\bootstrap.css" />
+    <Content Include="admin\css\css_SingleActivity\bootstrap.min.css" />
+    <Content Include="admin\css\css_SingleActivity\style.css" />
+    <Content Include="admin\css\css_system\add_stu.css" />
+    <Content Include="admin\css\css_system\default.css" />
+    <Content Include="admin\css\css_ystep\images\pointes_blue.png" />
+    <Content Include="admin\css\css_ystep\images\pointes_green.png" />
+    <Content Include="admin\css\css_ystep\ystep.css" />
+    <Content Include="admin\css\default.jpg" />
+    <Content Include="admin\css\image1.gif" />
+    <Content Include="admin\css\image2.gif" />
+    <Content Include="admin\css\Jcrop.gif" />
+    <Content Include="admin\css\jquery.Jcrop.css" />
+    <Content Include="admin\css\meeting_css.css" />
+    <Content Include="admin\css\meneame.jpg" />
+    <Content Include="admin\css\pagination.css" />
+    <Content Include="admin\css\scholarship.css" />
+    <Content Include="admin\css\validate.css" />
+    <Content Include="admin\js\bootstrap.min.js" />
+    <Content Include="admin\js\function.js" />
+    <Content Include="admin\js\html5shiv.js" />
+    <Content Include="admin\js\jquery-ex-plugins.js" />
+    <Content Include="admin\js\jquery.autotip.js" />
+    <Content Include="admin\js\jquery.inputDefault.js" />
+    <Content Include="admin\js\jquery.min.js" />
+    <Content Include="admin\js\jquery.placeholder.js" />
+    <Content Include="admin\js\jquery.SuperSlide.2.1.1.js" />
+    <Content Include="admin\js\js_2nd\quanquan_accf.js" />
+    <Content Include="admin\js\js_2nd\quanquan_found.js" />
+    <Content Include="admin\js\js_2nd\quanquan_ga.js" />
+    <Content Include="admin\js\js_2nd\quanquan_jqf.js" />
+    <Content Include="admin\js\js_2nd\quanquan_lib.js" />
+    <Content Include="admin\js\js_Jeditable\edit-plugin.js" />
+    <Content Include="admin\js\js_Jeditable\jquery-1.4.4.min.js" />
+    <Content Include="admin\js\js_Jeditable\jquery-ui.js" />
+    <Content Include="admin\js\js_Jeditable\jquery.jeditable.js" />
+    <Content Include="admin\js\js_PublicPageList\bootstrap.min.js" />
+    <Content Include="admin\js\js_PublicPageList\html5shiv.js" />
+    <Content Include="admin\js\js_PublicPageList\jquery.min.js" />
+    <Content Include="admin\js\js_PublicPageList\less-1.3.3.min.js" />
+    <Content Include="admin\js\js_PublicPageList\scripts.js" />
+    <Content Include="admin\js\js_SingleActivity\bootstrap.min.js" />
+    <Content Include="admin\js\js_SingleActivity\html5shiv.js" />
+    <Content Include="admin\js\js_SingleActivity\jquery.min.js" />
+    <Content Include="admin\js\js_SingleActivity\less-1.3.3.min.js" />
+    <Content Include="admin\js\js_SingleActivity\scripts.js" />
+    <Content Include="admin\js\js_ystep\jquery.min.js" />
+    <Content Include="admin\js\js_ystep\ystep.js" />
+    <Content Include="admin\js\less-1.3.3.min.js" />
+    <Content Include="admin\js\login-v3.js" />
+    <Content Include="admin\js\noright.js" />
+    <Content Include="admin\js\objURL.js" />
+    <Content Include="admin\js\quanquan_accf.js" />
+    <Content Include="admin\js\quanquan_found.js" />
+    <Content Include="admin\js\quanquan_ga.js" />
+    <Content Include="admin\js\quanquan_jqf.js" />
+    <Content Include="admin\js\quanquan_lib.js" />
+    <Content Include="admin\js\scripts.js" />
+    <Content Include="download\北京理工大学软件学院本科毕业设计系统.pdf" />
+    <Content Include="editor\kindeditor-min.js" />
+    <Content Include="editor\kindeditor.js" />
+    <Content Include="editor\lang\ar.js" />
+    <Content Include="editor\lang\en.js" />
+    <Content Include="editor\lang\zh_CN.js" />
+    <Content Include="editor\lang\zh_TW.js" />
+    <Content Include="editor\plugins\anchor\anchor.js" />
+    <Content Include="editor\plugins\clearhtml\clearhtml.js" />
+    <Content Include="editor\plugins\code\code.js" />
+    <Content Include="editor\plugins\code\prettify.css" />
+    <Content Include="editor\plugins\code\prettify.js" />
+    <Content Include="editor\plugins\emoticons\emoticons.js" />
+    <Content Include="editor\plugins\emoticons\images\0.gif" />
+    <Content Include="editor\plugins\emoticons\images\1.gif" />
+    <Content Include="editor\plugins\emoticons\images\10.gif" />
+    <Content Include="editor\plugins\emoticons\images\100.gif" />
+    <Content Include="editor\plugins\emoticons\images\101.gif" />
+    <Content Include="editor\plugins\emoticons\images\102.gif" />
+    <Content Include="editor\plugins\emoticons\images\103.gif" />
+    <Content Include="editor\plugins\emoticons\images\104.gif" />
+    <Content Include="editor\plugins\emoticons\images\105.gif" />
+    <Content Include="editor\plugins\emoticons\images\106.gif" />
+    <Content Include="editor\plugins\emoticons\images\107.gif" />
+    <Content Include="editor\plugins\emoticons\images\108.gif" />
+    <Content Include="editor\plugins\emoticons\images\109.gif" />
+    <Content Include="editor\plugins\emoticons\images\11.gif" />
+    <Content Include="editor\plugins\emoticons\images\110.gif" />
+    <Content Include="editor\plugins\emoticons\images\111.gif" />
+    <Content Include="editor\plugins\emoticons\images\112.gif" />
+    <Content Include="editor\plugins\emoticons\images\113.gif" />
+    <Content Include="editor\plugins\emoticons\images\114.gif" />
+    <Content Include="editor\plugins\emoticons\images\115.gif" />
+    <Content Include="editor\plugins\emoticons\images\116.gif" />
+    <Content Include="editor\plugins\emoticons\images\117.gif" />
+    <Content Include="editor\plugins\emoticons\images\118.gif" />
+    <Content Include="editor\plugins\emoticons\images\119.gif" />
+    <Content Include="editor\plugins\emoticons\images\12.gif" />
+    <Content Include="editor\plugins\emoticons\images\120.gif" />
+    <Content Include="editor\plugins\emoticons\images\121.gif" />
+    <Content Include="editor\plugins\emoticons\images\122.gif" />
+    <Content Include="editor\plugins\emoticons\images\123.gif" />
+    <Content Include="editor\plugins\emoticons\images\124.gif" />
+    <Content Include="editor\plugins\emoticons\images\125.gif" />
+    <Content Include="editor\plugins\emoticons\images\126.gif" />
+    <Content Include="editor\plugins\emoticons\images\127.gif" />
+    <Content Include="editor\plugins\emoticons\images\128.gif" />
+    <Content Include="editor\plugins\emoticons\images\129.gif" />
+    <Content Include="editor\plugins\emoticons\images\13.gif" />
+    <Content Include="editor\plugins\emoticons\images\130.gif" />
+    <Content Include="editor\plugins\emoticons\images\131.gif" />
+    <Content Include="editor\plugins\emoticons\images\132.gif" />
+    <Content Include="editor\plugins\emoticons\images\133.gif" />
+    <Content Include="editor\plugins\emoticons\images\134.gif" />
+    <Content Include="editor\plugins\emoticons\images\14.gif" />
+    <Content Include="editor\plugins\emoticons\images\15.gif" />
+    <Content Include="editor\plugins\emoticons\images\16.gif" />
+    <Content Include="editor\plugins\emoticons\images\17.gif" />
+    <Content Include="editor\plugins\emoticons\images\18.gif" />
+    <Content Include="editor\plugins\emoticons\images\19.gif" />
+    <Content Include="editor\plugins\emoticons\images\2.gif" />
+    <Content Include="editor\plugins\emoticons\images\20.gif" />
+    <Content Include="editor\plugins\emoticons\images\21.gif" />
+    <Content Include="editor\plugins\emoticons\images\22.gif" />
+    <Content Include="editor\plugins\emoticons\images\23.gif" />
+    <Content Include="editor\plugins\emoticons\images\24.gif" />
+    <Content Include="editor\plugins\emoticons\images\25.gif" />
+    <Content Include="editor\plugins\emoticons\images\26.gif" />
+    <Content Include="editor\plugins\emoticons\images\27.gif" />
+    <Content Include="editor\plugins\emoticons\images\28.gif" />
+    <Content Include="editor\plugins\emoticons\images\29.gif" />
+    <Content Include="editor\plugins\emoticons\images\3.gif" />
+    <Content Include="editor\plugins\emoticons\images\30.gif" />
+    <Content Include="editor\plugins\emoticons\images\31.gif" />
+    <Content Include="editor\plugins\emoticons\images\32.gif" />
+    <Content Include="editor\plugins\emoticons\images\33.gif" />
+    <Content Include="editor\plugins\emoticons\images\34.gif" />
+    <Content Include="editor\plugins\emoticons\images\35.gif" />
+    <Content Include="editor\plugins\emoticons\images\36.gif" />
+    <Content Include="editor\plugins\emoticons\images\37.gif" />
+    <Content Include="editor\plugins\emoticons\images\38.gif" />
+    <Content Include="editor\plugins\emoticons\images\39.gif" />
+    <Content Include="editor\plugins\emoticons\images\4.gif" />
+    <Content Include="editor\plugins\emoticons\images\40.gif" />
+    <Content Include="editor\plugins\emoticons\images\41.gif" />
+    <Content Include="editor\plugins\emoticons\images\42.gif" />
+    <Content Include="editor\plugins\emoticons\images\43.gif" />
+    <Content Include="editor\plugins\emoticons\images\44.gif" />
+    <Content Include="editor\plugins\emoticons\images\45.gif" />
+    <Content Include="editor\plugins\emoticons\images\46.gif" />
+    <Content Include="editor\plugins\emoticons\images\47.gif" />
+    <Content Include="editor\plugins\emoticons\images\48.gif" />
+    <Content Include="editor\plugins\emoticons\images\49.gif" />
+    <Content Include="editor\plugins\emoticons\images\5.gif" />
+    <Content Include="editor\plugins\emoticons\images\50.gif" />
+    <Content Include="editor\plugins\emoticons\images\51.gif" />
+    <Content Include="editor\plugins\emoticons\images\52.gif" />
+    <Content Include="editor\plugins\emoticons\images\53.gif" />
+    <Content Include="editor\plugins\emoticons\images\54.gif" />
+    <Content Include="editor\plugins\emoticons\images\55.gif" />
+    <Content Include="editor\plugins\emoticons\images\56.gif" />
+    <Content Include="editor\plugins\emoticons\images\57.gif" />
+    <Content Include="editor\plugins\emoticons\images\58.gif" />
+    <Content Include="editor\plugins\emoticons\images\59.gif" />
+    <Content Include="editor\plugins\emoticons\images\6.gif" />
+    <Content Include="editor\plugins\emoticons\images\60.gif" />
+    <Content Include="editor\plugins\emoticons\images\61.gif" />
+    <Content Include="editor\plugins\emoticons\images\62.gif" />
+    <Content Include="editor\plugins\emoticons\images\63.gif" />
+    <Content Include="editor\plugins\emoticons\images\64.gif" />
+    <Content Include="editor\plugins\emoticons\images\65.gif" />
+    <Content Include="editor\plugins\emoticons\images\66.gif" />
+    <Content Include="editor\plugins\emoticons\images\67.gif" />
+    <Content Include="editor\plugins\emoticons\images\68.gif" />
+    <Content Include="editor\plugins\emoticons\images\69.gif" />
+    <Content Include="editor\plugins\emoticons\images\7.gif" />
+    <Content Include="editor\plugins\emoticons\images\70.gif" />
+    <Content Include="editor\plugins\emoticons\images\71.gif" />
+    <Content Include="editor\plugins\emoticons\images\72.gif" />
+    <Content Include="editor\plugins\emoticons\images\73.gif" />
+    <Content Include="editor\plugins\emoticons\images\74.gif" />
+    <Content Include="editor\plugins\emoticons\images\75.gif" />
+    <Content Include="editor\plugins\emoticons\images\76.gif" />
+    <Content Include="editor\plugins\emoticons\images\77.gif" />
+    <Content Include="editor\plugins\emoticons\images\78.gif" />
+    <Content Include="editor\plugins\emoticons\images\79.gif" />
+    <Content Include="editor\plugins\emoticons\images\8.gif" />
+    <Content Include="editor\plugins\emoticons\images\80.gif" />
+    <Content Include="editor\plugins\emoticons\images\81.gif" />
+    <Content Include="editor\plugins\emoticons\images\82.gif" />
+    <Content Include="editor\plugins\emoticons\images\83.gif" />
+    <Content Include="editor\plugins\emoticons\images\84.gif" />
+    <Content Include="editor\plugins\emoticons\images\85.gif" />
+    <Content Include="editor\plugins\emoticons\images\86.gif" />
+    <Content Include="editor\plugins\emoticons\images\87.gif" />
+    <Content Include="editor\plugins\emoticons\images\88.gif" />
+    <Content Include="editor\plugins\emoticons\images\89.gif" />
+    <Content Include="editor\plugins\emoticons\images\9.gif" />
+    <Content Include="editor\plugins\emoticons\images\90.gif" />
+    <Content Include="editor\plugins\emoticons\images\91.gif" />
+    <Content Include="editor\plugins\emoticons\images\92.gif" />
+    <Content Include="editor\plugins\emoticons\images\93.gif" />
+    <Content Include="editor\plugins\emoticons\images\94.gif" />
+    <Content Include="editor\plugins\emoticons\images\95.gif" />
+    <Content Include="editor\plugins\emoticons\images\96.gif" />
+    <Content Include="editor\plugins\emoticons\images\97.gif" />
+    <Content Include="editor\plugins\emoticons\images\98.gif" />
+    <Content Include="editor\plugins\emoticons\images\99.gif" />
+    <Content Include="editor\plugins\emoticons\images\static.gif" />
+    <Content Include="editor\plugins\filemanager\filemanager.js" />
+    <Content Include="editor\plugins\filemanager\images\file-16.gif" />
+    <Content Include="editor\plugins\filemanager\images\file-64.gif" />
+    <Content Include="editor\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="editor\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="editor\plugins\filemanager\images\go-up.gif" />
+    <Content Include="editor\plugins\flash\flash.js" />
+    <Content Include="editor\plugins\image\image.js" />
+    <Content Include="editor\plugins\image\images\align_left.gif" />
+    <Content Include="editor\plugins\image\images\align_right.gif" />
+    <Content Include="editor\plugins\image\images\align_top.gif" />
+    <Content Include="editor\plugins\image\images\refresh.png" />
+    <Content Include="editor\plugins\insertfile\insertfile.js" />
+    <Content Include="editor\plugins\lineheight\lineheight.js" />
+    <Content Include="editor\plugins\link\link.js" />
+    <Content Include="editor\plugins\map\map.html" />
+    <Content Include="editor\plugins\map\map.js" />
+    <Content Include="editor\plugins\media\media.js" />
+    <Content Include="editor\plugins\pagebreak\pagebreak.js" />
+    <Content Include="editor\plugins\plainpaste\plainpaste.js" />
+    <Content Include="editor\plugins\preview\preview.js" />
+    <Content Include="editor\plugins\quickformat\quickformat.js" />
+    <Content Include="editor\plugins\table\table.js" />
+    <Content Include="editor\plugins\template\html\1.html" />
+    <Content Include="editor\plugins\template\html\2.html" />
+    <Content Include="editor\plugins\template\html\3.html" />
+    <Content Include="editor\plugins\template\template.js" />
+    <Content Include="editor\plugins\wordpaste\wordpaste.js" />
+    <Content Include="editor\themes\common\anchor.gif" />
+    <Content Include="editor\themes\common\blank.gif" />
+    <Content Include="editor\themes\common\flash.gif" />
+    <Content Include="editor\themes\common\loading.gif" />
+    <Content Include="editor\themes\common\media.gif" />
+    <Content Include="editor\themes\common\rm.gif" />
+    <Content Include="editor\themes\default\background.png" />
+    <Content Include="editor\themes\default\default.css" />
+    <Content Include="editor\themes\default\default.png" />
+    <Content Include="editor\themes\simple\simple.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="FusionCharts\Charts\Area2D.swf" />
+    <Content Include="FusionCharts\Charts\Bar2D.swf" />
+    <Content Include="FusionCharts\Charts\Bubble.swf" />
+    <Content Include="FusionCharts\Charts\Column2D.swf" />
+    <Content Include="FusionCharts\Charts\Column3D.swf" />
+    <Content Include="FusionCharts\Charts\Doughnut2D.swf" />
+    <Content Include="FusionCharts\Charts\Doughnut3D.swf" />
+    <Content Include="FusionCharts\Charts\FCExporter.swf" />
+    <Content Include="FusionCharts\Charts\Line.swf" />
+    <Content Include="FusionCharts\Charts\MSArea.swf" />
+    <Content Include="FusionCharts\Charts\MSBar2D.swf" />
+    <Content Include="FusionCharts\Charts\MSBar3D.swf" />
+    <Content Include="FusionCharts\Charts\MSColumn2D.swf" />
+    <Content Include="FusionCharts\Charts\MSColumn3D.swf" />
+    <Content Include="FusionCharts\Charts\MSColumn3DLineDY.swf" />
+    <Content Include="FusionCharts\Charts\MSColumnLine3D.swf" />
+    <Content Include="FusionCharts\Charts\MSCombi2D.swf" />
+    <Content Include="FusionCharts\Charts\MSCombi3D.swf" />
+    <Content Include="FusionCharts\Charts\MSCombiDY2D.swf" />
+    <Content Include="FusionCharts\Charts\MSLine.swf" />
+    <Content Include="FusionCharts\Charts\MSStackedColumn2D.swf" />
+    <Content Include="FusionCharts\Charts\MSStackedColumn2DLineDY.swf" />
+    <Content Include="FusionCharts\Charts\Pie2D.swf" />
+    <Content Include="FusionCharts\Charts\Pie3D.swf" />
+    <Content Include="FusionCharts\Charts\Scatter.swf" />
+    <Content Include="FusionCharts\Charts\ScrollArea2D.swf" />
+    <Content Include="FusionCharts\Charts\ScrollColumn2D.swf" />
+    <Content Include="FusionCharts\Charts\ScrollCombi2D.swf" />
+    <Content Include="FusionCharts\Charts\ScrollCombiDY2D.swf" />
+    <Content Include="FusionCharts\Charts\ScrollLine2D.swf" />
+    <Content Include="FusionCharts\Charts\ScrollStackedColumn2D.swf" />
+    <Content Include="FusionCharts\Charts\SSGrid.swf" />
+    <Content Include="FusionCharts\Charts\StackedArea2D.swf" />
+    <Content Include="FusionCharts\Charts\StackedBar2D.swf" />
+    <Content Include="FusionCharts\Charts\StackedBar3D.swf" />
+    <Content Include="FusionCharts\Charts\StackedColumn2D.swf" />
+    <Content Include="FusionCharts\Charts\StackedColumn3D.swf" />
+    <Content Include="FusionCharts\Charts\StackedColumn3DLineDY.swf" />
+    <Content Include="home\news\3.0.html" />
+    <Content Include="home\news\template\news_404.html" />
+    <Content Include="home\news\template\news_error.html" />
+    <Content Include="home\news\template\news_redirect.html" />
+    <Content Include="home\news\template\news_template.html" />
+    <Content Include="home\news\template\pushnews_template.html" />
+    <Content Include="home\news\template\webnews_template.html" />
+    <Content Include="home\news\web\201607\30\08D727D5DCDDB39E.html" />
+    <Content Include="home\news\web\201607\30\6E56C4B4F79E6FD1.html" />
+    <Content Include="home\news\web\201607\30\C34FC4D190CB7122.html" />
+    <Content Include="home\news\web\201608\01\0DE4F0D6C15DF694.html" />
+    <Content Include="home\news\web\201608\01\21DED7D134615710.html" />
+    <Content Include="home\news\web\201608\01\233FBF8ADC98915E.html" />
+    <Content Include="home\news\web\201608\01\A120FAEE6F67865D.html" />
+    <Content Include="home\news\web\201608\02\105BACF85084779C.html" />
+    <Content Include="home\news\web\201608\02\5CE7DE7E742EA18B.html" />
+    <Content Include="home\news\web\201608\02\A6B6ED2AE507BB1E.html" />
+    <Content Include="home\news\web\201608\02\E1854801E3DDE7AA.html" />
+    <Content Include="home\news\web\201608\03\0977A917CD2C4F2D.html" />
+    <Content Include="home\news\web\201608\03\0EF7B317BDC36E90.html" />
+    <Content Include="home\news\web\201608\03\1B7AD82ADB29526E.html" />
+    <Content Include="home\news\web\201608\03\612C24B3A37D3124.html" />
+    <Content Include="home\news\web\201608\03\858238F733C45243.html" />
+    <Content Include="home\news\web\201608\03\962FE41F3B93E39C.html" />
+    <Content Include="home\news\web\201608\03\9AAAA38F4A391CA1.html" />
+    <Content Include="home\news\web\201608\03\AD8BA24D8AA62F8A.html" />
+    <Content Include="home\news\web\201608\03\ADE7B5374139C4FB.html" />
+    <Content Include="home\news\web\201608\03\AE03FE2FBD57F0BB.html" />
+    <Content Include="home\news\web\201608\03\B78D18D14013AB5E.html" />
+    <Content Include="home\news\web\201608\03\B833BF061BE84C6E.html" />
+    <Content Include="home\news\web\201608\03\B94422F7006EF195.html" />
+    <Content Include="home\news\web\201608\03\CE3A17BFAE4421FD.html" />
+    <Content Include="home\news\web\201608\03\D690E85E262E8A42.html" />
+    <Content Include="home\news\web\201608\03\EAFBF33CF1039EE8.html" />
+    <Content Include="home\news\web\201608\04\0977A917CD2C4F2D.html" />
+    <Content Include="home\news\web\201608\04\1FF39DE9301EB647.html" />
+    <Content Include="home\news\web\201608\04\33A6BB2F84869BB3.html" />
+    <Content Include="home\news\web\201608\04\AD2242D7948EE9C0.html" />
+    <Content Include="home\news\web\201608\05\AD2242D7948EE9C0.html" />
+    <Content Include="home\news\web\201608\06\381EED673E62DB9A.html" />
+    <Content Include="home\news\web\201608\06\8E9B1FFD8CC98CD5.html" />
+    <Content Include="home\news\web\201608\06\9BCC704CDC05B33F.html" />
+    <Content Include="home\news\web\201608\06\CB22C18A23DAEE1B.html" />
+    <Content Include="home\news\web\201608\06\D450DEFADC7FB2AC.html" />
+    <Content Include="images\404.png" />
+    <Content Include="images\500.png" />
+    <Content Include="images\background.png" />
+    <Content Include="images\bianji.jpg" />
+    <Content Include="images\bullet_user.png" />
+    <Content Include="images\error404.png" />
+    <Content Include="images\first.png" />
+    <Content Include="images\folder.png" />
+    <Content Include="images\hint.png" />
+    <Content Include="images\jia.png" />
+    <Content Include="images\jian.png" />
+    <Content Include="images\job_head.png" />
+    <Content Include="images\last.png" />
+    <Content Include="images\login\login-bg.png" />
+    <Content Include="images\login\login-mid.png" />
+    <Content Include="images\login\wqbackground.png" />
+    <Content Include="images\login\wqlogo1.png" />
+    <Content Include="images\login\wqlogo2.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo_middle.png" />
+    <Content Include="images\logo_small.png" />
+    <Content Include="images\msg.png" />
+    <Content Include="images\msg_bg.png" />
+    <Content Include="images\new.gif" />
+    <Content Include="images\news_ad_1024_v1.jpg" />
+    <Content Include="images\news_head.png" />
+    <Content Include="images\news_share.jpg" />
+    <Content Include="images\pay_delivery.gif" />
+    <Content Include="images\refresh.png" />
+    <Content Include="images\sendfile.png" />
+    <Content Include="images\step.png" />
+    <Content Include="images\step_1.png" />
+    <Content Include="images\step_2.png" />
+    <Content Include="images\validate_bg.gif" />
+    <Content Include="images\pay_alipay.gif" />
+    <Content Include="images\pay_balance.gif" />
+    <Content Include="images\pay_tenpay.gif" />
+    <Content Include="images\news_ad.jpg" />
+    <Content Include="index.aspx" />
+    <Content Include="metro\404.html" />
+    <Content Include="metro\500.html" />
+    <Content Include="metro\about_us.html" />
+    <Content Include="metro\assets\bootstrap-colorpicker\css\colorpicker.css" />
+    <Content Include="metro\assets\bootstrap-colorpicker\img\alpha.png" />
+    <Content Include="metro\assets\bootstrap-colorpicker\img\hue.png" />
+    <Content Include="metro\assets\bootstrap-colorpicker\img\saturation.png" />
+    <Content Include="metro\assets\bootstrap-colorpicker\js\bootstrap-colorpicker.js" />
+    <Content Include="metro\assets\bootstrap-datepicker\css\datepicker.css" />
+    <Content Include="metro\assets\bootstrap-datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="metro\assets\bootstrap-daterangepicker\date.js" />
+    <Content Include="metro\assets\bootstrap-daterangepicker\daterangepicker.css" />
+    <Content Include="metro\assets\bootstrap-daterangepicker\daterangepicker.js" />
+    <Content Include="metro\assets\bootstrap-inputmask\bootstrap-inputmask.min.js" />
+    <Content Include="metro\assets\bootstrap-timepicker\compiled\timepicker.css" />
+    <Content Include="metro\assets\bootstrap-timepicker\js\bootstrap-timepicker.js" />
+    <Content Include="metro\assets\bootstrap-toggle-buttons\static\js\jquery.toggle.buttons.js" />
+    <Content Include="metro\assets\bootstrap-toggle-buttons\static\stylesheets\bootstrap-toggle-buttons.css" />
+    <Content Include="metro\assets\bootstrap-tree\bootstrap-tree\css\bootstrap-tree.css" />
+    <Content Include="metro\assets\bootstrap-tree\bootstrap-tree\img\bstree-halflings.png" />
+    <Content Include="metro\assets\bootstrap-tree\bootstrap-tree\js\assets\plugins\bootstrap-tree\bootstrap-tree\img\ajax-loader.gif" />
+    <Content Include="metro\assets\bootstrap-tree\bootstrap-tree\js\bootstrap-tree.js" />
+    <Content Include="metro\assets\bootstrap-tree\htmlexample.html" />
+    <Content Include="metro\assets\bootstrap-tree\xmlexample.xml" />
+    <Content Include="metro\assets\bootstrap-wizard\jquery.bootstrap.wizard.min.js" />
+    <Content Include="metro\assets\bootstrap-wysihtml5\bootstrap-wysihtml5.css" />
+    <Content Include="metro\assets\bootstrap-wysihtml5\bootstrap-wysihtml5.js" />
+    <Content Include="metro\assets\bootstrap-wysihtml5\foo.gif" />
+    <Content Include="metro\assets\bootstrap-wysihtml5\wysihtml5-0.3.0.js" />
+    <Content Include="metro\assets\bootstrap\css\bootstrap-fileupload.css" />
+    <Content Include="metro\assets\bootstrap\css\bootstrap-index-v3.min.css" />
+    <Content Include="metro\assets\bootstrap\css\bootstrap-responsive-index-v3.min.css" />
+    <Content Include="metro\assets\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="metro\assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="metro\assets\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="metro\assets\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="metro\assets\bootstrap\js\bootstrap-fileupload.js" />
+    <Content Include="metro\assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="metro\assets\chart-master\Chart.js" />
+    <Content Include="metro\assets\chosen-bootstrap\chosen\chosen-sprite.png" />
+    <Content Include="metro\assets\chosen-bootstrap\chosen\chosen.css" />
+    <Content Include="metro\assets\chosen-bootstrap\chosen\chosen.jquery.min.js" />
+    <Content Include="metro\assets\ckeditor\ckeditor.js" />
+    <Content Include="metro\assets\ckeditor\images\spacer.gif" />
+    <Content Include="metro\assets\clockface\css\clockface.css" />
+    <Content Include="metro\assets\clockface\js\clockface.js" />
+    <Content Include="metro\assets\data-tables\DT_bootstrap.css" />
+    <Content Include="metro\assets\data-tables\DT_bootstrap.js" />
+    <Content Include="metro\assets\data-tables\images\sort_asc.png" />
+    <Content Include="metro\assets\data-tables\images\sort_asc_disabled.png" />
+    <Content Include="metro\assets\data-tables\images\sort_both.png" />
+    <Content Include="metro\assets\data-tables\images\sort_desc.png" />
+    <Content Include="metro\assets\data-tables\images\sort_desc_disabled.png" />
+    <Content Include="metro\assets\data-tables\jquery.dataTables.js" />
+    <Content Include="metro\assets\dropzone\css\dropzone.css" />
+    <Content Include="metro\assets\dropzone\dropzone.js" />
+    <Content Include="metro\assets\dropzone\images\spritemap%402x.png" />
+    <Content Include="metro\assets\dropzone\images\spritemap.png" />
+    <Content Include="metro\assets\fancybox\source\blank.gif" />
+    <Content Include="metro\assets\fancybox\source\fancybox_loading.gif" />
+    <Content Include="metro\assets\fancybox\source\fancybox_overlay.png" />
+    <Content Include="metro\assets\fancybox\source\fancybox_sprite.png" />
+    <Content Include="metro\assets\fancybox\source\jquery.fancybox.css" />
+    <Content Include="metro\assets\fancybox\source\jquery.fancybox.pack.js" />
+    <Content Include="metro\assets\flot\jquery.flot.crosshair.js" />
+    <Content Include="metro\assets\flot\jquery.flot.js" />
+    <Content Include="metro\assets\flot\jquery.flot.pie.js" />
+    <Content Include="metro\assets\flot\jquery.flot.resize.js" />
+    <Content Include="metro\assets\flot\jquery.flot.stack.js" />
+    <Content Include="metro\assets\font-awesome\css\font-awesome.css" />
+    <Content Include="metro\assets\font-awesome\font\fontawesome-webfont.svg" />
+    <Content Include="metro\assets\fullcalendar\fullcalendar\bootstrap-fullcalendar.css" />
+    <Content Include="metro\assets\fullcalendar\fullcalendar\fullcalendar.min.js" />
+    <Content Include="metro\assets\gritter\css\jquery.gritter.css" />
+    <Content Include="metro\assets\gritter\images\gritter-light.png" />
+    <Content Include="metro\assets\gritter\images\gritter.png" />
+    <Content Include="metro\assets\gritter\images\ie-spacer.gif" />
+    <Content Include="metro\assets\gritter\js\jquery.gritter.js" />
+    <Content Include="metro\assets\jquery-easy-pie-chart\jquery.easy-pie-chart.css" />
+    <Content Include="metro\assets\jquery-easy-pie-chart\jquery.easy-pie-chart.js" />
+    <Content Include="metro\assets\jquery-slimscroll\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="metro\assets\jquery-slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="metro\assets\jquery-tags-input\jquery.tagsinput.css" />
+    <Content Include="metro\assets\jquery-tags-input\jquery.tagsinput.min.js" />
+    <Content Include="metro\assets\jquery-ui\images\animated-overlay.gif" />
+    <Content Include="metro\assets\jquery-ui\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="metro\assets\jquery-ui\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="metro\assets\jquery-ui\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="metro\assets\jquery-ui\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="metro\assets\jquery-ui\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="metro\assets\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="metro\assets\jquery-ui\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="metro\assets\jquery-ui\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="metro\assets\jquery-ui\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="metro\assets\jquery-ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="metro\assets\jquery-ui\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="metro\assets\jquery-ui\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="metro\assets\jquery-ui\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="metro\assets\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="metro\assets\jquery-ui\jquery-ui-1.10.1.custom.min.css" />
+    <Content Include="metro\assets\jquery-ui\jquery-ui-1.10.1.custom.min.js" />
+    <Content Include="metro\assets\jqvmap\jqvmap\data\jquery.vmap.sampledata.js" />
+    <Content Include="metro\assets\jqvmap\jqvmap\jquery.vmap.js" />
+    <Content Include="metro\assets\jqvmap\jqvmap\jqvmap.css" />
+    <Content Include="metro\assets\jqvmap\jqvmap\maps\jquery.vmap.europe.js" />
+    <Content Include="metro\assets\jqvmap\jqvmap\maps\jquery.vmap.germany.js" />
+    <Content Include="metro\assets\jqvmap\jqvmap\maps\jquery.vmap.russia.js" />
+    <Content Include="metro\assets\jqvmap\jqvmap\maps\jquery.vmap.usa.js" />
+    <Content Include="metro\assets\jqvmap\jqvmap\maps\jquery.vmap.world.js" />
+    <Content Include="metro\assets\metr-folio\assets\grain.png" />
+    <Content Include="metro\assets\metr-folio\assets\link.png" />
+    <Content Include="metro\assets\metr-folio\assets\link_clean.png" />
+    <Content Include="metro\assets\metr-folio\assets\lupe.png" />
+    <Content Include="metro\assets\metr-folio\assets\socialbar-bg.png" />
+    <Content Include="metro\assets\metr-folio\assets\tiles\list.png" />
+    <Content Include="metro\assets\metr-folio\assets\tiles\topgradient.png" />
+    <Content Include="metro\assets\metr-folio\assets\zoom_clean.png" />
+    <Content Include="metro\assets\metr-folio\css\metro-gallery.css" />
+    <Content Include="metro\assets\metr-folio\icons\comments.png" />
+    <Content Include="metro\assets\metr-folio\icons\facebook.png" />
+    <Content Include="metro\assets\metr-folio\icons\like.png" />
+    <Content Include="metro\assets\metr-folio\icons\more.png" />
+    <Content Include="metro\assets\metr-folio\icons\twitter.png" />
+    <Content Include="metro\assets\metr-folio\js\jquery.metro-gal.megafoliopro.js" />
+    <Content Include="metro\assets\metr-folio\js\jquery.metro-gal.plugins.min.js" />
+    <Content Include="metro\assets\nestable\jquery.nestable.css" />
+    <Content Include="metro\assets\nestable\jquery.nestable.js" />
+    <Content Include="metro\assets\uniform\css\uniform.default.css" />
+    <Content Include="metro\assets\uniform\images\bg-input-focus.png" />
+    <Content Include="metro\assets\uniform\images\bg-input.png" />
+    <Content Include="metro\assets\uniform\images\sprite.png" />
+    <Content Include="metro\assets\uniform\jquery.uniform.min.js" />
+    <Content Include="metro\basic_table.html" />
+    <Content Include="metro\blank.html" />
+    <Content Include="metro\blog.html" />
+    <Content Include="metro\blog_details.html" />
+    <Content Include="metro\button.html" />
+    <Content Include="metro\calendar.html" />
+    <Content Include="metro\chartjs.html" />
+    <Content Include="metro\contact_us.html" />
+    <Content Include="metro\create_invoice.html" />
+    <Content Include="metro\css\css_activity\activity_detail.css" />
+    <Content Include="metro\css\css_activity\calendar.css" />
+    <Content Include="metro\css\css_activity\default.css" />
+    <Content Include="metro\css\css_activity\hdx.min.css" />
+    <Content Include="metro\css\css_apply\apply.js" />
+    <Content Include="metro\css\css_apply\chosen-sprite.png" />
+    <Content Include="metro\css\css_apply\chosen.css" />
+    <Content Include="metro\css\css_apply\chosen.jquery.min.js" />
+    <Content Include="metro\css\css_data\default.css" />
+    <Content Include="metro\css\css_data\infodetail.css" />
+    <Content Include="metro\css\css_data\search.css" />
+    <Content Include="metro\css\css_organassn\organassn_detail.css" />
+    <Content Include="metro\css\css_template\template.css" />
+    <Content Include="metro\css\default.css" />
+    <Content Include="metro\css\ex-style.css" />
+    <Content Include="metro\css\style-default.css" />
+    <Content Include="metro\css\style-responsive.css" />
+    <Content Include="metro\css\style.css" />
+    <Content Include="metro\css\timeline-component.css" />
+    <Content Include="metro\draggable_portlet.html" />
+    <Content Include="metro\dropzone.html" />
+    <Content Include="metro\dynamic_table.html" />
+    <Content Include="metro\editable_table.html" />
+    <Content Include="metro\edit_profile.html" />
+    <Content Include="metro\faq.html" />
+    <Content Include="metro\flot_chart.html" />
+    <Content Include="metro\font\myriadprobold.svg" />
+    <Content Include="metro\font\myriadproit.svg" />
+    <Content Include="metro\font\myriadprolight.svg" />
+    <Content Include="metro\font\myriadproregular.svg" />
+    <Content Include="metro\font_awesome.html" />
+    <Content Include="metro\form_component.html" />
+    <Content Include="metro\form_layout.html" />
+    <Content Include="metro\form_validation.html" />
+    <Content Include="metro\form_wizard.html" />
+    <Content Include="metro\gallery.html" />
+    <Content Include="metro\general.html" />
+    <Content Include="metro\general_portlet.html" />
+    <Content Include="metro\glyphicons.html" />
+    <Content Include="metro\google_map.html" />
+    <Content Include="metro\grids.html" />
+    <Content Include="metro\img\404bg.jpg" />
+    <Content Include="metro\img\500bg.jpg" />
+    <Content Include="metro\img\about-us\img-1.jpg" />
+    <Content Include="metro\img\about-us\img-2.jpg" />
+    <Content Include="metro\img\about-us\img-3.jpg" />
+    <Content Include="metro\img\about-us\img-4.jpg" />
+    <Content Include="metro\img\avatar-mini.png" />
+    <Content Include="metro\img\avatar1.jpg" />
+    <Content Include="metro\img\avatar1_small.jpg" />
+    <Content Include="metro\img\avatar2.jpg" />
+    <Content Include="metro\img\avatar3.jpg" />
+    <Content Include="metro\img\blog\blog-thumb-2.jpg" />
+    <Content Include="metro\img\blog\blog-thumb-3.jpg" />
+    <Content Include="metro\img\blog\blog1-big.jpg" />
+    <Content Include="metro\img\blog\blog2-big.jpg" />
+    <Content Include="metro\img\blog\blog3-big.jpg" />
+    <Content Include="metro\img\file-search\ai.png" />
+    <Content Include="metro\img\file-search\doc.png" />
+    <Content Include="metro\img\file-search\email.png" />
+    <Content Include="metro\img\file-search\eps.png" />
+    <Content Include="metro\img\file-search\jpg.png" />
+    <Content Include="metro\img\file-search\pdf.png" />
+    <Content Include="metro\img\file-search\ppt.png" />
+    <Content Include="metro\img\file-search\psd.png" />
+    <Content Include="metro\img\file-search\rss.png" />
+    <Content Include="metro\img\file-search\xls.png" />
+    <Content Include="metro\img\file-search\zip.png" />
+    <Content Include="metro\img\gallery\icons\flexible.png" />
+    <Content Include="metro\img\gallery\icons\grid.png" />
+    <Content Include="metro\img\gallery\icons\leaf.png" />
+    <Content Include="metro\img\gallery\icons\light.png" />
+    <Content Include="metro\img\gallery\icons\mobile.png" />
+    <Content Include="metro\img\gallery\icons\nike.png" />
+    <Content Include="metro\img\gallery\icons\runner.png" />
+    <Content Include="metro\img\gallery\image1.jpg" />
+    <Content Include="metro\img\gallery\image10.jpg" />
+    <Content Include="metro\img\gallery\image11.jpg" />
+    <Content Include="metro\img\gallery\image12.jpg" />
+    <Content Include="metro\img\gallery\image13.jpg" />
+    <Content Include="metro\img\gallery\image14.jpg" />
+    <Content Include="metro\img\gallery\image15.jpg" />
+    <Content Include="metro\img\gallery\image16.jpg" />
+    <Content Include="metro\img\gallery\image17.jpg" />
+    <Content Include="metro\img\gallery\image18.jpg" />
+    <Content Include="metro\img\gallery\image2.jpg" />
+    <Content Include="metro\img\gallery\image3.jpg" />
+    <Content Include="metro\img\gallery\image4.jpg" />
+    <Content Include="metro\img\gallery\image5.jpg" />
+    <Content Include="metro\img\gallery\image6.jpg" />
+    <Content Include="metro\img\gallery\image7.jpg" />
+    <Content Include="metro\img\gallery\image8.jpg" />
+    <Content Include="metro\img\gallery\image9.jpg" />
+    <Content Include="metro\img\glyphicons-halflings-white.png" />
+    <Content Include="metro\img\glyphicons-halflings.png" />
+    <Content Include="metro\img\img_activitynew\backgrounds.32.png" />
+    <Content Include="metro\img\img_activitynew\backgrounds2.32.png" />
+    <Content Include="metro\img\img_activitynew\fullcalendar_bg.png" />
+    <Content Include="metro\img\img_activitynew\sports.jpg" />
+    <Content Include="metro\img\img_declaration\LOGO_jxjsb.png" />
+    <Content Include="metro\img\img_declaration\LOGO_ptsb.png" />
+    <Content Include="metro\img\img_organassn\logo.png" />
+    <Content Include="metro\img\lock-thumb.jpg" />
+    <Content Include="metro\img\logo.png" />
+    <Content Include="metro\img\Main.jpg" />
+    <Content Include="metro\img\overlay-icon.png" />
+    <Content Include="metro\img\product1.jpg" />
+    <Content Include="metro\img\product2.png" />
+    <Content Include="metro\img\product3.png" />
+    <Content Include="metro\img\product4.png" />
+    <Content Include="metro\img\product5.png" />
+    <Content Include="metro\img\profile-contact.jpg" />
+    <Content Include="metro\img\vector-lab.jpg" />
+    <Content Include="metro\include\footer_common.html" />
+    <Content Include="metro\include\header_common.html" />
+    <Content Include="metro\include\header_contextmenu.html" />
+    <Content Include="metro\include\header_datepicker.html" />
+    <Content Include="metro\include\header_ueditor.html" />
+    <Content Include="metro\include\header_ystep.html" />
+    <Content Include="metro\include\header_ztree.html" />
+    <Content Include="metro\index.html" />
+    <Content Include="metro\invoice.html" />
+    <Content Include="metro\invoice_list.html" />
+    <Content Include="metro\js\additional-methods.min.js" />
+    <Content Include="metro\js\all-chartjs.js" />
+    <Content Include="metro\js\app-interact.js" />
+    <Content Include="metro\js\artDialog-v6\css\ui-dialog.css" />
+    <Content Include="metro\js\artDialog-v6\dist\dialog-min.js" />
+    <Content Include="metro\js\artDialog-v6\dist\dialog-plus-min.js" />
+    <Content Include="metro\js\artDialog-v6\dist\dialog-plus.js" />
+    <Content Include="metro\js\artDialog-v6\dist\dialog.js" />
+    <Content Include="metro\js\artDialog-v6\lib\jquery-1.10.2.js" />
+    <Content Include="metro\js\artDialog-v6\lib\require.js" />
+    <Content Include="metro\js\artDialog-v6\lib\sea.js" />
+    <Content Include="metro\js\common-scripts.js" />
+    <Content Include="metro\js\custom-flot-chart.js" />
+    <Content Include="metro\js\data-js\data-horse.js" />
+    <Content Include="metro\js\draggable-portlet.js" />
+    <Content Include="metro\js\dropdown-hover.js" />
+    <Content Include="metro\js\dynamic-table.js" />
+    <Content Include="metro\js\easy-pie-chart.js" />
+    <Content Include="metro\js\echart2.0.0\build.js" />
+    <Content Include="metro\js\echart2.0.0\codemirror.js" />
+    <Content Include="metro\js\echart2.0.0\config-tpl.js" />
+    <Content Include="metro\js\echart2.0.0\echarts-map.js" />
+    <Content Include="metro\js\echart2.0.0\echarts-original-map.js" />
+    <Content Include="metro\js\echart2.0.0\echarts-original.js" />
+    <Content Include="metro\js\echart2.0.0\echarts-plain-map.js" />
+    <Content Include="metro\js\echart2.0.0\echarts-plain-original-map.js" />
+    <Content Include="metro\js\echart2.0.0\echarts-plain-original.js" />
+    <Content Include="metro\js\echart2.0.0\echarts-plain.js" />
+    <Content Include="metro\js\echart2.0.0\echarts.js" />
+    <Content Include="metro\js\echart2.0.0\echartsExample.js" />
+    <Content Include="metro\js\echart2.0.0\esl.js" />
+    <Content Include="metro\js\echart2.0.0\r.js" />
+    <Content Include="metro\js\echart2.0.0\wrap\almond.js" />
+    <Content Include="metro\js\echart2.0.0\wrap\end-map.js" />
+    <Content Include="metro\js\echart2.0.0\wrap\end.js" />
+    <Content Include="metro\js\echart2.0.0\wrap\start.js" />
+    <Content Include="metro\js\editable-table.js" />
+    <Content Include="metro\js\ex-common-scripts.js" />
+    <Content Include="metro\js\ex-jquery-plugins.js" />
+    <Content Include="metro\js\excanvas.js" />
+    <Content Include="metro\js\external-dragging-calendar.js" />
+    <Content Include="metro\js\firstintro\certf\addtemplate-intro.js" />
+    <Content Include="metro\js\firstintro\certf\admincertf-intro.js" />
+    <Content Include="metro\js\firstintro\certf\studentcertf-intro.js" />
+    <Content Include="metro\js\firstintro\news\news-intro.js" />
+    <Content Include="metro\js\firstintro\notice-intro.js" />
+    <Content Include="metro\js\firstintro\schoolmanager\addmanager.js" />
+    <Content Include="metro\js\firstintro\schoolmanager\addmanager2.js" />
+    <Content Include="metro\js\firstintro\schoolmanager\addmanager3.js" />
+    <Content Include="metro\js\firstintro\schoolmanager\addorg.js" />
+    <Content Include="metro\js\firstintro\schoolmanager\addstu.js" />
+    <Content Include="metro\js\firstintro\schoolmanager\managerlist.js" />
+    <Content Include="metro\js\firstintro\schoolmanager\orglist.js" />
+    <Content Include="metro\js\firstintro\schoolmanager\stulist.js" />
+    <Content Include="metro\js\firstintro\schoolmanager\stu_edit.js" />
+    <Content Include="metro\js\firstintro\schoolmanager\stu_edit_stu.js" />
+    <Content Include="metro\js\flot-chart.js" />
+    <Content Include="metro\js\form-component.js" />
+    <Content Include="metro\js\form-validation-script.js" />
+    <Content Include="metro\js\form-wizard.js" />
+    <Content Include="metro\js\gmaps-scripts.js" />
+    <Content Include="metro\js\gmaps.js" />
+    <Content Include="metro\js\gritter.js" />
+    <Content Include="metro\js\home-chartjs.js" />
+    <Content Include="metro\js\home-page-calender.js" />
+    <Content Include="metro\js\intro-js-v1.0.0\intro.js" />
+    <Content Include="metro\js\intro-js-v1.0.0\introjs.css" />
+    <Content Include="metro\js\jquery-1.10.2.min.js" />
+    <Content Include="metro\js\jquery-1.8.2.min.js" />
+    <Content Include="metro\js\jquery-1.8.3.min.js" />
+    <Content Include="metro\js\jquery.blockui.js" />
+    <Content Include="metro\js\jquery.contextmenu\jquery.contextMenu.css" />
+    <Content Include="metro\js\jquery.contextmenu\jquery.contextMenu.js" />
+    <Content Include="metro\js\jQuery.dualListBox-1.3.js" />
+    <Content Include="metro\js\jquery.nicescroll.js" />
+    <Content Include="metro\js\jquery.placeholder.js" />
+    <Content Include="metro\js\jquery.pulsate.min.js" />
+    <Content Include="metro\js\jquery.scrollTo.min.js" />
+    <Content Include="metro\js\jquery.sparkline.js" />
+    <Content Include="metro\js\jquery.timeago.js" />
+    <Content Include="metro\js\jquery.timeago.zh.js" />
+    <Content Include="metro\js\jquery.validate.min.js" />
+    <Content Include="metro\js\JsMap.js" />
+    <Content Include="metro\js\json2.js" />
+    <Content Include="metro\js\js_activity\mobile.js" />
+    <Content Include="metro\js\js_activity\staticmobile.js" />
+    <Content Include="metro\js\js_activity\web.js" />
+    <Content Include="metro\js\js_declaration\DT_bootstrap.css" />
+    <Content Include="metro\js\js_declaration\DT_bootstrap.js" />
+    <Content Include="metro\js\js_declaration\dynamic-table.js" />
+    <Content Include="metro\js\js_declaration\images\sort_asc.png" />
+    <Content Include="metro\js\js_declaration\images\sort_asc_disabled.png" />
+    <Content Include="metro\js\js_declaration\images\sort_both.png" />
+    <Content Include="metro\js\js_declaration\images\sort_desc.png" />
+    <Content Include="metro\js\js_declaration\images\sort_desc_disabled.png" />
+    <Content Include="metro\js\js_declaration\DataDic.js" />
+    <Content Include="metro\js\js_declaration\DataOperation.js" />
+    <Content Include="metro\js\js_declaration\jquery.dataTables.js" />
+    <Content Include="metro\js\js_declaration\jQuery.dualListBox-1.3.js" />
+    <Content Include="metro\js\layer\extend\layer.ext.js" />
+    <Content Include="metro\js\layer\layer.min.js" />
+    <Content Include="metro\js\layer\skin\default\icon_ext.png" />
+    <Content Include="metro\js\layer\skin\default\textbg.png" />
+    <Content Include="metro\js\layer\skin\default\xubox_ico0.png" />
+    <Content Include="metro\js\layer\skin\default\xubox_loading0.gif" />
+    <Content Include="metro\js\layer\skin\default\xubox_loading1.gif" />
+    <Content Include="metro\js\layer\skin\default\xubox_loading2.gif" />
+    <Content Include="metro\js\layer\skin\default\xubox_loading3.gif" />
+    <Content Include="metro\js\layer\skin\default\xubox_title0.png" />
+    <Content Include="metro\js\layer\skin\layer.css" />
+    <Content Include="metro\js\layer\skin\layer.ext.css" />
+    <Content Include="metro\js\laytpl.js" />
+    <Content Include="metro\js\My97DatePicker\calendar.js" />
+    <Content Include="metro\js\My97DatePicker\config.js" />
+    <Content Include="metro\js\My97DatePicker\lang\en.js" />
+    <Content Include="metro\js\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="metro\js\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="metro\js\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="metro\js\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="metro\js\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="metro\js\My97DatePicker\skin\default\img.gif" />
+    <Content Include="metro\js\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="metro\js\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="metro\js\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="metro\js\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="metro\js\My97DatePicker\WdatePicker.js" />
+    <Content Include="metro\js\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="metro\js\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="metro\js\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="metro\js\My97DatePicker\开发包\readme.txt" />
+    <Content Include="metro\js\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="metro\js\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="metro\js\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="metro\js\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="metro\js\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="metro\js\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="metro\js\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="metro\js\nestable.js" />
+    <Content Include="metro\js\objURL.js" />
+    <Content Include="metro\js\pulstate.js" />
+    <Content Include="metro\js\respond.js" />
+    <Content Include="metro\js\sliders.js" />
+    <Content Include="metro\js\sparkline-chart.js" />
+    <Content Include="metro\js\TextExt\css\arrow.png" />
+    <Content Include="metro\js\TextExt\css\close.png" />
+    <Content Include="metro\js\TextExt\css\textext.core.css" />
+    <Content Include="metro\js\TextExt\css\textext.plugin.arrow.css" />
+    <Content Include="metro\js\TextExt\css\textext.plugin.autocomplete.css" />
+    <Content Include="metro\js\TextExt\css\textext.plugin.focus.css" />
+    <Content Include="metro\js\TextExt\css\textext.plugin.prompt.css" />
+    <Content Include="metro\js\TextExt\css\textext.plugin.tags.css" />
+    <Content Include="metro\js\TextExt\js\jquery-1.8.2.js" />
+    <Content Include="metro\js\TextExt\js\textext.core.js" />
+    <Content Include="metro\js\TextExt\js\textext.plugin.ajax.js" />
+    <Content Include="metro\js\TextExt\js\textext.plugin.arrow.js" />
+    <Content Include="metro\js\TextExt\js\textext.plugin.autocomplete.js" />
+    <Content Include="metro\js\TextExt\js\textext.plugin.filter.js" />
+    <Content Include="metro\js\TextExt\js\textext.plugin.focus.js" />
+    <Content Include="metro\js\TextExt\js\textext.plugin.prompt.js" />
+    <Content Include="metro\js\TextExt\js\textext.plugin.suggestions.js" />
+    <Content Include="metro\js\TextExt\js\textext.plugin.tags.js" />
+    <Content Include="metro\js\tree.js" />
+    <Content Include="metro\js\verify\verify-pwd.js" />
+    <Content Include="metro\js\vmaps-scripts.js" />
+    <Content Include="metro\js\ystep\css\images\pointes_blue.png" />
+    <Content Include="metro\js\ystep\css\images\pointes_green.png" />
+    <Content Include="metro\js\ystep\css\ystep.css" />
+    <Content Include="metro\js\ystep\js\jquery.min.js" />
+    <Content Include="metro\js\ystep\js\ystep.js" />
+    <Content Include="metro\js\zTree\css\demo.css" />
+    <Content Include="metro\js\zTree\css\zTreeStyle\img\diy\1_close.png" />
+    <Content Include="metro\js\zTree\css\zTreeStyle\img\diy\1_open.png" />
+    <Content Include="metro\js\zTree\css\zTreeStyle\img\diy\2.png" />
+    <Content Include="metro\js\zTree\css\zTreeStyle\img\diy\3.png" />
+    <Content Include="metro\js\zTree\css\zTreeStyle\img\diy\4.png" />
+    <Content Include="metro\js\zTree\css\zTreeStyle\img\diy\5.png" />
+    <Content Include="metro\js\zTree\css\zTreeStyle\img\diy\6.png" />
+    <Content Include="metro\js\zTree\css\zTreeStyle\img\diy\7.png" />
+    <Content Include="metro\js\zTree\css\zTreeStyle\img\diy\8.png" />
+    <Content Include="metro\js\zTree\css\zTreeStyle\img\diy\9.png" />
+    <Content Include="metro\js\zTree\css\zTreeStyle\img\line_conn.gif" />
+    <Content Include="metro\js\zTree\css\zTreeStyle\img\loading.gif" />
+    <Content Include="metro\js\zTree\css\zTreeStyle\img\zTreeStandard.gif" />
+    <Content Include="metro\js\zTree\css\zTreeStyle\img\zTreeStandard.png" />
+    <Content Include="metro\js\zTree\css\zTreeStyle\zTreeStyle.css" />
+    <Content Include="metro\js\zTree\js\jquery-1.4.4.min.js" />
+    <Content Include="metro\js\zTree\js\jquery.ztree.all-3.5.js" />
+    <Content Include="metro\js\zTree\js\jquery.ztree.all-3.5.min.js" />
+    <Content Include="metro\js\zTree\js\jquery.ztree.core-3.5.js" />
+    <Content Include="metro\js\zTree\js\jquery.ztree.core-3.5.min.js" />
+    <Content Include="metro\js\zTree\js\jquery.ztree.excheck-3.5.js" />
+    <Content Include="metro\js\zTree\js\jquery.ztree.excheck-3.5.min.js" />
+    <Content Include="metro\js\zTree\js\jquery.ztree.exedit-3.5.js" />
+    <Content Include="metro\js\zTree\js\jquery.ztree.exedit-3.5.min.js" />
+    <Content Include="metro\js\zTree\js\jquery.ztree.exedit.js" />
+    <Content Include="metro\js\zTree\js\jquery.ztree.exhide-3.5.js" />
+    <Content Include="metro\js\zTree\js\jquery.ztree.exhide-3.5.min.js" />
+    <Content Include="metro\js\zTree\js\json2.js" />
+    <Content Include="metro\lock.html" />
+    <Content Include="metro\login.html" />
+    <Content Include="metro\metro_view.html" />
+    <Content Include="metro\nestable.html" />
+    <Content Include="metro\pricing_tables.html" />
+    <Content Include="metro\profile.html" />
+    <Content Include="metro\profile_activities.html" />
+    <Content Include="metro\profile_contact.html" />
+    <Content Include="metro\search_result.html" />
+    <Content Include="metro\slider.html" />
+    <Content Include="metro\tabs_accordion.html" />
+    <Content Include="metro\timeline.html" />
+    <Content Include="metro\tips\css\bootstrap.css" />
+    <Content Include="metro\tips\css\bootstrap.min.css" />
+    <Content Include="metro\tips\css\jquery.webui-popover.css" />
+    <Content Include="metro\tips\css\jquery.webui-popover.min.css" />
+    <Content Include="metro\tips\js\jquery-1.11.1.min.js" />
+    <Content Include="metro\tips\js\jquery.js" />
+    <Content Include="metro\tips\js\jquery.webui-popover.js" />
+    <Content Include="metro\tips\js\jquery.webui-popover.min.js" />
+    <Content Include="metro\tree_view.html" />
+    <Content Include="metro\typography.html" />
+    <Content Include="metro\vector_map.html" />
+    <Content Include="metro\youth\css\vote_default.css" />
+    <Content Include="metro\youth\image\ac_intro.png" />
+    <Content Include="metro\youth\image\ac_rule.png" />
+    <Content Include="metro\youth\image\ac_vote.png" />
+    <Content Include="metro\youth\image\container.png" />
+    <Content Include="metro\youth\image\head.png" />
+    <Content Include="metro\youth\image\lgslogo.png" />
+    <Content Include="metro\youth\image\logo.png" />
+    <Content Include="metro\youth\image\qcby_vote_logo.jpg" />
+    <Content Include="metro\youth\image\reward.png" />
+    <Content Include="metro\youth\image\schoollogo.png" />
+    <Content Include="metro\youth\image\vote_button.png" />
+    <Content Include="metro\youth\image\vote_complete.png" />
+    <Content Include="metro\youth\image\vote_end.png" />
+    <Content Include="metro\youth\image\vote_login.png" />
+    <Content Include="metro\youth\image\vote_right.png" />
+    <Content Include="metro\youth\image\vote_will.png" />
+    <Content Include="privacy.html" />
+    <Content Include="scripts\artDialog4.1.7\artDialog.js" />
+    <Content Include="scripts\artDialog4.1.7\artDialog.source.js" />
+    <Content Include="scripts\artDialog4.1.7\jquery.artDialog.js" />
+    <Content Include="scripts\artDialog4.1.7\jquery.artDialog.source.js" />
+    <Content Include="scripts\artDialog4.1.7\license.txt" />
+    <Content Include="scripts\artDialog4.1.7\plugins\iframeTools.js" />
+    <Content Include="scripts\artDialog4.1.7\plugins\iframeTools.source.js" />
+    <Content Include="scripts\artDialog4.1.7\skins\aero.css" />
+    <Content Include="scripts\artDialog4.1.7\skins\aero\aero_s.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\aero\aero_s2.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\aero\ie6\aui_close.hover.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\aero\ie6\aui_close.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\aero\ie6\aui_e.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\aero\ie6\aui_n.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\aero\ie6\aui_ne.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\aero\ie6\aui_nw.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\aero\ie6\aui_s.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\aero\ie6\aui_se.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\aero\ie6\aui_sw.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\aero\ie6\aui_title_icon.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\aero\ie6\aui_w.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\black.css" />
+    <Content Include="scripts\artDialog4.1.7\skins\black\bg.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\black\bg2.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\black\bg_css3.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\black\bg_css3_2.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\black\ie6\close.hover.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\black\ie6\close.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\black\ie6\e.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\black\ie6\n.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\black\ie6\ne.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\black\ie6\nw.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\black\ie6\s.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\black\ie6\se.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\black\ie6\sw.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\black\ie6\w.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\blue.css" />
+    <Content Include="scripts\artDialog4.1.7\skins\blue\bg.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\blue\bg2.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\blue\bg_css3.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\blue\bg_css3_2.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\blue\ie6\close.hover.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\blue\ie6\close.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\blue\ie6\e.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\blue\ie6\n.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\blue\ie6\ne.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\blue\ie6\nw.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\blue\ie6\s.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\blue\ie6\se.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\blue\ie6\sw.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\blue\ie6\w.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\chrome.css" />
+    <Content Include="scripts\artDialog4.1.7\skins\chrome\border.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\chrome\chrome_s.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\default.css" />
+    <Content Include="scripts\artDialog4.1.7\skins\green.css" />
+    <Content Include="scripts\artDialog4.1.7\skins\green\bg.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\green\bg2.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\green\bg_css3.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\green\bg_css3_2.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\green\color_bg.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\green\ie6\close.hover.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\green\ie6\close.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\green\ie6\e.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\green\ie6\n.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\green\ie6\ne.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\green\ie6\nw.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\green\ie6\s.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\green\ie6\se.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\green\ie6\sw.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\green\ie6\w.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\icons\error.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\icons\face-sad.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\icons\face-smile.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\icons\loading.gif" />
+    <Content Include="scripts\artDialog4.1.7\skins\icons\question.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\icons\succeed.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\icons\wait.gif" />
+    <Content Include="scripts\artDialog4.1.7\skins\icons\warning.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\idialog.css" />
+    <Content Include="scripts\artDialog4.1.7\skins\idialog\idialog_s.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\idialog\idialog_s2.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\idialog\ie6\aui_close.hover.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\idialog\ie6\aui_close.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\idialog\ie6\aui_e.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\idialog\ie6\aui_n.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\idialog\ie6\aui_ne.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\idialog\ie6\aui_nw.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\idialog\ie6\aui_s.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\idialog\ie6\aui_se.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\idialog\ie6\aui_sw.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\idialog\ie6\aui_w.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\opera.css" />
+    <Content Include="scripts\artDialog4.1.7\skins\opera\ie6\aui_close.hover.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\opera\ie6\aui_close.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\opera\ie6\aui_e.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\opera\ie6\aui_n.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\opera\ie6\aui_ne.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\opera\ie6\aui_nw.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\opera\ie6\aui_s.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\opera\ie6\aui_se.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\opera\ie6\aui_sw.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\opera\ie6\aui_w.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\opera\s1.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\opera\s2.png" />
+    <Content Include="scripts\artDialog4.1.7\skins\simple.css" />
+    <Content Include="scripts\artDialog4.1.7\skins\twitter.css" />
+    <Content Include="scripts\echart2.0.0\build.js" />
+    <Content Include="scripts\echart2.0.0\codemirror.js" />
+    <Content Include="scripts\echart2.0.0\config-tpl.js" />
+    <Content Include="scripts\echart2.0.0\echarts-map.js" />
+    <Content Include="scripts\echart2.0.0\echarts-original-map.js" />
+    <Content Include="scripts\echart2.0.0\echarts-original.js" />
+    <Content Include="scripts\echart2.0.0\echarts-plain-map.js" />
+    <Content Include="scripts\echart2.0.0\echarts-plain-original-map.js" />
+    <Content Include="scripts\echart2.0.0\echarts-plain-original.js" />
+    <Content Include="scripts\echart2.0.0\echarts-plain.js" />
+    <Content Include="scripts\echart2.0.0\echarts.js" />
+    <Content Include="scripts\echart2.0.0\echartsExample.js" />
+    <Content Include="scripts\echart2.0.0\esl.js" />
+    <Content Include="scripts\echart2.0.0\r.js" />
+    <Content Include="scripts\echart2.0.0\wrap\almond.js" />
+    <Content Include="scripts\echart2.0.0\wrap\end-map.js" />
+    <Content Include="scripts\echart2.0.0\wrap\end.js" />
+    <Content Include="scripts\echart2.0.0\wrap\start.js" />
+    <Content Include="scripts\calendar.js" />
+    <Content Include="scripts\echarts-map.js" />
+    <Content Include="scripts\echarts-original-map.js" />
+    <Content Include="scripts\echarts-original.js" />
+    <Content Include="scripts\echarts.js" />
+    <Content Include="scripts\esl.js" />
+    <Content Include="scripts\jquery\jquery-1.10.2.min.js" />
+    <Content Include="scripts\jquery\jquery-1.3.2.min.js" />
+    <Content Include="scripts\jquery\jquery.form.js" />
+    <Content Include="scripts\jquery\jquery.form.min.js" />
+    <Content Include="scripts\jquery\jquery.Jcrop.min.js" />
+    <Content Include="scripts\jquery\jquery.jqzoom.js" />
+    <Content Include="scripts\jquery\jquery.KinSlideshow-1.2.1.min.js" />
+    <Content Include="scripts\jquery\jquery.metadata.js" />
+    <Content Include="scripts\jquery\jquery.pagination.js" />
+    <Content Include="scripts\jquery\jquery.validate.min.js" />
+    <Content Include="scripts\jquery\messages_cn.js" />
+    <Content Include="scripts\layer\extend\layer.ext.js" />
+    <Content Include="scripts\layer\layer.min.js" />
+    <Content Include="scripts\layer\skin\default\icon_ext.png" />
+    <Content Include="scripts\layer\skin\default\textbg.png" />
+    <Content Include="scripts\layer\skin\default\xubox_ico0.png" />
+    <Content Include="scripts\layer\skin\default\xubox_loading0.gif" />
+    <Content Include="scripts\layer\skin\default\xubox_loading1.gif" />
+    <Content Include="scripts\layer\skin\default\xubox_loading2.gif" />
+    <Content Include="scripts\layer\skin\default\xubox_loading3.gif" />
+    <Content Include="scripts\layer\skin\default\xubox_title0.png" />
+    <Content Include="scripts\layer\skin\layer.css" />
+    <Content Include="scripts\layer\skin\layer.ext.css" />
+    <Content Include="scripts\My97DatePicker\calendar.js" />
+    <Content Include="scripts\My97DatePicker\config.js" />
+    <Content Include="scripts\My97DatePicker\lang\en.js" />
+    <Content Include="scripts\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="scripts\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="scripts\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="scripts\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="scripts\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="scripts\My97DatePicker\skin\default\img.gif" />
+    <Content Include="scripts\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="scripts\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="scripts\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="scripts\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="scripts\My97DatePicker\WdatePicker.js" />
+    <Content Include="scripts\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="scripts\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="scripts\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="scripts\My97DatePicker\开发包\readme.txt" />
+    <Content Include="scripts\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="scripts\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="scripts\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="scripts\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="scripts\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="scripts\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="scripts\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="scripts\onoff\jquery.onoff.css" />
+    <Content Include="scripts\onoff\jquery.onoff.js" />
+    <Content Include="scripts\onoff\jquery.onoff.min.js" />
+    <Content Include="scripts\onoff\test\index.html" />
+    <Content Include="scripts\onoff\test\libs\jquery.js" />
+    <Content Include="scripts\onoff\test\libs\qunit\qunit.css" />
+    <Content Include="scripts\onoff\test\libs\qunit\qunit.js" />
+    <Content Include="scripts\onoff\test\libs\require.js" />
+    <Content Include="scripts\onoff\test\onoff_test.js" />
+    <Content Include="scripts\swfupload\swfupload.handlers.js" />
+    <Content Include="scripts\swfupload\swfupload.js" />
+    <Content Include="scripts\swfupload\swfupload.queue.js" />
+    <Content Include="scripts\swfupload\swfupload.swf" />
+    <Content Include="scripts\TextExt\js\jquery-1.8.2.js" />
+    <Content Include="scripts\TextExt\css\arrow.png" />
+    <Content Include="scripts\TextExt\css\close.png" />
+    <Content Include="scripts\TextExt\css\textext.core.css" />
+    <Content Include="scripts\TextExt\css\textext.plugin.arrow.css" />
+    <Content Include="scripts\TextExt\css\textext.plugin.autocomplete.css" />
+    <Content Include="scripts\TextExt\css\textext.plugin.focus.css" />
+    <Content Include="scripts\TextExt\css\textext.plugin.prompt.css" />
+    <Content Include="scripts\TextExt\css\textext.plugin.tags.css" />
+    <Content Include="scripts\TextExt\js\textext.core.js" />
+    <Content Include="scripts\TextExt\js\textext.plugin.ajax.js" />
+    <Content Include="scripts\TextExt\js\textext.plugin.arrow.js" />
+    <Content Include="scripts\TextExt\js\textext.plugin.autocomplete.js" />
+    <Content Include="scripts\TextExt\js\textext.plugin.filter.js" />
+    <Content Include="scripts\TextExt\js\textext.plugin.focus.js" />
+    <Content Include="scripts\TextExt\js\textext.plugin.prompt.js" />
+    <Content Include="scripts\TextExt\js\textext.plugin.suggestions.js" />
+    <Content Include="scripts\TextExt\js\textext.plugin.tags.js" />
+    <Content Include="scripts\ui\js\ligerBuild.min.js" />
+    <Content Include="scripts\ui\js\ligerBuild.source.js" />
+    <Content Include="scripts\ui\skins\Aqua\css\ligerui-all.css" />
+    <Content Include="scripts\ui\skins\Aqua\css\ligerui-common.css" />
+    <Content Include="scripts\ui\skins\Aqua\css\ligerui-dialog.css" />
+    <Content Include="scripts\ui\skins\Aqua\css\ligerui-form.css" />
+    <Content Include="scripts\ui\skins\Aqua\css\ligerui-grid.css" />
+    <Content Include="scripts\ui\skins\Aqua\css\ligerui-layout.css" />
+    <Content Include="scripts\ui\skins\Aqua\css\ligerui-menu.css" />
+    <Content Include="scripts\ui\skins\Aqua\css\ligerui-tab.css" />
+    <Content Include="scripts\ui\skins\Aqua\css\ligerui-tree.css" />
+    <Content Include="scripts\ui\skins\Aqua\images\box\box-btn-done.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\box\box-btn-error.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\box\box-btn-l-over.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\box\box-btn-l.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\box\box-btn-over.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\box\box-btn-question.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\box\box-btn-r-over.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\box\box-btn-r.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\box\box-btn-warn.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\box\box-btn.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\box\box-close-over.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\box\box-close.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\box\box-lefttop.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\box\box-righttop.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\box\box-top.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\box\tabs-item-left-bg.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\common\loading.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\dialog-bc.png" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\dialog-bl.png" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\dialog-br.png" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\dialog-button.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\dialog-button.png" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\dialog-cl.png" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\dialog-close.png" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\dialog-cr.png" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\dialog-done.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\dialog-error.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\dialog-icons.png" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\dialog-question.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\dialog-tc.png" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\dialog-title-icon.png" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\dialog-tl.png" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\dialog-tr.png" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\dialog-warn.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\ie6\dialog-bc.png" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\ie6\dialog-cl.png" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\ie6\dialog-cr.png" />
+    <Content Include="scripts\ui\skins\Aqua\images\dialog\ie6\dialog-tc.png" />
+    <Content Include="scripts\ui\skins\Aqua\images\form\verify-corner.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\grid\box-lefttop.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\grid\box-righttop.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\grid\grid-checkbox-checked.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\grid\grid-checkbox.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\grid\grid-detail-close.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\grid\grid-detail-open.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\grid\grid-line.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\grid\grid-tree-close.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\grid\grid-tree-open.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\grid\header-bg-over.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\grid\header-bg.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\grid\header2-bg.jpg" />
+    <Content Include="scripts\ui\skins\Aqua\images\grid\loading.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\grid\popup-line.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\grid\popup-row-over.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\grid\popup-row-over.png" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\bar-button-over.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\checkbox-checked.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\checkbox.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-close-over.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-close.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-close18X18.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-done.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-down.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-drop.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-edited.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-first.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-last.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-line.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-load.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-load.png" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-milestone.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-next.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-prev.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-remark15X15.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-sort-asc.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-sort-desc.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-up.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\icon-warn.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\icon\magnifier.png" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\accordion-content.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\accordion-header-over.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\accordion-header.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\layout-header-over.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\layout-header.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\layout-sidebar-header.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\mini-bottom.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\mini-left.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\mini-right.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\mini-top.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\panel-content.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\panel-header-over.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\panel-header.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\tabs-bg.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\tabs-item-bg.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\tabs-item-left-bg.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\tabs-item-over-bg.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\tabs-item-right-bg.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\tabs-tools.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\layout\togglebar.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\menu\menu-item-arrow.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\menu\menu-item-down.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\menu\menu-item-over-l.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\menu\menu-item-over-m.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\menu\menu-item-over-r.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\menu\menu-line-x.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\menu\menu-line-y.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\panel\bar-bg.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\panel\header-bg.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\panel\header-bg.jpg" />
+    <Content Include="scripts\ui\skins\Aqua\images\panel\header2-bg.jpg" />
+    <Content Include="scripts\ui\skins\Aqua\images\panel\panel-btn-l.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\panel\panel-btn-r.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\panel\panel-btn.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\panel\panel-header.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\panel\panel-menu-item-down.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\panel\panel-menu.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\panel\panel-menu.jpg" />
+    <Content Include="scripts\ui\skins\Aqua\images\panel\panel-toolbar.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\panel\panel-toolbar.jpg" />
+    <Content Include="scripts\ui\skins\Aqua\images\panel\panel-tools-sprites.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\panel\panel-tools.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\tree\folder-open.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\tree\folder.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\tree\loading.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\tree\tree-leaf.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\tree\tree-level.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\tree\tree-noline.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\tree\tree-status-close.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\tree\tree-status-open.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\tree\tree-status.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\tree\tree.gif" />
+    <Content Include="scripts\ui\skins\Aqua\images\tree\tree.png" />
+    <Content Include="scripts\zTree\css\demo.css" />
+    <Content Include="scripts\zTree\css\zTreeStyle\img\diy\1_close.png" />
+    <Content Include="scripts\zTree\css\zTreeStyle\img\diy\1_open.png" />
+    <Content Include="scripts\zTree\css\zTreeStyle\img\diy\2.png" />
+    <Content Include="scripts\zTree\css\zTreeStyle\img\diy\3.png" />
+    <Content Include="scripts\zTree\css\zTreeStyle\img\diy\4.png" />
+    <Content Include="scripts\zTree\css\zTreeStyle\img\diy\5.png" />
+    <Content Include="scripts\zTree\css\zTreeStyle\img\diy\6.png" />
+    <Content Include="scripts\zTree\css\zTreeStyle\img\diy\7.png" />
+    <Content Include="scripts\zTree\css\zTreeStyle\img\diy\8.png" />
+    <Content Include="scripts\zTree\css\zTreeStyle\img\diy\9.png" />
+    <Content Include="scripts\zTree\css\zTreeStyle\img\line_conn.gif" />
+    <Content Include="scripts\zTree\css\zTreeStyle\img\loading.gif" />
+    <Content Include="scripts\zTree\css\zTreeStyle\img\zTreeStandard.gif" />
+    <Content Include="scripts\zTree\css\zTreeStyle\img\zTreeStandard.png" />
+    <Content Include="scripts\zTree\css\zTreeStyle\zTreeStyle.css" />
+    <Content Include="scripts\zTree\demo\cn\bigdata\common.html" />
+    <Content Include="scripts\zTree\demo\cn\bigdata\diy_async.html" />
+    <Content Include="scripts\zTree\demo\cn\bigdata\page.html" />
+    <Content Include="scripts\zTree\demo\cn\core\async.html" />
+    <Content Include="scripts\zTree\demo\cn\core\async_fun.html" />
+    <Content Include="scripts\zTree\demo\cn\core\click.html" />
+    <Content Include="scripts\zTree\demo\cn\core\custom_font.html" />
+    <Content Include="scripts\zTree\demo\cn\core\custom_icon.html" />
+    <Content Include="scripts\zTree\demo\cn\core\custom_iconSkin.html" />
+    <Content Include="scripts\zTree\demo\cn\core\expand.html" />
+    <Content Include="scripts\zTree\demo\cn\core\noicon.html" />
+    <Content Include="scripts\zTree\demo\cn\core\noline.html" />
+    <Content Include="scripts\zTree\demo\cn\core\otherMouse.html" />
+    <Content Include="scripts\zTree\demo\cn\core\searchNodes.html" />
+    <Content Include="scripts\zTree\demo\cn\core\simpleData.html" />
+    <Content Include="scripts\zTree\demo\cn\core\standardData.html" />
+    <Content Include="scripts\zTree\demo\cn\core\update_fun.html" />
+    <Content Include="scripts\zTree\demo\cn\core\url.html" />
+    <Content Include="scripts\zTree\demo\cn\excheck\checkbox.html" />
+    <Content Include="scripts\zTree\demo\cn\excheck\checkbox_chkDisabled.html" />
+    <Content Include="scripts\zTree\demo\cn\excheck\checkbox_count.html" />
+    <Content Include="scripts\zTree\demo\cn\excheck\checkbox_fun.html" />
+    <Content Include="scripts\zTree\demo\cn\excheck\checkbox_halfCheck.html" />
+    <Content Include="scripts\zTree\demo\cn\excheck\checkbox_nocheck.html" />
+    <Content Include="scripts\zTree\demo\cn\excheck\radio.html" />
+    <Content Include="scripts\zTree\demo\cn\excheck\radio_chkDisabled.html" />
+    <Content Include="scripts\zTree\demo\cn\excheck\radio_fun.html" />
+    <Content Include="scripts\zTree\demo\cn\excheck\radio_halfCheck.html" />
+    <Content Include="scripts\zTree\demo\cn\excheck\radio_nocheck.html" />
+    <Content Include="scripts\zTree\demo\cn\exedit\async_edit.html" />
+    <Content Include="scripts\zTree\demo\cn\exedit\drag.html" />
+    <Content Include="scripts\zTree\demo\cn\exedit\drag_fun.html" />
+    <Content Include="scripts\zTree\demo\cn\exedit\drag_super.html" />
+    <Content Include="scripts\zTree\demo\cn\exedit\edit.html" />
+    <Content Include="scripts\zTree\demo\cn\exedit\edit_fun.html" />
+    <Content Include="scripts\zTree\demo\cn\exedit\edit_super.html" />
+    <Content Include="scripts\zTree\demo\cn\exedit\multiTree.html" />
+    <Content Include="scripts\zTree\demo\cn\exhide\checkbox.html" />
+    <Content Include="scripts\zTree\demo\cn\exhide\common.html" />
+    <Content Include="scripts\zTree\demo\cn\exhide\radio.html" />
+    <Content Include="scripts\zTree\demo\cn\index.html" />
+    <Content Include="scripts\zTree\demo\cn\super\asyncForAll.html" />
+    <Content Include="scripts\zTree\demo\cn\super\checkbox_radio.html" />
+    <Content Include="scripts\zTree\demo\cn\super\diydom.html" />
+    <Content Include="scripts\zTree\demo\cn\super\dragWithOther.html" />
+    <Content Include="scripts\zTree\demo\cn\super\left_menu.html" />
+    <Content Include="scripts\zTree\demo\cn\super\left_menuForOutLook.gif" />
+    <Content Include="scripts\zTree\demo\cn\super\left_menuForOutLook.html" />
+    <Content Include="scripts\zTree\demo\cn\super\left_menuForOutLook.png" />
+    <Content Include="scripts\zTree\demo\cn\super\oneclick.html" />
+    <Content Include="scripts\zTree\demo\cn\super\oneroot.html" />
+    <Content Include="scripts\zTree\demo\cn\super\rightClickMenu.html" />
+    <Content Include="scripts\zTree\demo\cn\super\select_menu.html" />
+    <Content Include="scripts\zTree\demo\cn\super\select_menu_checkbox.html" />
+    <Content Include="scripts\zTree\demo\cn\super\select_menu_radio.html" />
+    <Content Include="scripts\zTree\demo\cn\super\singlepath.html" />
+    <Content Include="scripts\zTree\demo\en\bigdata\common.html" />
+    <Content Include="scripts\zTree\demo\en\bigdata\diy_async.html" />
+    <Content Include="scripts\zTree\demo\en\bigdata\page.html" />
+    <Content Include="scripts\zTree\demo\en\core\async.html" />
+    <Content Include="scripts\zTree\demo\en\core\async_fun.html" />
+    <Content Include="scripts\zTree\demo\en\core\click.html" />
+    <Content Include="scripts\zTree\demo\en\core\custom_font.html" />
+    <Content Include="scripts\zTree\demo\en\core\custom_icon.html" />
+    <Content Include="scripts\zTree\demo\en\core\custom_iconSkin.html" />
+    <Content Include="scripts\zTree\demo\en\core\expand.html" />
+    <Content Include="scripts\zTree\demo\en\core\noicon.html" />
+    <Content Include="scripts\zTree\demo\en\core\noline.html" />
+    <Content Include="scripts\zTree\demo\en\core\otherMouse.html" />
+    <Content Include="scripts\zTree\demo\en\core\searchNodes.html" />
+    <Content Include="scripts\zTree\demo\en\core\simpleData.html" />
+    <Content Include="scripts\zTree\demo\en\core\standardData.html" />
+    <Content Include="scripts\zTree\demo\en\core\update_fun.html" />
+    <Content Include="scripts\zTree\demo\en\core\url.html" />
+    <Content Include="scripts\zTree\demo\en\excheck\checkbox.html" />
+    <Content Include="scripts\zTree\demo\en\excheck\checkbox_chkDisabled.html" />
+    <Content Include="scripts\zTree\demo\en\excheck\checkbox_count.html" />
+    <Content Include="scripts\zTree\demo\en\excheck\checkbox_fun.html" />
+    <Content Include="scripts\zTree\demo\en\excheck\checkbox_halfCheck.html" />
+    <Content Include="scripts\zTree\demo\en\excheck\checkbox_nocheck.html" />
+    <Content Include="scripts\zTree\demo\en\excheck\radio.html" />
+    <Content Include="scripts\zTree\demo\en\excheck\radio_chkDisabled.html" />
+    <Content Include="scripts\zTree\demo\en\excheck\radio_fun.html" />
+    <Content Include="scripts\zTree\demo\en\excheck\radio_halfCheck.html" />
+    <Content Include="scripts\zTree\demo\en\excheck\radio_nocheck.html" />
+    <Content Include="scripts\zTree\demo\en\exedit\async_edit.html" />
+    <Content Include="scripts\zTree\demo\en\exedit\drag.html" />
+    <Content Include="scripts\zTree\demo\en\exedit\drag_fun.html" />
+    <Content Include="scripts\zTree\demo\en\exedit\drag_super.html" />
+    <Content Include="scripts\zTree\demo\en\exedit\edit.html" />
+    <Content Include="scripts\zTree\demo\en\exedit\edit_fun.html" />
+    <Content Include="scripts\zTree\demo\en\exedit\edit_super.html" />
+    <Content Include="scripts\zTree\demo\en\exedit\multiTree.html" />
+    <Content Include="scripts\zTree\demo\en\exhide\checkbox.html" />
+    <Content Include="scripts\zTree\demo\en\exhide\common.html" />
+    <Content Include="scripts\zTree\demo\en\exhide\radio.html" />
+    <Content Include="scripts\zTree\demo\en\index.html" />
+    <Content Include="scripts\zTree\demo\en\super\asyncForAll.html" />
+    <Content Include="scripts\zTree\demo\en\super\checkbox_radio.html" />
+    <Content Include="scripts\zTree\demo\en\super\diydom.html" />
+    <Content Include="scripts\zTree\demo\en\super\dragWithOther.html" />
+    <Content Include="scripts\zTree\demo\en\super\left_menu.html" />
+    <Content Include="scripts\zTree\demo\en\super\left_menuForOutLook.gif" />
+    <Content Include="scripts\zTree\demo\en\super\left_menuForOutLook.html" />
+    <Content Include="scripts\zTree\demo\en\super\left_menuForOutLook.png" />
+    <Content Include="scripts\zTree\demo\en\super\oneclick.html" />
+    <Content Include="scripts\zTree\demo\en\super\oneroot.html" />
+    <Content Include="scripts\zTree\demo\en\super\rightClickMenu.html" />
+    <Content Include="scripts\zTree\demo\en\super\select_menu.html" />
+    <Content Include="scripts\zTree\demo\en\super\select_menu_checkbox.html" />
+    <Content Include="scripts\zTree\demo\en\super\select_menu_radio.html" />
+    <Content Include="scripts\zTree\demo\en\super\singlepath.html" />
+    <Content Include="scripts\zTree\js\jquery-1.4.4.min.js" />
+    <Content Include="scripts\zTree\js\jquery.ztree.all-3.5.js" />
+    <Content Include="scripts\zTree\js\jquery.ztree.all-3.5.min.js" />
+    <Content Include="scripts\zTree\js\jquery.ztree.core-3.5.js" />
+    <Content Include="scripts\zTree\js\jquery.ztree.core-3.5.min.js" />
+    <Content Include="scripts\zTree\js\jquery.ztree.excheck-3.5.js" />
+    <Content Include="scripts\zTree\js\jquery.ztree.excheck-3.5.min.js" />
+    <Content Include="scripts\zTree\js\jquery.ztree.exedit-3.5.js" />
+    <Content Include="scripts\zTree\js\jquery.ztree.exedit-3.5.min.js" />
+    <Content Include="scripts\zTree\js\jquery.ztree.exedit.js" />
+    <Content Include="scripts\zTree\js\jquery.ztree.exhide-3.5.js" />
+    <Content Include="scripts\zTree\js\jquery.ztree.exhide-3.5.min.js" />
+    <Content Include="tools\upload_ajax.ashx" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\anchor\anchor.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\attachment.css" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\attachment.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\attachment.js" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\fileTypeImages\icon_chm.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\fileTypeImages\icon_default.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\fileTypeImages\icon_doc.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\fileTypeImages\icon_exe.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\fileTypeImages\icon_jpg.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\fileTypeImages\icon_mp3.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\fileTypeImages\icon_mv.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\fileTypeImages\icon_pdf.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\fileTypeImages\icon_ppt.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\fileTypeImages\icon_psd.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\fileTypeImages\icon_rar.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\fileTypeImages\icon_txt.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\fileTypeImages\icon_xls.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\images\alignicon.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\images\alignicon.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\images\bg.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\images\file-icons.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\images\file-icons.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\images\icons.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\images\icons.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\images\image.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\images\progress.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\images\success.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\attachment\images\success.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\background\background.css" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\background\background.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\background\background.js" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\background\images\bg.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\background\images\success.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\charts\chart.config.js" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\charts\charts.css" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\charts\charts.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\charts\charts.js" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\charts\images\charts0.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\charts\images\charts1.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\charts\images\charts2.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\charts\images\charts3.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\charts\images\charts4.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\charts\images\charts5.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\emotion\emotion.css" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\emotion\emotion.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\emotion\emotion.js" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\emotion\images\0.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\emotion\images\bface.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\emotion\images\cface.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\emotion\images\fface.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\emotion\images\tface.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\emotion\images\wface.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\emotion\images\yface.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\gmap\gmap.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\help\help.css" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\help\help.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\help\help.js" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\image\image.css" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\image\image.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\image\image.js" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\image\images\alignicon.jpg" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\image\images\bg.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\image\images\icons.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\image\images\icons.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\image\images\image.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\image\images\progress.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\image\images\success.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\image\images\success.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\insertframe\insertframe.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\internal.js" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\link\link.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\map\map.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\map\show.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\music\music.css" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\music\music.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\music\music.js" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\preview\preview.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\scrawl\images\addimg.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\scrawl\images\brush.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\scrawl\images\delimg.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\scrawl\images\delimgH.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\scrawl\images\empty.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\scrawl\images\emptyH.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\scrawl\images\eraser.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\scrawl\images\redo.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\scrawl\images\redoH.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\scrawl\images\scale.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\scrawl\images\scaleH.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\scrawl\images\size.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\scrawl\images\undo.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\scrawl\images\undoH.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\scrawl\scrawl.css" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\scrawl\scrawl.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\scrawl\scrawl.js" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\searchreplace\searchreplace.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\searchreplace\searchreplace.js" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\snapscreen\snapscreen.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\spechars\spechars.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\spechars\spechars.js" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\table\dragicon.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\table\edittable.css" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\table\edittable.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\table\edittable.js" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\table\edittd.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\table\edittip.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\template\config.js" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\template\images\bg.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\template\images\pre0.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\template\images\pre1.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\template\images\pre2.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\template\images\pre3.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\template\images\pre4.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\template\template.css" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\template\template.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\template\template.js" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\video\images\bg.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\video\images\center_focus.jpg" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\video\images\file-icons.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\video\images\file-icons.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\video\images\icons.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\video\images\icons.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\video\images\image.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\video\images\left_focus.jpg" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\video\images\none_focus.jpg" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\video\images\progress.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\video\images\right_focus.jpg" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\video\images\success.gif" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\video\images\success.png" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\video\video.css" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\video\video.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\video\video.js" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\webapp\webapp.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\wordimage\fClipboard_ueditor.swf" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\wordimage\imageUploader.swf" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\wordimage\tangram.js" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\wordimage\wordimage.html" />
+    <Content Include="ueditor1_4_2_utf8\dialogs\wordimage\wordimage.js" />
+    <Content Include="ueditor1_4_2_utf8\editor_test.aspx" />
+    <Content Include="ueditor1_4_2_utf8\index.html" />
+    <Content Include="ueditor1_4_2_utf8\lang\en\en.js" />
+    <Content Include="ueditor1_4_2_utf8\lang\en\images\addimage.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\en\images\alldeletebtnhoverskin.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\en\images\alldeletebtnupskin.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\en\images\background.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\en\images\button.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\en\images\copy.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\en\images\deletedisable.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\en\images\deleteenable.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\en\images\listbackground.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\en\images\localimage.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\en\images\music.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\en\images\rotateleftdisable.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\en\images\rotateleftenable.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\en\images\rotaterightdisable.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\en\images\rotaterightenable.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\en\images\upload.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\zh-cn\images\copy.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\zh-cn\images\localimage.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\zh-cn\images\music.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\zh-cn\images\upload.png" />
+    <Content Include="ueditor1_4_2_utf8\lang\zh-cn\zh-cn.js" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\css\ueditor.css" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\css\ueditor.min.css" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\dialogbase.css" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\anchor.gif" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\arrow.png" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\arrow_down.png" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\arrow_up.png" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\button-bg.gif" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\cancelbutton.gif" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\charts.png" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\cursor_h.gif" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\cursor_h.png" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\cursor_v.gif" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\cursor_v.png" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\dialog-title-bg.png" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\filescan.png" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\highlighted.gif" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\icons-all.gif" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\icons.gif" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\icons.png" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\loaderror.png" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\loading.gif" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\lock.gif" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\neweditor-tab-bg.png" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\pagebreak.gif" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\scale.png" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\sortable.png" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\spacer.gif" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\sparator_v.png" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\table-cell-align.png" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\tangram-colorpicker.png" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\toolbar_bg.png" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\unhighlighted.gif" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\upload.png" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\videologo.gif" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\word.gif" />
+    <Content Include="ueditor1_4_2_utf8\themes\default\images\wordpaste.png" />
+    <Content Include="ueditor1_4_2_utf8\themes\iframe.css" />
+    <Content Include="ueditor1_4_2_utf8\third-party\codemirror\codemirror.css" />
+    <Content Include="ueditor1_4_2_utf8\third-party\codemirror\codemirror.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\adapters\mootools-adapter.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\adapters\mootools-adapter.src.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\adapters\prototype-adapter.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\adapters\prototype-adapter.src.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\adapters\standalone-framework.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\adapters\standalone-framework.src.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\highcharts-more.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\highcharts-more.src.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\highcharts.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\highcharts.src.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\modules\annotations.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\modules\annotations.src.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\modules\canvas-tools.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\modules\canvas-tools.src.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\modules\data.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\modules\data.src.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\modules\drilldown.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\modules\drilldown.src.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\modules\exporting.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\modules\exporting.src.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\modules\funnel.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\modules\funnel.src.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\modules\heatmap.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\modules\heatmap.src.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\modules\map.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\modules\map.src.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\modules\no-data-to-display.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\modules\no-data-to-display.src.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\themes\dark-blue.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\themes\dark-green.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\themes\gray.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\themes\grid.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\highcharts\themes\skies.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\jquery-1.10.2.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\jquery-1.10.2.min.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\snapscreen\UEditorSnapscreen.exe" />
+    <Content Include="ueditor1_4_2_utf8\third-party\SyntaxHighlighter\shCore.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\SyntaxHighlighter\shCoreDefault.css" />
+    <Content Include="ueditor1_4_2_utf8\third-party\video-js\font\vjs.svg" />
+    <Content Include="ueditor1_4_2_utf8\third-party\video-js\video-js.css" />
+    <Content Include="ueditor1_4_2_utf8\third-party\video-js\video-js.min.css" />
+    <Content Include="ueditor1_4_2_utf8\third-party\video-js\video-js.swf" />
+    <Content Include="ueditor1_4_2_utf8\third-party\video-js\video.dev.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\video-js\video.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\webuploader\Uploader.swf" />
+    <Content Include="ueditor1_4_2_utf8\third-party\webuploader\webuploader.css" />
+    <Content Include="ueditor1_4_2_utf8\third-party\webuploader\webuploader.flashonly.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\webuploader\webuploader.flashonly.min.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\webuploader\webuploader.html5only.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\webuploader\webuploader.html5only.min.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\webuploader\webuploader.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\webuploader\webuploader.min.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\webuploader\webuploader.withoutimage.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\webuploader\webuploader.withoutimage.min.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\zeroclipboard\ZeroClipboard.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\zeroclipboard\ZeroClipboard.min.js" />
+    <Content Include="ueditor1_4_2_utf8\third-party\zeroclipboard\ZeroClipboard.swf" />
+    <Content Include="ueditor1_4_2_utf8\ueditor.all.js" />
+    <Content Include="ueditor1_4_2_utf8\ueditor.all.min.js" />
+    <Content Include="ueditor1_4_2_utf8\ueditor.config.js" />
+    <Content Include="ueditor1_4_2_utf8\ueditor.parse.js" />
+    <Content Include="ueditor1_4_2_utf8\ueditor.parse.min.js" />
+    <Content Include="upload\201608\05\201608051904114812.jpg" />
+    <Content Include="upload\201608\06\201608061733160787.jpg" />
+    <Content Include="upload\201608\06\201608061809020542.jpg" />
+    <Content Include="upload\201608\06\201608061810271133.jpg" />
+    <Content Include="upload\news\logo\636032658477000552.jpg" />
+    <Content Include="upload\news\logo\636032680932414928.jpg" />
+    <Content Include="upload\news\logo\636032681597212952.jpg" />
+    <Content Include="upload\user\face\636042004691923935.jpg" />
+    <Content Include="upload\user\UP_ID_picture\636061043706471226.jpg" />
+    <Content Include="upload\user\UP_ID_picture\636061044282149653.jpg" />
+    <Content Include="upload\video\bg.png" />
+    <Content Include="upload\video\flv.swf" />
+    <Content Include="watermark.png" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminMetro\CCOM\AddUserInfo\AddUserInfo.aspx.cs">
+      <DependentUpon>AddUserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\AddUserInfo\AddUserInfo.aspx.designer.cs">
+      <DependentUpon>AddUserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\center.aspx.cs">
+      <DependentUpon>center.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\center.aspx.designer.cs">
+      <DependentUpon>center.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\DatumManage\TeacherCheck.aspx.cs">
+      <DependentUpon>TeacherCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\DatumManage\TeacherCheck.aspx.designer.cs">
+      <DependentUpon>TeacherCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\DatumManage\TeacherCheckList.aspx.cs">
+      <DependentUpon>TeacherCheckList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\DatumManage\TeacherCheckList.aspx.designer.cs">
+      <DependentUpon>TeacherCheckList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\DatumManage\WeeklyAdd.aspx.cs">
+      <DependentUpon>WeeklyAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\DatumManage\WeeklyAdd.aspx.designer.cs">
+      <DependentUpon>WeeklyAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\DatumManage\WeeklyList.aspx.cs">
+      <DependentUpon>WeeklyList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\DatumManage\WeeklyList.aspx.designer.cs">
+      <DependentUpon>WeeklyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\DatumManage\StudentSubmitList.aspx.cs">
+      <DependentUpon>StudentSubmitList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\DatumManage\StudentSubmitList.aspx.designer.cs">
+      <DependentUpon>StudentSubmitList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\DatumManage\StudentSubmit.aspx.cs">
+      <DependentUpon>StudentSubmit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\DatumManage\StudentSubmit.aspx.designer.cs">
+      <DependentUpon>StudentSubmit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\Achievement_degree.aspx.cs">
+      <DependentUpon>Achievement_degree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\Achievement_degree.aspx.designer.cs">
+      <DependentUpon>Achievement_degree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\AddInfo.ashx.cs">
+      <DependentUpon>AddInfo.ashx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\AddStudent.aspx.cs">
+      <DependentUpon>AddStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\AddStudent.aspx.designer.cs">
+      <DependentUpon>AddStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\AddTeacher.aspx.cs">
+      <DependentUpon>AddTeacher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\AddTeacher.aspx.designer.cs">
+      <DependentUpon>AddTeacher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\ExamEdit.aspx.cs">
+      <DependentUpon>ExamEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\ExamEdit.aspx.designer.cs">
+      <DependentUpon>ExamEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\ExamList.aspx.cs">
+      <DependentUpon>ExamList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\ExamList.aspx.designer.cs">
+      <DependentUpon>ExamList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\ExamMarkingTable.aspx.cs">
+      <DependentUpon>ExamMarkingTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\ExamMarkingTable.aspx.designer.cs">
+      <DependentUpon>ExamMarkingTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\MyExamList.aspx.cs">
+      <DependentUpon>MyExamList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\MyExamList.aspx.designer.cs">
+      <DependentUpon>MyExamList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\FormReview.aspx.cs">
+      <DependentUpon>FormReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\FormReview.aspx.designer.cs">
+      <DependentUpon>FormReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\FormReview2.aspx.cs">
+      <DependentUpon>FormReview2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\FormReview2.aspx.designer.cs">
+      <DependentUpon>FormReview2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\MyStudentList.aspx.cs">
+      <DependentUpon>MyStudentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\MyStudentList.aspx.designer.cs">
+      <DependentUpon>MyStudentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\Tracking_evaluation.aspx.cs">
+      <DependentUpon>Tracking_evaluation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\Tracking_evaluation.aspx.designer.cs">
+      <DependentUpon>Tracking_evaluation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\ApplyBest.aspx.cs">
+      <DependentUpon>ApplyBest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\ApplyBest.aspx.designer.cs">
+      <DependentUpon>ApplyBest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\ApplyBestList.aspx.cs">
+      <DependentUpon>ApplyBestList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\ApplyBestList.aspx.designer.cs">
+      <DependentUpon>ApplyBestList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\GroupStudentList.aspx.cs">
+      <DependentUpon>GroupStudentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\GroupStudentList.aspx.designer.cs">
+      <DependentUpon>GroupStudentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\GroupList.aspx.cs">
+      <DependentUpon>GroupList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\GroupList.aspx.designer.cs">
+      <DependentUpon>GroupList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\CommentScore.aspx.cs">
+      <DependentUpon>CommentScore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\CommentScore.aspx.designer.cs">
+      <DependentUpon>CommentScore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\SoftwareScore.aspx.cs">
+      <DependentUpon>SoftwareScore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\SoftwareScore.aspx.designer.cs">
+      <DependentUpon>SoftwareScore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\ScoreList.aspx.cs">
+      <DependentUpon>ScoreList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\ScoreList.aspx.designer.cs">
+      <DependentUpon>ScoreList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\CommentPage.aspx.cs">
+      <DependentUpon>CommentPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\CommentPage.aspx.designer.cs">
+      <DependentUpon>CommentPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\SoftwarePage.aspx.cs">
+      <DependentUpon>SoftwarePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\SoftwarePage.aspx.designer.cs">
+      <DependentUpon>SoftwarePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\MyScore.aspx.cs">
+      <DependentUpon>MyScore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\MyScore.aspx.designer.cs">
+      <DependentUpon>MyScore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\MySoftwarePage.aspx.cs">
+      <DependentUpon>MySoftwarePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\MySoftwarePage.aspx.designer.cs">
+      <DependentUpon>MySoftwarePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\TeacherComment.aspx.cs">
+      <DependentUpon>TeacherComment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\TeacherComment.aspx.designer.cs">
+      <DependentUpon>TeacherComment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\ComputScore.aspx.cs">
+      <DependentUpon>ComputScore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\ComputScore.aspx.designer.cs">
+      <DependentUpon>ComputScore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\ProposalReview.aspx.cs">
+      <DependentUpon>ProposalReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\ProposalReview.aspx.designer.cs">
+      <DependentUpon>ProposalReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\ProposalList.aspx.cs">
+      <DependentUpon>ProposalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ScoreManage\ProposalList.aspx.designer.cs">
+      <DependentUpon>ProposalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\StudentApply\FileDownload.aspx.cs">
+      <DependentUpon>FileDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\StudentApply\FileDownload.aspx.designer.cs">
+      <DependentUpon>FileDownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\StudentManage\DataBatchAdd.aspx.cs">
+      <DependentUpon>DataBatchAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\StudentManage\DataBatchAdd.aspx.designer.cs">
+      <DependentUpon>DataBatchAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\StudentManage\InitSystem.aspx.cs">
+      <DependentUpon>InitSystem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\StudentManage\InitSystem.aspx.designer.cs">
+      <DependentUpon>InitSystem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\StudentManage\ExamSignInForm.aspx.cs">
+      <DependentUpon>ExamSignInForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\StudentManage\ExamSignInForm.aspx.designer.cs">
+      <DependentUpon>ExamSignInForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\PrintExamInfor.aspx.cs">
+      <DependentUpon>PrintExamInfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ExamArrange\PrintExamInfor.aspx.designer.cs">
+      <DependentUpon>PrintExamInfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\FunctionManege\AddFatherFunction.aspx.cs">
+      <DependentUpon>AddFatherFunction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\FunctionManege\AddFatherFunction.aspx.designer.cs">
+      <DependentUpon>AddFatherFunction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\FunctionManege\AddFatherFunction1.aspx.cs">
+      <DependentUpon>AddFatherFunction1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\FunctionManege\AddFatherFunction1.aspx.designer.cs">
+      <DependentUpon>AddFatherFunction1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\FunctionManege\AddSonFunction.aspx.cs">
+      <DependentUpon>AddSonFunction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\FunctionManege\AddSonFunction.aspx.designer.cs">
+      <DependentUpon>AddSonFunction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\FunctionManege\EditSonFunction.aspx.cs">
+      <DependentUpon>EditSonFunction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\FunctionManege\EditSonFunction.aspx.designer.cs">
+      <DependentUpon>EditSonFunction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ManagerManage\AddManager.aspx.cs">
+      <DependentUpon>AddManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ManagerManage\AddManager.aspx.designer.cs">
+      <DependentUpon>AddManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ManagerManage\ManagerList.aspx.cs">
+      <DependentUpon>ManagerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ManagerManage\ManagerList.aspx.designer.cs">
+      <DependentUpon>ManagerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notice\ApplySms.aspx.cs">
+      <DependentUpon>ApplySms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notice\ApplySms.aspx.designer.cs">
+      <DependentUpon>ApplySms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notice\Edit_default_notice.aspx.cs">
+      <DependentUpon>Edit_default_notice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notice\Edit_default_notice.aspx.designer.cs">
+      <DependentUpon>Edit_default_notice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notice\Manage_SMS_apply.aspx.cs">
+      <DependentUpon>Manage_SMS_apply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notice\Manage_SMS_apply.aspx.designer.cs">
+      <DependentUpon>Manage_SMS_apply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notice\NoticeHandler.ashx.cs">
+      <DependentUpon>NoticeHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notice\NoticeHtml.cs" />
+    <Compile Include="AdminMetro\CCOM\notice\Notice_list.aspx.cs">
+      <DependentUpon>Notice_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notice\Notice_list.aspx.designer.cs">
+      <DependentUpon>Notice_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notice\Notice_list_manager.aspx.cs">
+      <DependentUpon>Notice_list_manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notice\Notice_list_manager.aspx.designer.cs">
+      <DependentUpon>Notice_list_manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notice\ReleaseOrEditNotice.aspx.cs">
+      <DependentUpon>ReleaseOrEditNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notice\ReleaseOrEditNotice.aspx.designer.cs">
+      <DependentUpon>ReleaseOrEditNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notice\SelectUserDept.aspx.cs">
+      <DependentUpon>SelectUserDept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notice\SelectUserDept.aspx.designer.cs">
+      <DependentUpon>SelectUserDept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notice\SmsConfig.cs" />
+    <Compile Include="AdminMetro\CCOM\notice\SmsHelper.cs" />
+    <Compile Include="AdminMetro\CCOM\notice\ViewNotice.aspx.cs">
+      <DependentUpon>ViewNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notice\ViewNotice.aspx.designer.cs">
+      <DependentUpon>ViewNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\GetNewsByPage.ashx.cs">
+      <DependentUpon>GetNewsByPage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\GetNewsByPageNumber.ashx.cs">
+      <DependentUpon>GetNewsByPageNumber.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\GetNewsList.ashx.cs">
+      <DependentUpon>GetNewsList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\GetNewsReadNum.ashx.cs">
+      <DependentUpon>GetNewsReadNum.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\NewsHtml.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\News_handler.ashx.cs">
+      <DependentUpon>News_handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\News_list_manager.aspx.cs">
+      <DependentUpon>News_list_manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\News_list_manager.aspx.designer.cs">
+      <DependentUpon>News_list_manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\News_type_manage.aspx.cs">
+      <DependentUpon>News_type_manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\News_type_manage.aspx.designer.cs">
+      <DependentUpon>News_type_manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\Notice.aspx.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\Notice.aspx.designer.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\PreviewNews.aspx.cs">
+      <DependentUpon>PreviewNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\PreviewNews.aspx.designer.cs">
+      <DependentUpon>PreviewNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\PreviewNewsObject.cs" />
+    <Compile Include="AdminMetro\CCOM\notification\ReleaseOrEditNews.aspx.cs">
+      <DependentUpon>ReleaseOrEditNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\ReleaseOrEditNews.aspx.designer.cs">
+      <DependentUpon>ReleaseOrEditNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\ViewNews.aspx.cs">
+      <DependentUpon>ViewNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\notification\ViewNews.aspx.designer.cs">
+      <DependentUpon>ViewNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\OrgManage\OrgAdd.aspx.cs">
+      <DependentUpon>OrgAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\OrgManage\OrgAdd.aspx.designer.cs">
+      <DependentUpon>OrgAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\OrgManage\OrgEdit.aspx.cs">
+      <DependentUpon>OrgEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\OrgManage\OrgEdit.aspx.designer.cs">
+      <DependentUpon>OrgEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\OrgManage\OrgList.aspx.cs">
+      <DependentUpon>OrgList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\OrgManage\OrgList.aspx.designer.cs">
+      <DependentUpon>OrgList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\OrgManage\OrgSelect.aspx.cs">
+      <DependentUpon>OrgSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\OrgManage\OrgSelect.aspx.designer.cs">
+      <DependentUpon>OrgSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\JudgeAdd.aspx.cs">
+      <DependentUpon>JudgeAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\JudgeAdd.aspx.designer.cs">
+      <DependentUpon>JudgeAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\JudgeBatchAdd.aspx.cs">
+      <DependentUpon>JudgeBatchAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\JudgeBatchAdd.aspx.designer.cs">
+      <DependentUpon>JudgeBatchAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\JudgeList.aspx.cs">
+      <DependentUpon>JudgeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\JudgeList.aspx.designer.cs">
+      <DependentUpon>JudgeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\ResourceAdd.aspx.cs">
+      <DependentUpon>ResourceAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\ResourceAdd.aspx.designer.cs">
+      <DependentUpon>ResourceAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\ResourceBatchAdd.aspx.cs">
+      <DependentUpon>ResourceBatchAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\ResourceBatchAdd.aspx.designer.cs">
+      <DependentUpon>ResourceBatchAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\ResourceList.aspx.cs">
+      <DependentUpon>ResourceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\ResourceList.aspx.designer.cs">
+      <DependentUpon>ResourceList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\RoomAdd.aspx.cs">
+      <DependentUpon>RoomAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\RoomAdd.aspx.designer.cs">
+      <DependentUpon>RoomAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\RoomBatchAdd.aspx.cs">
+      <DependentUpon>RoomBatchAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\RoomBatchAdd.aspx.designer.cs">
+      <DependentUpon>RoomBatchAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\RoomList.aspx.cs">
+      <DependentUpon>RoomList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\RoomList.aspx.designer.cs">
+      <DependentUpon>RoomList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\MajorList.aspx.cs">
+      <DependentUpon>MajorList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\ResManage\MajorList.aspx.designer.cs">
+      <DependentUpon>MajorList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\RoleManage\AddRole.aspx.cs">
+      <DependentUpon>AddRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\RoleManage\AddRole.aspx.designer.cs">
+      <DependentUpon>AddRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\RoleManage\PermissionManage.aspx.cs">
+      <DependentUpon>PermissionManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\RoleManage\PermissionManage.aspx.designer.cs">
+      <DependentUpon>PermissionManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\RoleManage\RoleList.aspx.cs">
+      <DependentUpon>RoleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\RoleManage\RoleList.aspx.designer.cs">
+      <DependentUpon>RoleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\StudentApply\UpdateUserInfor.ashx.cs">
+      <DependentUpon>UpdateUserInfor.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\StudentManage\AddStudent2.aspx.cs">
+      <DependentUpon>AddStudent2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\StudentManage\AddStudent2.aspx.designer.cs">
+      <DependentUpon>AddStudent2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\StudentManage\StudentBatchAdd.aspx.cs">
+      <DependentUpon>StudentBatchAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\StudentManage\StudentBatchAdd.aspx.designer.cs">
+      <DependentUpon>StudentBatchAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\StudentManage\StudentList.aspx.cs">
+      <DependentUpon>StudentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\StudentManage\StudentList.aspx.designer.cs">
+      <DependentUpon>StudentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\BatchCheck.aspx.cs">
+      <DependentUpon>BatchCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\BatchCheck.aspx.designer.cs">
+      <DependentUpon>BatchCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\StudentPage.aspx.cs">
+      <DependentUpon>StudentPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\StudentPage.aspx.designer.cs">
+      <DependentUpon>StudentPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\TeacherPage.aspx.cs">
+      <DependentUpon>TeacherPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\TeacherPage.aspx.designer.cs">
+      <DependentUpon>TeacherPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\TopicBatchAdd.aspx.cs">
+      <DependentUpon>TopicBatchAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\TopicBatchAdd.aspx.designer.cs">
+      <DependentUpon>TopicBatchAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\TopicCheckList.aspx.cs">
+      <DependentUpon>TopicCheckList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\TopicCheckList.aspx.designer.cs">
+      <DependentUpon>TopicCheckList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\TopicList.aspx.cs">
+      <DependentUpon>TopicList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\TopicList.aspx.designer.cs">
+      <DependentUpon>TopicList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\StudentChoose.aspx.cs">
+      <DependentUpon>StudentChoose.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\StudentChoose.aspx.designer.cs">
+      <DependentUpon>StudentChoose.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\TeacherChoose.aspx.cs">
+      <DependentUpon>TeacherChoose.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\TeacherChoose.aspx.designer.cs">
+      <DependentUpon>TeacherChoose.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\AcceptStudent.aspx.cs">
+      <DependentUpon>AcceptStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\AcceptStudent.aspx.designer.cs">
+      <DependentUpon>AcceptStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\TopicPage.aspx.cs">
+      <DependentUpon>TopicPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\TopicManage\TopicPage.aspx.designer.cs">
+      <DependentUpon>TopicPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\update_info\UpdateInfo.aspx.cs">
+      <DependentUpon>UpdateInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\update_info\UpdateInfo.aspx.designer.cs">
+      <DependentUpon>UpdateInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\update_info\update_info.aspx.cs">
+      <DependentUpon>update_info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\update_info\update_info.aspx.designer.cs">
+      <DependentUpon>update_info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\update_info\ChangePWD.aspx.cs">
+      <DependentUpon>ChangePWD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\update_info\ChangePWD.aspx.designer.cs">
+      <DependentUpon>ChangePWD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\userInfo\EditUserInfo.aspx.cs">
+      <DependentUpon>EditUserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\CCOM\userInfo\EditUserInfo.aspx.designer.cs">
+      <DependentUpon>EditUserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\login_page.aspx.cs">
+      <DependentUpon>login_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\login_page.aspx.designer.cs">
+      <DependentUpon>login_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\getpwd.aspx.cs">
+      <DependentUpon>getpwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\getpwd.aspx.designer.cs">
+      <DependentUpon>getpwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\OnlineView\OnlineImgView.aspx.cs">
+      <DependentUpon>OnlineImgView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\OnlineView\OnlineImgView.aspx.designer.cs">
+      <DependentUpon>OnlineImgView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\OnlineView\OnlinePdfView.aspx.cs">
+      <DependentUpon>OnlinePdfView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\OnlineView\OnlinePdfView.aspx.designer.cs">
+      <DependentUpon>OnlinePdfView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\OnlineView\OnlineTxtView.aspx.cs">
+      <DependentUpon>OnlineTxtView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\OnlineView\OnlineTxtView.aspx.designer.cs">
+      <DependentUpon>OnlineTxtView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\OnlineView\OnlineView.aspx.cs">
+      <DependentUpon>OnlineView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMetro\OnlineView\OnlineView.aspx.designer.cs">
+      <DependentUpon>OnlineView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMetro\OnlineView\OnlineViewHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="tools\admin_ajax.ashx.cs">
+      <DependentUpon>admin_ajax.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="tools\download.ashx.cs">
+      <DependentUpon>download.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="tools\ManageReminder.cs" />
+    <Compile Include="tools\upload_ajax.ashx.cs">
+      <DependentUpon>upload_ajax.ashx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tools\verify_code.ashx.cs">
+      <DependentUpon>verify_code.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ueditor1_4_2_utf8\editor_test.aspx.cs">
+      <DependentUpon>editor_test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ueditor1_4_2_utf8\editor_test.aspx.designer.cs">
+      <DependentUpon>editor_test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ueditor1_4_2_utf8\net\Utilities\Config.cs" />
+    <Compile Include="ueditor1_4_2_utf8\net\Utilities\ConfigHandler.cs" />
+    <Compile Include="ueditor1_4_2_utf8\net\Utilities\CrawlerHandler.cs" />
+    <Compile Include="ueditor1_4_2_utf8\net\Utilities\Handler.cs" />
+    <Compile Include="ueditor1_4_2_utf8\net\Utilities\ListFileHandler.cs" />
+    <Compile Include="ueditor1_4_2_utf8\net\Utilities\NotSupportedHandler.cs" />
+    <Compile Include="ueditor1_4_2_utf8\net\Utilities\PathFormater.cs" />
+    <Compile Include="ueditor1_4_2_utf8\net\Utilities\UploadHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdminMetro\CCOM\ExamApply\" />
+    <Folder Include="editor\bin\zh-Hans\" />
+    <Folder Include="metro\js\zTree\demo\cn\asyncData\" />
+    <Folder Include="metro\youth\js\" />
+    <Folder Include="upload\file\" />
+    <Folder Include="upload\news\attach\" />
+    <Folder Include="upload\news\pic\" />
+    <Folder Include="upload\qrcode\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="xmlconfig\alipay.config" />
+    <Content Include="xmlconfig\tenpay.config" />
+    <Content Include="packages.config" />
+    <Content Include="images\Thumbs.db" />
+    <Content Include="AdminMetro\CCOM\notification\GetNewsByPage.ashx" />
+    <Content Include="AdminMetro\CCOM\notification\GetNewsByPageNumber.ashx" />
+    <Content Include="AdminMetro\CCOM\notification\GetNewsList.ashx" />
+    <Content Include="AdminMetro\CCOM\notification\GetNewsReadNum.ashx" />
+    <Content Include="AdminMetro\CCOM\notice\NoticeHandler.ashx" />
+    <Content Include="AdminMetro\CCOM\notification\News_handler.ashx" />
+    <Content Include="AdminMetro\CCOM\StudentApply\UpdateUserInfor.ashx" />
+    <Content Include="download\软件验收表.doc" />
+    <Content Include="download\答辩评分表.doc" />
+    <Content Include="metro\assets\bootstrap-tree\jsonexample.json" />
+    <Content Include="metro\assets\ckeditor\,CKEDITOR.tools.htmlEncode%28e._[" />
+    <Content Include="metro\assets\font-awesome\font\fontawesome-webfont.eot" />
+    <Content Include="metro\assets\font-awesome\font\fontawesome-webfont.ttf" />
+    <Content Include="metro\assets\font-awesome\font\fontawesome-webfont.woff" />
+    <Content Include="metro\assets\font-awesome\font\FontAwesome.otf" />
+    <Content Include="metro\font\fontawesome-webfont.eot" />
+    <Content Include="metro\font\myriadprobold.eot" />
+    <Content Include="metro\font\myriadprobold.ttf" />
+    <Content Include="metro\font\myriadprobold.woff" />
+    <Content Include="metro\font\myriadproit.eot" />
+    <Content Include="metro\font\myriadproit.ttf" />
+    <Content Include="metro\font\myriadproit.woff" />
+    <Content Include="metro\font\myriadprolight.eot" />
+    <Content Include="metro\font\myriadprolight.ttf" />
+    <Content Include="metro\font\myriadprolight.woff" />
+    <Content Include="metro\font\myriadproregular.eot" />
+    <Content Include="metro\font\myriadproregular.ttf" />
+    <Content Include="metro\font\myriadproregular.woff" />
+    <Content Include="home\model_fudaoyuan.xlsx" />
+    <Content Include="home\model_stu.xlsx" />
+    <Content Include="scripts\onoff\test\.jshintrc" />
+    <None Include="Properties\PublishProfiles\ISSConfig.pubxml" />
+    <None Include="scripts\ui\skins\Aqua\images\dialog\ie6\Thumbs.db" />
+    <None Include="scripts\ui\skins\Aqua\images\dialog\Thumbs.db" />
+    <None Include="scripts\ui\skins\Aqua\images\layout\tab.psd" />
+    <None Include="scripts\ui\skins\Aqua\images\layout\tabs-tools.psd" />
+    <None Include="scripts\ui\skins\Aqua\images\layout\Thumbs.db" />
+    <None Include="scripts\ui\skins\Aqua\images\tree\tree.psd" />
+    <Content Include="xmlconfig\site.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="xmlconfig\urls.config" />
+    <Content Include="xmlconfig\user.config" />
+    <Content Include="用户.xlsx" />
+    <Content Include="upload\excel\08111101.xlsx" />
+    <Content Include="upload\excel\08111102.xlsx" />
+    <Content Include="upload\excel\08111103.xlsx" />
+    <Content Include="upload\excel\08211101.xlsx" />
+    <Content Include="upload\excel\08211102.xlsx" />
+    <Content Include="upload\excel\08311001.xlsx" />
+    <Content Include="upload\excel\08311101.xlsx" />
+    <Content Include="upload\excel\08311102.xlsx" />
+    <Content Include="upload\excel\用户.xlsx" />
+    <Content Include="ueditor1_4_2_utf8\net\config.json" />
+    <Content Include="ueditor1_4_2_utf8\net\controller.ashx" />
+    <Content Include="ueditor1_4_2_utf8\third-party\jquery-1.10.2.min.map" />
+    <Content Include="ueditor1_4_2_utf8\third-party\video-js\font\vjs.eot" />
+    <Content Include="ueditor1_4_2_utf8\third-party\video-js\font\vjs.ttf" />
+    <Content Include="ueditor1_4_2_utf8\third-party\video-js\font\vjs.woff" />
+    <Content Include="scripts\zTree\demo\cn\asyncData\getNodes.php" />
+    <Content Include="scripts\zTree\demo\cn\asyncData\getNodesForBigData.php" />
+    <Content Include="scripts\zTree\demo\en\asyncData\getNodes.php" />
+    <Content Include="scripts\zTree\demo\en\asyncData\getNodesForBigData.php" />
+    <Content Include="xmlconfig\FileServerpath.config" />
+    <Content Include="tools\admin_ajax.ashx" />
+    <Content Include="tools\download.ashx" />
+    <Content Include="tools\verify_code.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\university.BLL\university.BLL.csproj">
+      <Project>{73a204aa-7805-4e9f-9c79-6d02989a03a7}</Project>
+      <Name>university.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\university.Common\university.Common.csproj">
+      <Project>{0362990a-0c6b-440b-a3f2-c58ce1a92a66}</Project>
+      <Name>university.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\university.Database\university.Database.csproj">
+      <Project>{828da3d9-8f60-4859-8b30-bc9b72781876}</Project>
+      <Name>university.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\university.Model\university.Model.csproj">
+      <Project>{00e27a2d-baca-4d2d-b303-ecffa09ffe7d}</Project>
+      <Name>university.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\universty.UI\university.UI.csproj">
+      <Project>{508e83d1-b1db-4113-9966-dbea6164c083}</Project>
+      <Name>university.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>9728</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:20000/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://192.168.1.149</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

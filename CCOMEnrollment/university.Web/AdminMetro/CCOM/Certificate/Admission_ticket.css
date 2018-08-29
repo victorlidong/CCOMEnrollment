@@ -1,0 +1,247 @@
+﻿ 
+        .body_container
+        {
+
+            overflow:hidden;
+            width:1200px;
+            min-width:1200px;
+            min-height:600px;
+            border:1px solid grey;
+            margin:0 auto;
+        }
+        .left
+        {
+            width:49%;
+            float:left;
+            margin-top:15px;
+        }
+        .title
+        {
+            width:83%;
+            height:100px;
+            text-align:center;
+            margin:0 auto;
+            margin-top:15px;
+            /*margin-left:10px;*/
+        }
+        .for_img
+        {
+            margin:0 auto;
+            width:200px;
+            margin-top:20px;
+            height:200px;
+            background-color:orange;
+        }
+        .for_img img
+        {
+             width:200px;
+            height:200px;
+        }
+        .person_info
+        {
+            width:85%;
+            /*height:350px;*/
+            margin:0 auto;
+            margin-top:15px;
+        }
+        .info_line
+        {
+            width:90%;
+            height:30px;
+            margin:0 auto;
+            margin-bottom:8px;
+            padding-top:8px;
+            font-size:25px;
+        }
+        .key
+        {
+            width:45%;
+            height:100%;
+            float:left;
+            text-align:right;
+        }
+        .value
+        {
+             width:54%;
+            height:100%;
+            
+            text-align:left;
+            margin-left:46%;
+        }
+        .left_footer
+        {
+            width:85%;
+            height:90px;
+            margin:0 auto;
+            margin-top:20px;
+            margin-bottom:20px;
+        }
+
+        .left_qrcode
+        {
+            width:110px;
+            height:90px;
+            float:left;
+            margin-left:20px;
+        }
+        .left_qrcode img
+        {
+            width:90px;
+            height:90px;
+        }
+        .extra_info
+        {
+            margin-left:130px;
+            width:72%;
+            height:100%;
+            text-align:center;
+        }
+        .extra_info span
+        {
+            font-size:18px;
+            line-height:30px;
+        }
+        .right
+        {
+            width:49%;
+            /*min-width:660px;*/
+            /*height:900px;*/
+            float:right;
+             margin-top:15px;
+             border-left:1px solid grey;
+            /*margin-top:-900px;*/
+        }
+        .right_title
+        {
+            width:80%;
+            height:40px;
+            margin:0 auto;
+            margin-top:10px;
+            text-align:center;
+        }
+        .right_body
+        {
+            width:85%;
+            /*height:600px;*/
+            margin:0 auto;
+            
+            
+        }
+     
+        .table_title
+        {
+            text-align:center;
+            width:100%;
+            height:25px;
+            font-size:20px;
+            font-weight:600;
+        }
+
+          .table_title_left
+          {
+              width:35%;
+              height:25px;
+              float:left;
+              background-color:lightgrey;
+          }
+          .table_title_right
+          {
+              width:64%;
+              height:25px;
+              margin-left:36%;
+              background-color:lightgrey;
+          }
+         .table_content
+         {
+            width:100%;
+            min-height:360px;
+            font-size:18px;
+            margin:0 auto;
+            margin-top:8px;
+            margin-bottom:8px;
+         }
+         .exam_line
+         {
+             width:100%;
+             height:45px;
+             
+         }
+         .exam_line span
+         {
+             line-height:23px;
+             margin-left:10px;
+         }
+         .course
+         {
+             width:35%;
+             height:100%;
+             float:left;
+             
+         }
+         .arrange
+         {
+             width:64%;
+             height:100%;
+             margin-left:36%;
+             
+         }
+         .line
+         {
+             border-top: #00686b 1px dashed;
+             overflow: hidden; 
+             height:1px;
+             margin-bottom:5px;
+         }
+    
+       
+         .right_footer
+         {
+             width:90%;
+             margin:0 auto;
+             height:180px;
+             margin-top:15px;
+             margin-bottom:20px;
+            
+             
+            
+         }
+         .tip
+         {
+             width:95%;
+             height:120px;
+             margin:0 auto;
+            
+         }
+         
+          .tip p
+          {
+              width:100%;
+              font-size:17px;
+              margin:0 auto;
+          }
+          .focus
+         {
+             width:95%;
+             height:40px;
+             margin:0 auto;
+             text-align:center;
+             
+         }
+          .focus span
+          {
+              font-size:30px; 
+          }
+         .suggest
+         {
+             margin:0 auto;
+             text-align:center;
+             width:95%;
+             height:35px;
+             
+         }
+         .suggest span
+         {
+             font-size:20px;
+         }
+      
+     

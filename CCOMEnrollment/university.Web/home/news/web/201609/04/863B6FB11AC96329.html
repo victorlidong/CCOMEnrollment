@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,user-scalable=no" name="viewport">
+    <title>敬畏传统、尊重历史、认识当代——周娟作曲、配乐的京剧《金锁记》唱响长安大戏院-圈圈校园资讯</title>
+    <!--    <link rel="stylesheet" href="../css/touch.css"> -->
+    <style type="text/css">
+        html, body {
+            height: 100%;
+        }
+
+        body, ul, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mainBody { /*background:#EFF0F4;*/
+            text-align: left; /*font-family:STHeiti,Arial;*/ /*font-family: "HiraginoSansGB W3";*/
+            font-family: "Helvetica";
+            /*padding:0  0.8em;*/
+            overflow-x: scroll;
+            overflow-y: hidden;
+            max-width: 1024px;
+            margin: 0 auto;
+            overflow-x: auto;
+            background: #fff;
+            min-height: 100%;
+            /*footer置底*/
+            position: relative; /*重要！保证footer是相对于wapper位置绝对*/
+            height: auto; /* 保证页面能撑开浏览器高度时显示正常*/
+            min-height: 100%; /* IE6不支持，IE6要单独配置*/
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+            a:visited {
+                color: #999;
+            }
+
+            a:hover {
+                color: #F5A70D;
+            }
+
+        .articleList {
+            overflow: hidden;
+            color: #000;
+            background: #fff;
+            display: none;
+            padding: 1.2em;
+            padding-bottom: 180px; /*重要！给footer预留的空间*/
+        }
+
+            .articleList h1 {
+                font-size: 1.2em;
+                margin: 0;
+            }
+
+            .articleList h2 {
+                color: #b9b9b9;
+                font-size: 0.8em;
+                font-weight: normal;
+            }
+
+            .articleList .text1 p {
+                margin: 0.1em 0;
+                text-indent: 2em;
+                line-height: 1.45em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 table p {
+                margin: 0.1em 0;
+                line-height: 1.45em;
+                text-indent: 0em;
+                padding-top: 0.3em;
+                font-size: 1.0em;
+                font-weight: normal;
+                letter-spacing: 0.1em;
+                max-width: 100%;
+            }
+
+            .articleList .text1 img {
+                max-width: 60%;
+                clear: both;
+                display: block;
+                margin: auto;
+                border: 0px;
+            }
+
+        .ep-source {
+            color: #808080;
+            font-size: 0.8em;
+            padding-top: 0.2em;
+        }
+
+        .attach {
+            color: #808080;
+            font-size: 0.9em;
+            padding-top: 0.2em;
+        }
+
+            .attach .attachTitle {
+            }
+
+            .attach .attachItem {
+                background: url(/admin/images/icon_attach.png) no-repeat 3px 4px;
+                padding-left: 20px;
+                line-height: 20px;
+                vertical-align: middle;
+            }
+
+        .text1 {
+            /*overflow-x: auto;*/
+        }
+
+        /*img
+        {
+            width: 98%;
+            max-width: 600px;
+        }*/
+        .spanShare {
+            float: left;
+            padding: 5px 0 0;
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0; /* 关键 */
+            left: 0; /* IE下一定要记得 */
+            height: 130px; /* footer的高度一定要是固定值*/
+        }
+
+        a.view-link {
+            padding-left: 5px;
+            color: #018DFF;
+        }
+
+            a.view-link:hover {
+                color: #F5A70D;
+            }
+    </style>
+    <script type="text/javascript" src="/scripts/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+       
+
+        $(document).ready(function () {
+            var url = window.location.href;
+            //alert(url);
+            var start_index = url.lastIndexOf("/") + 1;
+            var end_index = url.lastIndexOf(".");
+            var id = url.substring(start_index, end_index);
+            //alert(id);
+            $.ajax({
+                type: "POST",
+                url: "/AdminMetro/CCOM/notification/GetNewsReadNum.ashx",
+                data: { "newsId": id },
+                success: function (data) {
+                    //alert(data);
+                    $("#readCnt").html(data);
+                },
+                error: function (data) {
+                    alert("请求数据出错");
+                }
+            });
+            //if ($(".text1").find("img").length == 0)
+            //{
+            //    $("<div style=\"display:none;\"><img src=\"/images/news_share.jpg\" alt=\"中央音乐学院\" /></div>").insertAfter($(".text"));
+            //}
+            //$(".applink").remove();
+            //$(".weblink").show();
+        });
+
+    </script>
+</head>
+<body style="background-color: #eee;">
+    <div class="mainBody">
+        <div style="border-bottom: 1px solid #666; padding: 17px;">
+            <a href="/AdminMetro/login_page.aspx">
+                <img src="/images/login/logo4.png" style="border: 0px;" alt="中央音乐学院资讯" />
+            </a>
+        </div>
+        <!-- banner top end -->
+        <article class="articleList" style="display: block;">
+            <div class="head clearfix">
+                <h1 class="title">敬畏传统、尊重历史、认识当代——周娟作曲、配乐的京剧《金锁记》唱响长安大戏院</h1>
+                <h2>
+                    <span class="time"><span>发布者：中央音乐学院管理员</span>&nbsp;&nbsp;2016/9/4 12:22:00</span>
+                    &nbsp;&nbsp;<span>阅读量：<b id="readCnt">1</b></span>
+                </h2>
+            </div>
+            <!-- JiaThis Button BEGIN -->
+            <div id="bdshare" class="jiathis_style_24x24 ">
+                <span class="spanShare">分享：</span>
+                <a class="jiathis_button_qzone"></a>
+                <a class="jiathis_button_tsina"></a>
+                <a class="jiathis_button_tqq"></a>
+                <a class="jiathis_button_weixin"></a>
+                <a class="jiathis_button_renren"></a>
+                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+            </div>
+            <div style="clear: both;"></div>
+            <!-- JiaThis Button END -->
+            <div class="text clearfix">
+                <div class="text1">
+                    <p><p><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">                作者：作曲系</span><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">来源：中央音乐学院</span><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">发布日期：2016-08-15 21:31:00</span><span style="margin: 0px 5px; padding: 0px; border: 0px; color: rgb(153, 153, 153);">本栏目内容由党委宣传部负责维护</span></p><p class="cas_content" style="text-align:center;color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　<a href="http://pic.ccom.edu.cn/2015pic/xwtpk/2016s/201608/W020160815778394454715.jpg" target="_blank" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/xwtpk/2016s/201608/W020160815778394454715.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"></a></p><p><a href="http://pic.ccom.edu.cn/2015pic/xwtpk/2016s/201608/W020160815778394454715.jpg" target="_blank" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/xwtpk/2016s/201608/W020160815778394454715.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(51, 51, 51); text-decoration: none; outline: none;"></a></p><p class="cas_content" style="text-align:center;color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;"><a href="http://pic.ccom.edu.cn/2015pic/xwtpk/2016s/201608/W020160815778394454715.jpg" target="_blank" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/xwtpk/2016s/201608/W020160815778394454715.jpg" style="margin: 0px; padding: 0px; border: 0px; color: rgb(75, 75, 75); text-decoration: none; outline: none;"><img border="0" src="/ueditor1_4_2_utf8/net/upload/image/201609/6360858875349419699142983.jpg" ignore="1" _fcksavedurl="http://pic.ccom.edu.cn/2015pic/xwtpk/2016s/201608/W020160815778376504913.jpg" photodocid="40628" fromphoto="1" style="margin: 0px; padding: 0px; border: 0px;"/></a>　　</p><p class="cas_content" style="color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　2016年6月27日，我院作曲系周娟副教授作曲、配器的京剧《金锁记》在长安大戏院进行了北京的首演。该剧是由重庆市京剧团（前身是新中国成立前享誉海内外的“重庆厉家班”）委约周娟创作的，并特别邀请中国当代最具国际影响力的戏剧导演、北京人民艺术剧院国家一级导演、剧作家李六乙担当总导演，主创人员包括导演安凤英、编剧和唱腔设计韩剑光、舞美设计谭韶远、唱腔设计吕玉勇等国内一流创作人员，由文华表演奖获得者程联群和梅花奖获得者张军强联袂出演。该剧自2010年在重庆首次公演以来，以全剧、折子戏等多种形式巡演近百场，逐渐打磨为一部成熟的精品，受到了各界专家、学者以及观众高度的评价和赞扬，尤其肯定了该剧的音乐继承了京剧艺术之髓的写意、洗练、留白。</p><p class="cas_content" style="text-align:left;color: rgb(67, 67, 67); font-size: 14px; line-height: 32.2px; margin-bottom: 20px;">　　近年来，周娟副教授尝试对传统音乐文化进行挖掘和研究，并结合现代的音乐技术手段和学术理念，力图继承并发展传统音乐文化的精神，并融入鲜明的时代气息。在这样的探索下，她创作了《我的精神家园》（为维吾尔族传统艺人和室内乐队创作）、京剧《金锁记》和《浣花吟》、合唱《风》等。周娟表示，从这几部作品问世以来专家和听众的反响来看，这样的探索是有意义的，她将继续探索下去。</p><p><br/></p></p>
+                </div>
+                <div class="attach"></div>
+            </div>
+
+        </article>
+        <div id="footer">
+            <!--<a href="/index.aspx">
+                <img style="max-width: 100%; width: 100%; border: 0px;" src="/images/news_ad_1024_v1.jpg" alt="中央音乐学院资讯">
+            </a>-->
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" id="jiaThis" src="http://v3.jiathis.com/code/jia.js?uid=1365383547842139" charset="utf-8">
+</script>
+

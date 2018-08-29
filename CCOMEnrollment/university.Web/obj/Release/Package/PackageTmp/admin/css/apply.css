@@ -1,0 +1,28 @@
+﻿.res_table {
+    margin: 0 auto;
+    background: #fff;
+    text-align: center;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+    .res_table td {
+        border: 1px solid #e1e1e1;
+        vertical-align: middle;
+        word-break: break-all;
+        word-wrap: break-word;
+        height: 30px;
+        border-collapse: collapse;
+        padding-left: 8px;
+        text-align: left;
+        padding: 3px 8px;
+    }
+
+    .res_table th {
+        border: 1px solid #e1e1e1;
+        vertical-align: middle;
+        word-break: break-all;
+        word-wrap: break-word;
+        height: 30px;
+        font-weight: bold;
+    }

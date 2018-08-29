@@ -1,0 +1,212 @@
+﻿@charset "utf-8";
+
+/*=============head==============*/
+.youth_head {
+    width:100%;
+    height:35px;
+    background-image:url(/metro/youth/image/head.png);
+    background-repeat:no-repeat;
+}
+.youth_logo {
+    width:100%;
+    height:auto;
+}
+    .youth_logo .schoollogo {
+        height:auto;
+        width:9%;
+        position:absolute;
+        margin-left:13%;
+        margin-top:1px;
+        z-index:1001;
+    }
+    .youth_logo .lgslogo {
+        height:auto;
+        width:12%;
+        position:absolute;
+        margin-left:22%;
+        margin-top:1px;
+        z-index:1001;
+    }
+    .youth_logo #bdshare {
+        position: absolute;
+        right: 4%;
+        display:none;
+    }
+    .youth_logo img {
+        width:100%;
+        height:auto;
+        border:0;
+        outline:none;
+    }
+
+/*=============container==============*/
+.youth_container {
+    width:74%;
+    height:auto;
+    color:#D2B879;
+    background-image:url(/metro/youth/image/container.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    margin:0 auto;
+    /*opacity:0.7;*/
+}
+    .youth_container h2 {
+        font-size: 13px;
+        font-family: '微软雅黑';
+        font-weight: bold;
+        line-height: 24px;
+        text-indent: 0;
+        margin: 5px 0;
+    }
+    .youth_container p {
+        font-size: 11px;
+        line-height: 21px;
+        text-indent: 0;
+        margin: 0;
+        text-align: justify;
+        text-justify: inter-ideograph;
+    }
+    /*=============container introduce&rule==============*/
+.youth_container_intro, .youth_container_rule {
+    width: 100%;
+    height: auto;
+}
+    .youth_container_intro .intro_left {
+        width: 11%;
+        height: auto;
+        text-align: center;
+        background: url(/metro/youth/image/ac_intro.png) no-repeat center;
+        background-size: 60%;
+        float: left;
+        clear: both;
+    }
+    .youth_container_rule .rule_left {
+        width: 11%;
+        height: auto;
+        text-align: center;
+        background: url(/metro/youth/image/ac_rule.png) no-repeat center;
+        background-size: 60%;
+        float: left;
+        clear: both;
+    }
+
+    .youth_container_intro .intro_right, .youth_container_rule .rule_right {
+        width: 85%;
+        height: auto;
+        float: left;
+        padding-bottom: 10px;
+        border-bottom: 2px dashed #A81D22;
+    }
+    /*=============container vote==============*/
+.youth_container_vote {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+    .youth_container_vote .vote_left {
+        width: 11%;
+        height: auto;
+        text-align: center;
+        vertical-align: middle;
+        float: left;
+        padding-top: 36px;
+    }
+    .youth_container_vote .vote_right {
+        width: 85%;
+        height: auto;
+        float: left;
+    }
+    /*=============container vote list==============*/
+.vote_inst {
+    color: #FFF;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.vote_list {
+    width:100%;
+    height:auto;
+}
+    .vote_list ul, .vote_list li {
+        width:100%;
+        height:auto;
+        color:#D2B879;
+        font-size:14px;
+        line-height: 25px;
+        margin:0;
+        padding:0;
+        list-style:none;
+    }
+    .vote_list li {
+        height:25px;
+    }
+        .vote_list li div {
+            float:left;
+        }
+        .vote_list li .youth_check {
+            width: 4%;
+            min-width: 25px;
+        }
+            .vote_list li .youth_check input {
+                color: #FFF;
+                margin-top: -1px;
+            }
+        .vote_list li .youth_title {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+            .vote_list li .youth_title a {
+                color:#D2B879;
+            }
+        .vote_list li .youth_votenum {
+            min-width: 120px;
+            width: 18%;
+            text-align: right;
+            float: right;
+        }
+            /*=============container vote button==============*/
+.vote_button {
+    text-align:center;
+    padding-top:20px;
+    margin:0 0 30px 0;
+    min-height:40px
+}
+    .vote_button #btnSubmit {
+        width:18%;
+        height:auto;
+        border:0;
+        outline:none;
+        opacity:1;
+        background-color:none;
+    }
+
+    /*=============container introduce img==============*/
+.intro_left img, .vote_left img {
+    width:60%;
+    height:auto;
+    border:0;
+    outline:none;
+}
+/*=============container vote share==============*/
+
+/*=============footer==============*/
+.youth_footer {
+    width:100%;
+    height:auto;
+    text-align:center;
+    color:#D2B879;
+    font-size:13px;
+    font-family:'微软雅黑';
+    /*padding-top:90px;
+    margin-top:-90px;*/
+    background-color:#7B171D;
+}
+    .youth_footer p, .youth_footer2 p{
+        line-height:24px;
+    }
+        .youth_footer p:first-child, .youth_footer2 p:first-child {
+            margin-top: 30px;
+        }
+    .youth_footer p a, .youth_footer2 p a{
+        color:#D2B879;
+    }

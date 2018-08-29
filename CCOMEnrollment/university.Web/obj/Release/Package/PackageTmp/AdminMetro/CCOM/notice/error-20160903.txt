@@ -1,0 +1,18 @@
+﻿GetUserNotice-Ex:System.Exception: “`”附近有语法错误。
+   在 university.Database.DBSQL.Query(String SQLString) 位置 f:\CCOM_Git\CCOMEnrollment\university.Database\DBSQL.cs:行号 554
+   在 university.DAL.CCOM.Notice.GetListByPage(String strWhere, String orderby, Int32 startIndex, Int32 endIndex) 位置 f:\CCOM_Git\CCOMEnrollment\university.DAL\CCOM\Notice.cs:行号 418
+   在 university.BLL.CCOM.Notice.GetListByPage(String strWhere, String orderby, Int32 startIndex, Int32 endIndex) 位置 f:\CCOM_Git\CCOMEnrollment\university.BLL\CCOM\Notice.cs:行号 212
+   在 university.Web.AdminMetro.CCOM.notice.NoticeHandler.GetUserNotice(HttpContext context) 位置 f:\CCOM_Git\CCOMEnrollment\university.Web\AdminMetro\CCOM\notice\NoticeHandler.ashx.cs:行号 264
+
+GetUserNotice-Ex:System.Exception: “`”附近有语法错误。
+   在 university.Database.DBSQL.Query(String SQLString) 位置 f:\CCOM_Git\CCOMEnrollment\university.Database\DBSQL.cs:行号 554
+   在 university.DAL.CCOM.Notice.GetListByPage(String strWhere, String orderby, Int32 startIndex, Int32 endIndex) 位置 f:\CCOM_Git\CCOMEnrollment\university.DAL\CCOM\Notice.cs:行号 418
+   在 university.BLL.CCOM.Notice.GetListByPage(String strWhere, String orderby, Int32 startIndex, Int32 endIndex) 位置 f:\CCOM_Git\CCOMEnrollment\university.BLL\CCOM\Notice.cs:行号 212
+   在 university.Web.AdminMetro.CCOM.notice.NoticeHandler.GetUserNotice(HttpContext context) 位置 f:\CCOM_Git\CCOMEnrollment\university.Web\AdminMetro\CCOM\notice\NoticeHandler.ashx.cs:行号 264
+
+GetUserNotice-Ex:System.Exception: “`”附近有语法错误。
+   在 university.Database.DBSQL.Query(String SQLString) 位置 f:\CCOM_Git\CCOMEnrollment\university.Database\DBSQL.cs:行号 554
+   在 university.DAL.CCOM.Notice.GetListByPage(String strWhere, String orderby, Int32 startIndex, Int32 endIndex) 位置 f:\CCOM_Git\CCOMEnrollment\university.DAL\CCOM\Notice.cs:行号 418
+   在 university.BLL.CCOM.Notice.GetListByPage(String strWhere, String orderby, Int32 startIndex, Int32 endIndex) 位置 f:\CCOM_Git\CCOMEnrollment\university.BLL\CCOM\Notice.cs:行号 212
+   在 university.Web.AdminMetro.CCOM.notice.NoticeHandler.GetUserNotice(HttpContext context) 位置 f:\CCOM_Git\CCOMEnrollment\university.Web\AdminMetro\CCOM\notice\NoticeHandler.ashx.cs:行号 264
+

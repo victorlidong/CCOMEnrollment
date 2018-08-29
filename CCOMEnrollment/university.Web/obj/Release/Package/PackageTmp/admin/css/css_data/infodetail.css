@@ -1,0 +1,134 @@
+/*.mainbody {
+    padding-top:0;
+}*/
+#contentTab {
+    width:760px;
+    margin:0 auto;
+}
+
+/*header*/
+.detail_header {
+    width:760px;
+    height: 50px;
+    line-height:50px;
+    margin:0 auto -3px auto;
+    text-align:left;
+    font-size:21px;
+    font-weight:bold;
+    border-bottom:3px solid #8A62BA;
+    /*background-image:url(../../img/img_data/lookResumebg.jpg);
+    background-repeat:no-repeat;*/
+}
+
+.upORdown {
+    width:32px;
+    height:28px;
+    margin-top:13px;
+    display:inline-block;
+    float:right;
+    background-image:url(../../img/img_data/up.png);
+    background-repeat:no-repeat;
+    cursor:pointer;
+}
+.downORup {
+    width:32px;
+    height:28px;
+    margin-top:13px;
+    display:inline-block;
+    float:right;
+    background-image:url(../../img/img_data/down.png);
+    background-repeat:no-repeat;
+    cursor:pointer;
+}
+    .upORdown:hover,.downORup:hover {
+        background-color:#E1E1E1;
+    }
+/*nav*/
+#contentTab ul,#contentTab ul li {
+    height: 50px;
+    line-height: 50px;
+    font-size:16px;
+    font-family: "Î¢ÈíÑÅºÚ";
+    font-weight:bold;
+    padding:0;
+}
+.tabfixed {
+    position:fixed;
+    z-index:1001;
+} 
+.tab {
+    width:960px;
+    border-bottom: 1px #E1E1E1 solid;
+    margin-bottom:10px;
+    background-color:#DDD;
+    top:0;
+}
+    .tab li {
+        width:128px;
+        list-style: none;
+        float: left;
+        border: 1px #E1E1E1 solid;
+        border-bottom: 0;
+        text-align: center;
+        margin:0 5px 0 0;
+    }
+        .tab li.selected {
+            background-color:#FFF;
+            color:#FF5500;
+        }
+#no1,#no2,#no3,#no4 {
+    width: 300px;
+    height: 35px;
+    display: inline-block;
+    text-align: left;
+    line-height: 35px;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left:10px;
+}
+.detail_table {
+    width:720px;
+    border-top:1px solid #999;
+    border-bottom:1px solid #999;
+    border-width:thin;
+    margin:0 auto 25px 40px;
+}
+.detail_table th {
+    width:80px;
+    text-align:right;
+    border:1px solid #999;
+}
+.detail_table tr td{
+    height:30px;
+    width:90px;
+    padding:5px 5px;
+    text-align:left;
+    line-height:1.3em;
+    border:1px solid #999;
+}
+/*Í·Ïñ*/
+#lblPhoto {
+    display:inline-block;
+    margin-top:0.5px;
+}
+img {
+    width: auto;
+    height: 35px;
+    float: left;
+}
+
+/*btnExportResume*/
+#btnExportResume {
+    width:170px;
+    height:35px;
+    color:#E1E1E1;
+    font-family:"Î¢ÈíÑÅºÚ", "ËÎÌå", Arial, sans-serif;
+    font-size:14px;
+    font-weight:bold;
+    background-color:#8A62BA;
+    border-color:#8A62BA;
+    outline:none;
+    margin:0 auto 20px auto;
+    float:right;
+}
