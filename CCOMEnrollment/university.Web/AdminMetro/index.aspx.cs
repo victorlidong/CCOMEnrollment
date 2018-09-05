@@ -103,7 +103,7 @@ namespace university.Web.AdminMetro
                 userDptName = showName;
                 //this.divUserDpt.InnerHtml = "|" + showName;
                  */
-                this.divUserDpt.InnerHtml = "软件学院毕业设计管理系统";
+                this.divUserDpt.InnerHtml = "计算机学院毕业设计管理系统";
             }
             catch (Exception ex)
             {
@@ -286,7 +286,7 @@ namespace university.Web.AdminMetro
             }
             
             
-            this.uoName.InnerText = "软件学院";
+            this.uoName.InnerText = "计算机学院";
 
             /*
             Session[MyKeys.SESSION_USER_TABLE] = MyEnums.UserStatus.App_Universities_AdminUser;

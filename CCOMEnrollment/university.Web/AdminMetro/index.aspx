@@ -11,7 +11,7 @@
 <!-- BEGIN HEAD -->
 <head id="Head1" runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>北京理工大学软件学院本科毕业设计系统</title>
+    <title>北京理工大学计算机学院本科毕业设计管理系统</title>
     
     <%--<meta content="width=device-width, initial-scale=1.0" name="viewport" />--%>
  
@@ -34,9 +34,9 @@
             color: white;
             width: 500px;
             position: absolute;
-            top: 24px;
-            font-size: 20px;
-            font-family: 微软雅黑;
+            top: 20px;
+            font-size: 28px;
+            font-family: 隶书;
             z-index: 20;
         }
 
@@ -51,23 +51,26 @@
         {
             height: 30px;
             line-height: 30px;
+            font-size: 20px;
+            font-family: 仿宋;
             display: inline-block;
+            background-color: #333f50;
         }
 
         .navbar-inner
         {
             border: 0;
-            background-color: #505050; /* fallback color, place your own */
+            background-color: #333f50; /* fallback color, place your own */
             /* Gradients for modern browsers, replace as you see fit */
-            background-image: -moz-linear-gradient(top, #505050, #404040);
-            background-image: -ms-linear-gradient(top, #505050, #404040);
-            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#505050), to(#404040));
-            background-image: -webkit-linear-gradient(top, #505050, #404040);
-            background-image: -o-linear-gradient(top, #505050, #404040);
-            background-image: linear-gradient(top, #505050, #404040);
+            background-image: -moz-linear-gradient(top, #333f50);
+            background-image: -ms-linear-gradient(top, #333f50);
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333f50), to(#333f50));
+            background-image: -webkit-linear-gradient(top, #333f50);
+            background-image: -o-linear-gradient(top, #333f50);
+            background-image: linear-gradient(top, #333f50, );
             background-repeat: repeat-x;
             /* IE8-9 gradient filter */
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#505050', endColorstr='#404040', GradientType=0);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333f50', endColorstr='#333f50', GradientType=0);
         }
 
         /*.navbar .nav > li > a
@@ -95,11 +98,12 @@
         {
             height: 34px;
             line-height: 34px;
+
         }
 
         .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus
         {
-            background-color: #575757;
+            background-color: #4a8bc2;
             color: #fff;
         }
 
@@ -282,13 +286,11 @@
                    
             
                     <!--BEGIN SIDEBAR TOGGLE-->
-                    <div class="sidebar-toggle-box hidden-phone">
-                        <div id="hide_sidebar" class="icon-reorder tooltips" data-placement="right" data-original-title="收起菜单"></div>
-                    </div>
+                   
                     <!--END SIDEBAR TOGGLE-->
                     <!-- BEGIN LOGO -->
-                    <a class="brand" href="/adminmetro/CCOM/center.aspx" target="sysMain" data-placement="right" title="回到桌面" style="padding-left:15px;width:60px;height:40px;">
-                        <img src="/images/login/logo_left1.png" alt="软件学院毕业设计管理系统" style="width:48px;height:50px;margin-top:-5px;"/> 
+                    <a class="brand" href="/adminmetro/CCOM/center.aspx" target="sysMain" data-placement="right"  style="padding-left:5px;width:60px;height:40px;">
+                        <img src="/images/login/lg1.png" alt="计算机学院毕业设计管理系统" style="width:48px;height:50px;margin-top:-5px;font-family:隶书;"/> 
                         
                     </a>
                     <!-- END LOGO -->
@@ -338,14 +340,14 @@
                                 <a href="#" id="lnkStatus" class="dropdown-toggle" data-toggle="dropdown" style="border: none;">
                                     <%--<img id="userImg" class="img-circle" src="/admin/images/default_user_avatar.gif" alt="头像" style="width: 29px;" runat="server" />--%>
                                     <span id="userName" runat="server">姓名</span>
-                                    <span id="uoName" runat="server">软件学院</span>
+                                    <span id="uoName" runat="server">计算机学院</span>
                                     <b class="caret"></b>
                                 </a>
                                 <ul id="status_list" class="dropdown-menu logout">
                                     <%--<li class="nav-header" style="height: 30px; padding-top: 10px; color: #08c; font-size: 15px;"><i class="icon-hand-down"></i>身份切换：</li>
                                     <asp:Literal runat="server" ID="ltrUserDept"></asp:Literal>--%>
                                     <%--  <li>
-                                        <a href="#">软件学院管理员</a>
+                                        <a href="#">计算机学院管理员</a>
                                     </li>
                                     <li>
                                         <a href="#">学院教师</a>

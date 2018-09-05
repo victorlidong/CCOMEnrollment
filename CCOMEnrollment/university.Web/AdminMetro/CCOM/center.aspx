@@ -9,7 +9,7 @@
 <!-- BEGIN HEAD -->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>北京理工大学软件学院本科毕业设计系统</title>
+    <title>北京理工大学计算机学院本科毕业设计系统</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="description" />
     <meta content="Mosaddek" name="author" />
@@ -96,7 +96,7 @@
                 <div class="container-fluid" style="padding-bottom: 20px;">
                     <!-- BEGIN PAGE CONTENT-->
                      <div class="row-fluid" align="center">
-                         您好，欢迎使用软件学院毕业设计管理系统！
+                        欢迎使用计算机学院毕业设计管理系统！
                      </div>
                     <div class="row-fluid" style="display:none;">
                         <!--BEGIN METRO STATES-->
