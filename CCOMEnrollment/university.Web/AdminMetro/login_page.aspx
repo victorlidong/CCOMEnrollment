@@ -343,8 +343,10 @@
                     </div>
                 </div>
                 <div class="login-info-container">
-               
-                  
+                    <%--<div class="login-title">
+                        <span style="float: left; margin-left: 30px; font-size: 20px; margin-top: 20px;">用户登录</span>
+                    </div>--%>
+                    <div class="login-body-concainer">                 
                         <form runat="server" id="form1" DefaultButton="btnSubmit">
                             <asp:HiddenField ID="showVCode" runat="server" Value="0" />
                             <asp:HiddenField ID="showLoginTab" runat="server" Value="0" />
@@ -370,19 +372,16 @@
                                     <a style="color: white; text-decoration: none;" href="CCOM/register/Register.aspx">注册</a>
                                 </div>--%>
                                 <div style="float: left; margin-left: 42px;">
-                                    <asp:LinkButton ID="btnSubmit" CssClass="login-button1" OnClick="btnSubmit_Click" runat="server" style="text-decoration:none;" Width="315px">登录</asp:LinkButton>
-                                    
-                                </div>
-                                 
+                                    <asp:LinkButton ID="btnSubmit" CssClass="login-button1" OnClick="btnSubmit_Click" runat="server" style="text-decoration:none;" Width="315px">登录</asp:LinkButton>                                   
+                                </div>                                 
                             </div>
-                               <asp:Label runat="server" Style="color: red; font-size: 13px;" ID="lblTip"></asp:Label>
-                        </form>
-                          
+                            <asp:Label runat="server" Style="color: red; font-size: 13px;" ID="lblTip"></asp:Label>
+                        </form>                         
                     </div>
                 </div>
             </div>
         </div>
-
+ </div>
     
 
     <script type="text/javascript">

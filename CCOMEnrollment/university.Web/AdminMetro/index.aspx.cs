@@ -147,8 +147,7 @@ namespace university.Web.AdminMetro
             str += "<li class=\"sub-menu\">";
             str += "<a href=\"javascript:;\" class=\"\">";
             //   string icon = xn.Attributes["icon"].Value == "" ? "icon-file-alt" : xn.Attributes["icon"].Value;
-            string icon = "icon-file-alt";
-            str += "<i class=\"" + icon + "\"></i>";
+            
 
             //string level1name = xn.Attributes["cff_name"].Value;
             string level1name = Ff.Ff_name;
@@ -162,7 +161,7 @@ namespace university.Web.AdminMetro
              */
 
             str += "<span>" + level1name + "</span>";
-            str += "<span class=\"arrow\"></span></a>";
+            str += "</a>";
             str += " <ul class=\"sub\">";
 
             string sql_Ff = " Ff_fatherID = " + Ff.Ff_id + " order by Ff_sort";

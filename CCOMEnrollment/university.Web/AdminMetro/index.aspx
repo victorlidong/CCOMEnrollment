@@ -54,9 +54,10 @@
             font-size: 20px;
             font-family: 仿宋;
             display: inline-block;
-            background-color: #333f50;
+            text-align:center;
         }
-
+        
+     
         .navbar-inner
         {
             border: 0;
@@ -126,6 +127,7 @@
         ul.dropdown-menu li .affix
         {
             top: 80px;
+
         }
     </style>
     <script type="text/javascript">

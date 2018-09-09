@@ -1,7 +1,7 @@
 @charset "gb2312";
 
 body {
-    color: #888;
+    color: #404040;
     /*background: #404040;*/
 }
 
@@ -53,7 +53,7 @@ ul.faq-list li a:hover, ul.faq-list li a.active{
 
 
 #sidebar > ul > li > ul.sub > li > a:hover, #sidebar > ul > li > ul.sub > li.active > a{
-    background: #575757;
+    background: #427dae;
     transition-duration: 500ms;
     transition-property: width, background;
     transition-timing-function: ease;
