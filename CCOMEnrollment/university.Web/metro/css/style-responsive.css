@@ -746,10 +746,11 @@
 		margin-top: 0px !important;
 	}
 
-	.container-fluid {
-	 	margin: 0px;
-	 	padding:5px;
-	}
+    .container-fluid {
+        margin: 0px;
+        padding: 5px;
+       
+    }
 
 	/* main container */
 	#container {
