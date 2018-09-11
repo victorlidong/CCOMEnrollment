@@ -125,7 +125,7 @@ SqlParameter[] parameters = {
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("delete from Certificate_type ");
+			strSql.Append("delete from Certificate_type "); 
 			strSql.Append(" where " + strWhere);
 			
 

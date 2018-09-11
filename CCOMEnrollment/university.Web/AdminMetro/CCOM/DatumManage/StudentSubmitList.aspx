@@ -80,36 +80,6 @@
                     <div class="row-fluid" id="contentTab">
                         <div class="span12 tab_con first-tab">
                             <ul class="weeks" id="week_list" runat="server">
-
-                                <%--<li id="section-1" class="mainTab">
-                                    <hr style="height:10px;border:none;border-top:10px groove skyblue;" />
-                                    <div class="content">
-                                        <div class="span4">
-                                            <h3 class="sectionname"><span>09月21日 - 09月27日</span></h3>
-                                            <hr />
-                                        </div>
-                                        <div class="span6" style="padding:22px 0;">
-                                            <a href="WeeklyAdd.aspx?weeklyId=1&action=<%=MyEnums.ActionEnum.Edit.ToString() %>&fun_id=<%=DESEncrypt.Encrypt("15") %>">
-                                                  <i class="icon-pencil"></i>修改</a>&nbsp;
-                                            <a onclick="javascript:DeleteWeekly(id)"><i class="icon-remove"></i>删除</a>
-                                        </div>
-                                        <ul class="span12">
-                                            <li class="fileTab">
-                                                <div>
-                                                    <div class="mod-indent-outer">
-                                                        <div class="mod-indent"></div>
-                                                        <div>
-                                                            <div class="activityinstance">
-                                                                <a><img src="/images/sendfile.png"/>  提交周志</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                   </div>
-                                </li>--%>
-
                             </ul>
                         </div>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

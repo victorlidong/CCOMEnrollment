@@ -111,3 +111,10 @@ D:\迅雷下载\CCOMEnrollment\CCOMEnrollment\university.Model\obj\Debug\univers
 D:\迅雷下载\CCOMEnrollment\CCOMEnrollment\university.Model\obj\Debug\university.Model.csproj.CoreCompileInputs.cache
 D:\迅雷下载\CCOMEnrollment\CCOMEnrollment\university.Model\obj\Debug\university.Model.dll
 D:\迅雷下载\CCOMEnrollment\CCOMEnrollment\university.Model\obj\Debug\university.Model.pdb
+E:\CCOMEnrollment\CCOMEnrollment\university.Model\bin\Debug\university.Model.dll
+E:\CCOMEnrollment\CCOMEnrollment\university.Model\bin\Debug\university.Model.pdb
+E:\CCOMEnrollment\CCOMEnrollment\university.Model\bin\Debug\Newtonsoft.Json.dll
+E:\CCOMEnrollment\CCOMEnrollment\university.Model\bin\Debug\Newtonsoft.Json.xml
+E:\CCOMEnrollment\CCOMEnrollment\university.Model\obj\Debug\university.Model.csproj.CoreCompileInputs.cache
+E:\CCOMEnrollment\CCOMEnrollment\university.Model\obj\Debug\university.Model.dll
+E:\CCOMEnrollment\CCOMEnrollment\university.Model\obj\Debug\university.Model.pdb

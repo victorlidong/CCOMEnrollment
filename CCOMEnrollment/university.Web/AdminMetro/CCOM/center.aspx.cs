@@ -6,11 +6,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using university.Common;
-
+using university.Web.AdminMetro.CCOM.notice;
 namespace university.Web.AdminMetro.CCOM
 {
     public partial class center : university.UI.ManagePage
     {
+        protected Model.CCOM.User_information user_info;
         protected string newsUrl = "";
         protected string noticeUrl = "";
         public center()
@@ -20,6 +21,59 @@ namespace university.Web.AdminMetro.CCOM
         }
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+            user_info = GetAdminInfo_CCOM(); //用户信息
+            if (user_info.Role_id != 3)//用户不为学生时，只显示欢迎界面
+            {
+                this.someWhat.InnerHtml = "<div style=\"font-family: 仿宋; text-align: center; font-size:20px; margin-top: 50px; \">欢迎您使用毕业设计管理系统！</ div > ";
+            }
+
+
+            
+            if(GetStatusText()==1|| GetStatusText()==3)//题目选择
+            {
+                this.bt1.InnerHtml = "<a href=\" /AdminMetro/CCOM/TopicManage/StudentChoose.aspx?fun_id=F10BCF0BC92D37DB\" class=\"btn\" style=\" margin-left:105px; margin-top: 20px; background-color: #888; \">题目选择</a>"+
+                    " <a href=\" /AdminMetro/CCOM/DatumManage/StudentSubmitList.aspx\"  class=\"btn\"   style=\" margin-left:200px; margin-top: 20px;\">开题报告</a>"+
+                     "<a href=\" /AdminMetro/CCOM/ScoreManage/MySoftwarePage.aspx\"  class=\"btn\"   style=\" margin-left:210px; margin-top: 20px;\">提交答辩</a>"+  
+                     "<a href=\" /AdminMetro/CCOM/ScoreManage/MyScore.aspx\"  class=\"btn\"   style=\" margin-left:210px; margin-top: 20px;\">查看评分</a> ";
+            }
+
+            int homeworkId = MyRequest.GetQueryInt("homeworkId");
+            Model.CCOM.Week_log log_model = new BLL.CCOM.Week_log().GetModel(" Homework_id=" + homeworkId);
+
+            if(log_model!=null)
+            {
+                this.bt1.InnerHtml = "<a href=\" /AdminMetro/CCOM/TopicManage/StudentChoose.aspx?fun_id=F10BCF0BC92D37DB\" class=\"btn\" style=\" margin-left:105px; margin-top: 20px; background-color: #888; \">题目选择</a>" +
+                    " <a href=\" /AdminMetro/CCOM/DatumManage/StudentSubmitList.aspx\"  class=\"btn\"   style=\" margin-left:200px; margin-top: 20px;background-color: #888; \">开题报告</a>" +
+                     "<a href=\" /AdminMetro/CCOM/ScoreManage/MySoftwarePage.aspx\"  class=\"btn\"   style=\" margin-left:210px; margin-top: 20px;\">提交答辩</a>" +
+                     "<a href=\" /AdminMetro/CCOM/ScoreManage/MyScore.aspx\"  class=\"btn\"   style=\" margin-left:210px; margin-top: 20px;\">查看评分</a> ";
+            }
+
+            var relation_model = new BLL.CCOM.Topic_relation().GetModel(" Student_id=" + GetAdminInfo_CCOM().User_id);
+            if (relation_model != null)
+            {
+                var software_model = new BLL.CCOM.Software_accept().GetModel(" Topic_relation_id=" + relation_model.Topic_relation_id);
+                if (software_model != null)
+                {
+                    if (software_model.Data_list != "")
+                    {
+                        this.bt1.InnerHtml = "<a href=\" /AdminMetro/CCOM/TopicManage/StudentChoose.aspx?fun_id=F10BCF0BC92D37DB\" class=\"btn\" style=\" margin-left:105px; margin-top: 20px;background-color: #888;  \">题目选择</a>" +
+                            " <a href=\" /AdminMetro/CCOM/DatumManage/StudentSubmitList.aspx\"  class=\"btn\"   style=\" margin-left:200px; margin-top: 20px;background-color: #888; \">开题报告</a>" +
+                             "<a href=\" /AdminMetro/CCOM/ScoreManage/MySoftwarePage.aspx\"  class=\"btn\"   style=\" margin-left:210px; margin-top: 20px;background-color: #888;\">提交答辩</a>" +
+                             "<a href=\" /AdminMetro/CCOM/ScoreManage/MyScore.aspx\"  class=\"btn\"   style=\" margin-left:210px; margin-top: 20px;\">查看评分</a> ";
+                    }
+                }
+            }
+
+            if(ShowInfo()==1)
+            {
+                this.bt1.InnerHtml = "<a href=\" /AdminMetro/CCOM/TopicManage/StudentChoose.aspx?fun_id=F10BCF0BC92D37DB\" class=\"btn\" style=\" margin-left:105px; margin-top: 20px;background-color: #888;  \">题目选择</a>" +
+                            " <a href=\" /AdminMetro/CCOM/DatumManage/StudentSubmitList.aspx\"  class=\"btn\"   style=\" margin-left:200px; margin-top: 20px;background-color: #888; \">开题报告</a>" +
+                             "<a href=\" /AdminMetro/CCOM/ScoreManage/MySoftwarePage.aspx\"  class=\"btn\"   style=\" margin-left:210px; margin-top: 20px;background-color: #888;\">提交答辩</a>" +
+                             "<a href=\" /AdminMetro/CCOM/ScoreManage/MyScore.aspx\"  class=\"btn\"   style=\" margin-left:210px; margin-top: 20px;background-color: #888;\">查看评分</a> ";
+            }
+
+
             //跳转去申报  by zc  20150915 不要删除
             string fromurl = Utils.GetCookie("FromUrl");
             Utils.WriteCookie("FromUrl", "", -1);  //清除这个cookie
@@ -32,6 +86,71 @@ namespace university.Web.AdminMetro.CCOM
             BindDeskTop();
          //   BindChannel();
         }
+
+        protected int ShowInfo()
+        {
+            Model.CCOM.User_information model = GetAdminInfo_CCOM();
+            long _id = model.User_id;
+            int score_t = -1, score_c = -1, score_s = -1;
+            BLL.CCOM.User_information user_bll = new BLL.CCOM.User_information();
+            Model.CCOM.User_information user_model = user_bll.GetModel(_id);
+
+            if (user_model == null)
+            {
+                InnerRedirect(MyEnums.RediirectErrorEnum.ParameterError);
+            }
+
+           
+            var relation_model = new BLL.CCOM.Topic_relation().GetModel(" Student_id=" + _id);
+            if (relation_model == null) return -1;
+
+            var comment_model = new BLL.CCOM.Comment().GetModel(" Topic_relation_id=" + relation_model.Topic_relation_id);
+            try
+            {
+                score_t = (int)comment_model.Teacher_score;
+            }
+            catch
+            {
+                score_t = -1;
+            }
+            try
+            {
+                score_c = (int)comment_model.Reply_score;
+                
+            }
+            catch
+            {
+                score_c = -1;
+            }
+            try
+            {
+                var soft_model = new BLL.CCOM.Software_accept().GetModel(" Topic_relation_id=" + relation_model.Topic_relation_id);
+                score_s = (int)soft_model.Conclusion;
+               
+            }
+            catch
+            {
+                score_s = -1;
+            }
+            if (score_c >= 0 && score_s >= 0 && score_t >= 0)
+            {
+                return 1;
+            }
+            else return 0;
+        }
+
+        protected int GetStatusText()
+        {
+            int state;
+            Model.CCOM.Topic_relation model = new BLL.CCOM.Topic_relation().GetModel(" Student_id=" + GetAdminInfo_CCOM().User_id);
+            if (model == null) state = 2;               //未选
+            else if (model.Accept_state == 0) state = 3;//已选，可换
+            else if (model.Accept_state == 1) state = 1;//已选，不可换
+            else if (model.Accept_state == 2) state = 3;
+            else state = 1;
+            return state;
+        }
+
 
         protected void BindDeskTop()
         {
@@ -82,21 +201,7 @@ namespace university.Web.AdminMetro.CCOM
         protected String GetMetroBlockString(List<MetroBlock> metroList)
         {
             var metroClickCountMap = new Dictionary<String, Int32>();
-            //var ml = new BLL.admin.Web_MetroClickInfo().GetModelList("userId=" + GetAdminInfo().UserID);
-            //if (ml != null && ml.Count > 0)
-            //{
-            //    foreach (var m in ml)
-            //    {
-            //        metroClickCountMap.Add(m.metro_name,m.click_count);
-            //    }
-            //}
-
-            //foreach (var metro in metroList)
-            //{
-            //    metro.ClickCount = GetMetroClickCount(metroClickCountMap, metro);
-            //}
-            //sort
-            //metroList.Sort((metroA, metroB)=> metroB.ClickCount-metroA.ClickCount);
+          
             var index = 0;
             var metroSb = new StringBuilder();
             foreach (var metro in metroList)

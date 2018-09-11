@@ -214,7 +214,7 @@ namespace university.Web.AdminMetro.CCOM.TopicManage
                 return "&nbsp;<a href=\"javascript:void(0);\" onclick='ChooseTopic(" + TopicID + "," + state + ")'>选择";  
             else
                 return "已选";
-
+  
         }
         //获取教师接收状态
         public string GetState(string state)

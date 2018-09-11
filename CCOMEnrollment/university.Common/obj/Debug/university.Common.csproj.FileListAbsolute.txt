@@ -198,3 +198,15 @@ D:\迅雷下载\CCOMEnrollment\CCOMEnrollment\university.Common\obj\Debug\univer
 D:\迅雷下载\CCOMEnrollment\CCOMEnrollment\university.Common\obj\Debug\university.Common.csproj.CoreCompileInputs.cache
 D:\迅雷下载\CCOMEnrollment\CCOMEnrollment\university.Common\obj\Debug\university.Common.dll
 D:\迅雷下载\CCOMEnrollment\CCOMEnrollment\university.Common\obj\Debug\university.Common.pdb
+E:\CCOMEnrollment\CCOMEnrollment\university.Common\bin\Debug\university.Common.dll.config
+E:\CCOMEnrollment\CCOMEnrollment\university.Common\bin\Debug\university.Common.dll
+E:\CCOMEnrollment\CCOMEnrollment\university.Common\bin\Debug\university.Common.pdb
+E:\CCOMEnrollment\CCOMEnrollment\university.Common\bin\Debug\DiffieHellman.dll
+E:\CCOMEnrollment\CCOMEnrollment\university.Common\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\CCOMEnrollment\CCOMEnrollment\university.Common\bin\Debug\Org.Mentalis.Security.dll
+E:\CCOMEnrollment\CCOMEnrollment\university.Common\bin\Debug\Qiniu.4.0.dll
+E:\CCOMEnrollment\CCOMEnrollment\university.Common\bin\Debug\Tamir.SharpSSH.dll
+E:\CCOMEnrollment\CCOMEnrollment\university.Common\obj\Debug\university.Common.csproj.CoreCompileInputs.cache
+E:\CCOMEnrollment\CCOMEnrollment\university.Common\obj\Debug\university.Common.dll
+E:\CCOMEnrollment\CCOMEnrollment\university.Common\obj\Debug\university.Common.pdb
+E:\CCOMEnrollment\CCOMEnrollment\university.Common\obj\Debug\university.Common.csprojResolveAssemblyReference.cache

@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="center.aspx.cs" Inherits="university.Web.AdminMetro.CCOM.center" %>
 
+<%@ Import Namespace="university.Web.AdminMetro.CCOM.notice" %>
+<%@ Import Namespace="university.Common" %>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
@@ -91,6 +93,7 @@
     color: #fff;     
     cursor: pointer;     
   }     
+  
      .btn:hover{     
     background-color: #99c6ff;     
   }     
@@ -127,6 +130,9 @@
                 <!-- BEGIN PAGE CONTAINER-->
                 <div class="container-fluid" style="padding-bottom: 20px; ">
                     <!-- BEGIN PAGE CONTENT-->
+                   
+
+                    <div class="row-fluid" id="someWhat" runat="server">
                      <div class="row-fluid"  style="font-family: 仿宋; text-align: center; font-size:20px; margin-top: 50px;">
                         毕业设计流程展示
                      </div>
@@ -140,13 +146,21 @@
                         <img src="/images/login/1.jpg" alt="查看评分" style="width:150px; height:150px; margin-left:58px; margin-top: 100px; "/> 
                     </a>
                     <!--<a>标签按钮-->     
-                    <a href="/AdminMetro/CCOM/TopicManage/StudentChoose.aspx?fun_id=F10BCF0BC92D37DB" class="btn" style=" margin-left:105px; margin-top: 20px;">题目选择</a>     
-                    <a href="/AdminMetro/CCOM/DatumManage/StudentSubmitList.aspx" class="btn" style=" margin-left:200px; margin-top: 20px;">开题报告</a>  
-                    <a href="/AdminMetro/CCOM/ScoreManage/MySoftwarePage.aspx"" class="btn" style=" margin-left:210px; margin-top: 20px;">提交答辩</a>  
-                    <a href="/AdminMetro/CCOM/ScoreManage/MyScore.aspx" class="btn" style=" margin-left:210px; margin-top: 20px;">查看评分</a>  
-                     <div class="row-fluid"  style="font-family: 仿宋; text-align: right; font-size:18px; margin-top: 270px;">
-                        未完成文字显示为蓝色，已完成文字显示为灰色
+                     <div class="row-fluid" >
+                         <div id="bt1" runat="server" >
+                        <a href="/AdminMetro/CCOM/TopicManage/StudentChoose.aspx?fun_id=F10BCF0BC92D37DB" class="btn"  style=" margin-left:105px; margin-top: 20px;">题目选择</a>     
+                        <a href="/AdminMetro/CCOM/DatumManage/StudentSubmitList.aspx"  class="btn"   style=" margin-left:200px; margin-top: 20px;">开题报告</a>  
+                        <a href="/AdminMetro/CCOM/ScoreManage/MySoftwarePage.aspx""  class="btn"   style=" margin-left:210px; margin-top: 20px;">提交答辩</a>  
+                        <a href="/AdminMetro/CCOM/ScoreManage/MyScore.aspx"  class="btn"   style=" margin-left:210px; margin-top: 20px;">查看评分</a>  
+                        </div>
                      </div>
+
+                        <div class="row-fluid"  style="font-family: 仿宋; text-align: right; font-size:18px; margin-top: 270px;">
+                        未完成文字背景色显示为蓝色，已完成文字背景色显示为灰色
+                     </div>
+                    </div>
+
+
                     <div class="row-fluid" style="display:none;">
                         <!--BEGIN METRO STATES-->
                             <div class="metro-nav metro-fix-view" id="div_affairs" runat="server">
