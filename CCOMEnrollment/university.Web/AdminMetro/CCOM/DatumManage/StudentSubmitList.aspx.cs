@@ -59,9 +59,18 @@ namespace university.Web.AdminMetro.CCOM.DatumManage
                     List<university.Model.CCOM.Homework> work_models = work_bll.GetModelList(" Week_id=" + week_model.TeachWeek_id);
                     foreach (university.Model.CCOM.Homework work_model in work_models)
                     {
-                        ht += "<li class=\"fileTab\"><div><div class=\"mod-indent-outer\"><div class=\"mod-indent\"></div><div><div class=\"activityinstance\">";
-                        ht += "<a href=\"StudentSubmit.aspx?homeworkId=" + work_model.Homework_id + "&fun_id=<%=DESEncrypt.Encrypt(\"15\") %><img src=\"/images/sendfile.png\"/>  提交" + (new BLL.CCOM.Datum_type().GetModel(work_model.DatumType_id).DatumType_name) + "</a>";
-                        ht += "</div></div></div></div></li>";
+                        if (work_model.DatumType_id == 2)//如果类型是提交开题报告
+                        {
+                            ht += "<li class=\"fileTab\"><div><div class=\"mod-indent-outer\"><div class=\"mod-indent\"></div><div><div class=\"activityinstance\">";
+                            ht += "<a href=\"StudentSubmit.aspx?homeworkId=" + work_model.Homework_id + "&fun_id=<%=DESEncrypt.Encrypt(\"15\") %><img src=\"/images/sendfile.png\"/>  提交" + (new BLL.CCOM.Datum_type().GetModel(work_model.DatumType_id).DatumType_name) + "</a>";
+                            ht += "</div></div></div></div></li>";
+                        }
+                        else
+                        {
+                            ht += "<li class=\"fileTab\"><div><div class=\"mod-indent-outer\"><div class=\"mod-indent\"></div><div><div class=\"activityinstance\">";
+                            ht += "<a href=\"StudentSubmit.aspx?homeworkId=" + work_model.Homework_id + "&fun_id=<%=DESEncrypt.Encrypt(\"15\") %><img src=\"/images/sendfile.png\"/>  提交" + (new BLL.CCOM.Datum_type().GetModel(work_model.DatumType_id).DatumType_name) + "</a>";
+                            ht += "</div></div></div></div></li>";
+                        }
                     }
                     ht += "</ul></div></li>";
                 }

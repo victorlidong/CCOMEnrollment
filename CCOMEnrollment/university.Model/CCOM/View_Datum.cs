@@ -43,10 +43,11 @@ namespace university.Model.CCOM
 		private bool _state;
 		private long _topic_relation_id;
 		private int _homework_id;
-		/// <summary>
-		/// 
-		/// </summary>
-		public long Datum_id
+        private long _user_id;
+        /// <summary>
+        /// 
+        /// </summary>
+        public long Datum_id
 		{
 			set{ _datum_id=value;}
 			get{return _datum_id;}
@@ -179,8 +180,13 @@ namespace university.Model.CCOM
 			set{ _homework_id=value;}
 			get{return _homework_id;}
 		}
-		#endregion Model
+        public long User_id
+        {
+            set { _user_id = value; }
+            get { return _user_id; }
+        }
+        #endregion Model
 
-	}
+    }
 }
 

@@ -373,6 +373,7 @@ E:\吴美静\研一\毕设管理系统_0913\CCOMEnrollment\university.api\bin\of
 E:\吴美静\研一\毕设管理系统_0913\CCOMEnrollment\university.api\obj\Debug\university.API.csprojResolveAssemblyReference.cache
 E:\吴美静\研一\毕设管理系统_0913\CCOMEnrollment\university.api\obj\Debug\university.api.dll
 E:\吴美静\研一\毕设管理系统_0913\CCOMEnrollment\university.api\obj\Debug\university.api.pdb
+E:\CCOMEnrollment\CCOMEnrollment\university.api\bin\ThoughtWorks.QRCode.dll
 E:\CCOMEnrollment\CCOMEnrollment\university.api\bin\university.api.dll.config
 E:\CCOMEnrollment\CCOMEnrollment\university.api\bin\university.api.dll
 E:\CCOMEnrollment\CCOMEnrollment\university.api\bin\university.api.pdb
@@ -386,7 +387,6 @@ E:\CCOMEnrollment\CCOMEnrollment\university.api\bin\university.DAL.dll
 E:\CCOMEnrollment\CCOMEnrollment\university.api\bin\ICSharpCode.SharpZipLib.dll
 E:\CCOMEnrollment\CCOMEnrollment\university.api\bin\Microsoft.Office.Interop.Word.dll
 E:\CCOMEnrollment\CCOMEnrollment\university.api\bin\Qiniu.4.0.dll
-E:\CCOMEnrollment\CCOMEnrollment\university.api\bin\ThoughtWorks.QRCode.dll
 E:\CCOMEnrollment\CCOMEnrollment\university.api\bin\Tamir.SharpSSH.dll
 E:\CCOMEnrollment\CCOMEnrollment\university.api\bin\university.UI.dll
 E:\CCOMEnrollment\CCOMEnrollment\university.api\bin\log4net.dll

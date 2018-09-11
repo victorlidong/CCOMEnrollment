@@ -6,6 +6,18 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using university.Common;
+using LitJson;
+using log4net;
+using Newtonsoft.Json;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Web;
+using System.Web.Script.Serialization;
+using System.Web.SessionState;
 using System.IO;  
 
 namespace university.Web.AdminMetro.CCOM.DatumManage
@@ -62,7 +74,7 @@ namespace university.Web.AdminMetro.CCOM.DatumManage
                 this.btnSubmit.Text = "已关闭";
                 this.btnSubmit.Enabled = false;
             }
-            if (work_model.DatumType_id == 1)
+            if (work_model.DatumType_id == 1)//周志
             {
                 this.fileTR.Visible = false;
                 this.logTRcontent.Visible = true;
@@ -89,7 +101,7 @@ namespace university.Web.AdminMetro.CCOM.DatumManage
                     this.btnSubmit.Text = "重新提交";
                 }
             }
-            else
+            else //开题报告
             {
                 this.fileTR.Visible = true;
                 this.logTRcontent.Visible = false;
@@ -99,7 +111,11 @@ namespace university.Web.AdminMetro.CCOM.DatumManage
                 this.logTRendtime.Visible = false;
                 this.btnSubmit.Visible = false;
                 Model.CCOM.View_Datum model = new BLL.CCOM.View_Datum().GetModel(" Homework_id=" + homeworkId);
-                if (model == null)
+                var user_model = HttpContext.Current.Session[MyKeys.SESSION_ADMIN_INFO] as Model.CCOM.User_information;//获得userid
+                //String User_id_String = user_model.User_id.ToString();
+                Model.CCOM.View_Datum model_1 = new BLL.CCOM.View_Datum().GetModel("User_id=" + user_model.User_id.ToString()+"and  Homework_id=" + homeworkId);
+               
+                if (model_1 == null)
                 {
                     this.state.InnerText = "未提交";
                 }
@@ -117,7 +133,7 @@ namespace university.Web.AdminMetro.CCOM.DatumManage
         #endregion
 
         #region 增加/编辑操作=================================
-        private string DoAction()
+        private string DoAction()//上传开题报告
         {
             string result = "";
 
@@ -149,9 +165,12 @@ namespace university.Web.AdminMetro.CCOM.DatumManage
 
             Model.CCOM.Homework work_model = new BLL.CCOM.Homework().GetModel(homeworkId);
             Model.CCOM.View_Datum model = new BLL.CCOM.View_Datum().GetModel(" Homework_id=" + homeworkId);
+            var user_model = HttpContext.Current.Session[MyKeys.SESSION_ADMIN_INFO] as Model.CCOM.User_information;//获得userid
+           
+            Model.CCOM.View_Datum model_1 = new BLL.CCOM.View_Datum().GetModel("User_id=" + user_model.User_id.ToString() + "and  Homework_id=" + homeworkId);
             try
             {
-                if (model == null)          //增加一条数据
+                if (model_1 == null)          //增加一条数据
                 {
                     Model.CCOM.Datum datum_model = new Model.CCOM.Datum();
                     datum_model.Homework_id = homeworkId;
@@ -160,6 +179,7 @@ namespace university.Web.AdminMetro.CCOM.DatumManage
                     datum_model.File_name = fileName;
                     datum_model.File_path = saveFileName;
                     datum_model.Topic_relation_id = new BLL.CCOM.Topic_relation().GetModel(" Student_id=" + GetAdminInfo_CCOM().User_id).Topic_relation_id;
+                    datum_model.User_id = user_model.User_id;
                     new BLL.CCOM.Datum().Add(datum_model);
                 }
                 else                        //更新一条数据

@@ -34,10 +34,17 @@ namespace university.Model.CCOM
 		private DateTime _submit_time;
 		private string _tutor_advice;
 		private int _homework_id;
-		/// <summary>
-		/// 
-		/// </summary>
-		public long Datum_id
+        private long _user_id;
+        /// <summary>
+        /// 
+        /// 
+        public long User_id
+        {
+            set { _user_id = value; }
+            get { return _user_id; }
+        }
+        /// </summary>
+        public long Datum_id
 		{
 			set{ _datum_id=value;}
 			get{return _datum_id;}

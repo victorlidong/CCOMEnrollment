@@ -38,9 +38,9 @@ namespace university.DAL.CCOM
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into Datum(");
-			strSql.Append("Topic_relation_id,File_path,File_name,DatumType_id,Submit_time,Tutor_advice,Homework_id)");
+			strSql.Append("Topic_relation_id,File_path,File_name,DatumType_id,Submit_time,Tutor_advice,Homework_id,User_id)");
 			strSql.Append(" values (");
-			strSql.Append("@Topic_relation_id,@File_path,@File_name,@DatumType_id,@Submit_time,@Tutor_advice,@Homework_id)");
+			strSql.Append("@Topic_relation_id,@File_path,@File_name,@DatumType_id,@Submit_time,@Tutor_advice,@Homework_id,@User_id)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@Topic_relation_id", SqlDbType.BigInt,8),
@@ -49,16 +49,17 @@ namespace university.DAL.CCOM
 					new SqlParameter("@DatumType_id", SqlDbType.Int,4),
 					new SqlParameter("@Submit_time", SqlDbType.Date,3),
 					new SqlParameter("@Tutor_advice", SqlDbType.Text),
-					new SqlParameter("@Homework_id", SqlDbType.Int,4)};
-			parameters[0].Value = model.Topic_relation_id;
+					new SqlParameter("@Homework_id", SqlDbType.Int,4),
+                    new SqlParameter("@User_id", SqlDbType.BigInt, 8)};
+        parameters[0].Value = model.Topic_relation_id;
 			parameters[1].Value = model.File_path;
 			parameters[2].Value = model.File_name;
 			parameters[3].Value = model.DatumType_id;
 			parameters[4].Value = model.Submit_time;
 			parameters[5].Value = model.Tutor_advice;
 			parameters[6].Value = model.Homework_id;
-
-			object obj = DBSQL.GetSingle(strSql.ToString(),parameters);
+            parameters[7].Value = model.User_id;
+            object obj = DBSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
 			{
 				return 0;

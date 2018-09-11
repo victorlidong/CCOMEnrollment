@@ -38,10 +38,11 @@ namespace university.Web.AdminMetro.CCOM
                      "<a href=\" /AdminMetro/CCOM/ScoreManage/MyScore.aspx\"  class=\"btn\"   style=\" margin-left:210px; margin-top: 20px;\">查看评分</a> ";
             }
 
-            int homeworkId = MyRequest.GetQueryInt("homeworkId");
-            Model.CCOM.Week_log log_model = new BLL.CCOM.Week_log().GetModel(" Homework_id=" + homeworkId);
-
-            if(log_model!=null)
+            //int homeworkId = MyRequest.GetQueryInt("homeworkId");
+            //Model.CCOM.Week_log log_model = new BLL.CCOM.Week_log().GetModel(" Homework_id=" + homeworkId);
+            var user_model = HttpContext.Current.Session[MyKeys.SESSION_ADMIN_INFO] as Model.CCOM.User_information;//获得userid
+            Model.CCOM.View_Datum model_1 = new BLL.CCOM.View_Datum().GetModel("User_id=" + user_model.User_id.ToString());
+            if (model_1 != null)
             {
                 this.bt1.InnerHtml = "<a href=\" /AdminMetro/CCOM/TopicManage/StudentChoose.aspx?fun_id=F10BCF0BC92D37DB\" class=\"btn\" style=\" margin-left:105px; margin-top: 20px; background-color: #888; \">题目选择</a>" +
                     " <a href=\" /AdminMetro/CCOM/DatumManage/StudentSubmitList.aspx\"  class=\"btn\"   style=\" margin-left:200px; margin-top: 20px;background-color: #888; \">开题报告</a>" +

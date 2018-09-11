@@ -24,9 +24,9 @@ namespace university.DAL.CCOM
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into View_Datum(");
-			strSql.Append("Datum_id,Student_id,Tutor_id,Topic_id,Accept_state,File_path,File_name,DatumType_id,DatumType_name,Submit_time,Tutor_advice,TeachWeek_id,Start_time,End_time,State,Topic_relation_id,Homework_id)");
+			strSql.Append("Datum_id,Student_id,Tutor_id,Topic_id,Accept_state,File_path,File_name,DatumType_id,DatumType_name,Submit_time,Tutor_advice,TeachWeek_id,Start_time,End_time,State,Topic_relation_id,Homework_id,User_id)");
 			strSql.Append(" values (");
-			strSql.Append("@Datum_id,@Student_id,@Tutor_id,@Topic_id,@Accept_state,@File_path,@File_name,@DatumType_id,@DatumType_name,@Submit_time,@Tutor_advice,@TeachWeek_id,@Start_time,@End_time,@State,@Topic_relation_id,@Homework_id)");
+			strSql.Append("@Datum_id,@Student_id,@Tutor_id,@Topic_id,@Accept_state,@File_path,@File_name,@DatumType_id,@DatumType_name,@Submit_time,@Tutor_advice,@TeachWeek_id,@Start_time,@End_time,@State,@Topic_relation_id,@Homework_id,@User_id)");
 			SqlParameter[] parameters = {
 					new SqlParameter("@Datum_id", SqlDbType.BigInt,8),
 					new SqlParameter("@Student_id", SqlDbType.BigInt,8),
@@ -44,8 +44,9 @@ namespace university.DAL.CCOM
 					new SqlParameter("@End_time", SqlDbType.Date,3),
 					new SqlParameter("@State", SqlDbType.Bit,1),
 					new SqlParameter("@Topic_relation_id", SqlDbType.BigInt,8),
-					new SqlParameter("@Homework_id", SqlDbType.Int,4)};
-			parameters[0].Value = model.Datum_id;
+					new SqlParameter("@Homework_id", SqlDbType.Int,4),
+                    new SqlParameter("@User_id", SqlDbType.BigInt,4)};
+            parameters[0].Value = model.Datum_id;
 			parameters[1].Value = model.Student_id;
 			parameters[2].Value = model.Tutor_id;
 			parameters[3].Value = model.Topic_id;
@@ -62,8 +63,8 @@ namespace university.DAL.CCOM
 			parameters[14].Value = model.State;
 			parameters[15].Value = model.Topic_relation_id;
 			parameters[16].Value = model.Homework_id;
-
-			int rows=DBSQL.ExecuteSql(strSql.ToString(),parameters);
+            parameters[17].Value = model.User_id;
+            int rows=DBSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
 			{
 				return true;

@@ -405,6 +405,7 @@ D:\迅雷下载\CCOMEnrollment\CCOMEnrollment\university.BLL\obj\Debug\universit
 D:\迅雷下载\CCOMEnrollment\CCOMEnrollment\university.BLL\obj\Debug\university.BLL.csproj.CoreCompileInputs.cache
 D:\迅雷下载\CCOMEnrollment\CCOMEnrollment\university.BLL\obj\Debug\university.BLL.dll
 D:\迅雷下载\CCOMEnrollment\CCOMEnrollment\university.BLL\obj\Debug\university.BLL.pdb
+E:\CCOMEnrollment\CCOMEnrollment\university.BLL\bin\Debug\university.DAL.pdb
 E:\CCOMEnrollment\CCOMEnrollment\university.BLL\bin\Debug\university.BLL.dll
 E:\CCOMEnrollment\CCOMEnrollment\university.BLL\bin\Debug\university.BLL.pdb
 E:\CCOMEnrollment\CCOMEnrollment\university.BLL\bin\Debug\Newtonsoft.Json.dll
@@ -421,7 +422,6 @@ E:\CCOMEnrollment\CCOMEnrollment\university.BLL\bin\Debug\DiffieHellman.dll
 E:\CCOMEnrollment\CCOMEnrollment\university.BLL\bin\Debug\Org.Mentalis.Security.dll
 E:\CCOMEnrollment\CCOMEnrollment\university.BLL\bin\Debug\university.Common.pdb
 E:\CCOMEnrollment\CCOMEnrollment\university.BLL\bin\Debug\university.Common.dll.config
-E:\CCOMEnrollment\CCOMEnrollment\university.BLL\bin\Debug\university.DAL.pdb
 E:\CCOMEnrollment\CCOMEnrollment\university.BLL\bin\Debug\university.Database.pdb
 E:\CCOMEnrollment\CCOMEnrollment\university.BLL\bin\Debug\university.Model.pdb
 E:\CCOMEnrollment\CCOMEnrollment\university.BLL\bin\Debug\Newtonsoft.Json.xml
